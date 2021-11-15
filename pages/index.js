@@ -4,7 +4,14 @@ import Link from 'next/link'
 import Script from 'next/script'
 import Layout from 'Components/layout'
 import { DiMongodb } from 'react-icons/di'
-import { FaHtml5, FaInfinity, FaJava, FaPython, FaServer } from 'react-icons/fa'
+import {
+    FaGithub,
+    FaHtml5,
+    FaInfinity,
+    FaJava,
+    FaPython,
+    FaServer,
+} from 'react-icons/fa'
 
 export default function Home() {
     return (
@@ -19,7 +26,7 @@ export default function Home() {
             </Head>
             <Script src="/js/age.js" />
             <Layout home>
-                <div className="rounded-lg bg-skin-bg-accent py-3 my-6 text-center w-full">
+                <div className="rounded-lg bg-skin-accent py-3 my-6 text-center w-full">
                     Hey, I&apos;m a full-stack developer based in Germany!
                 </div>
                 <article className="flex">
@@ -35,7 +42,9 @@ export default function Home() {
                             started learning and using NextJS.
                         </p>
                     </div>
-                    <div className="flex-shrink-0 ml-6 sm:ml-2 rounded-full border-2 border-red-600 max-h-28 w-28 bg-red-600">
+                    <div
+                        className="flex-shrink-0 desktop:ml-6 tablet:ml-6 mobile:ml-2 rounded-full max-h-32 w-32 p-1 
+                    bg-gradient-to-br from-[#7289da] to-pink-500">
                         <Image
                             src="/images/pexels-soumil-kumar-735911.jpg"
                             alt="headerImage"
@@ -50,6 +59,7 @@ export default function Home() {
                     <ul>
                         <li>
                             <h3>Storyblog</h3>
+                            <p>A blog project for my girlfriend</p>
                             <Link
                                 href="https://github.com/tobiaswild/storyblog"
                                 passHref>
@@ -58,6 +68,10 @@ export default function Home() {
                         </li>
                         <li>
                             <h3>CleanerTwitch</h3>
+                            <p>
+                                extention to remove useless stuff from the
+                                twitch page
+                            </p>
                             <Link
                                 href="https://github.com/tobiaswild/CleanerTwitchTV"
                                 passHref>
@@ -65,7 +79,11 @@ export default function Home() {
                             </Link>
                         </li>
                         <li>
-                            <h3>Facebook Klon</h3>
+                            <h3>Facebook Clone</h3>
+                            <p>
+                                clone of facebook i build in the web dev online
+                                course
+                            </p>
                             <Link
                                 href="https://github.com/tobiaswild/facebook-klon"
                                 passHref>
@@ -119,67 +137,22 @@ export default function Home() {
                         </li>
                     </ul>
                 </article>
-                <div>
-                    Consequat aute consequat magna esse dolore do voluptate
-                    nulla duis fugiat sunt laborum laborum. Laborum Lorem esse
-                    sit eu cillum. Dolor nisi consequat deserunt velit ad
-                    adipisicing voluptate adipisicing culpa. Voluptate et
-                    commodo est culpa. Pariatur eiusmod proident duis
-                    exercitation aliqua consequat eu laborum pariatur. Sunt est
-                    amet cillum ullamco. Proident magna dolor ut voluptate. Ut
-                    nisi incididunt quis fugiat ut laboris occaecat Lorem sunt
-                    aliquip laboris adipisicing. Incididunt magna incididunt
-                    nostrud labore eiusmod sunt elit sit id elit. Sint Lorem
-                    nisi est adipisicing excepteur ad voluptate id dolor est
-                    consequat ex. Enim do sunt non ut ipsum excepteur ullamco ut
-                    qui ad laborum id do est. Magna eiusmod nisi labore
-                    consequat voluptate. Ipsum deserunt consectetur sint
-                    deserunt amet fugiat aliqua commodo cillum cillum
-                    adipisicing laboris. Ad labore proident culpa amet sunt est.
-                    Consectetur deserunt enim nisi mollit ut esse anim ad anim
-                    non. Est reprehenderit eiusmod anim in elit mollit sit
-                    commodo voluptate in. Eu aute reprehenderit elit mollit
-                    proident. Fugiat irure exercitation consectetur Lorem
-                    consectetur duis id veniam. Nulla anim duis pariatur aliquip
-                    elit aliqua consectetur elit consequat eu amet ex nulla.
-                    Aute nulla exercitation magna in commodo do veniam fugiat
-                    pariatur. Sint cillum enim sunt sunt aute ut. Nisi dolore
-                    laboris ipsum reprehenderit fugiat mollit officia. Mollit
-                    irure ad cupidatat in aliquip voluptate laborum dolor
-                    deserunt velit velit quis. Sint ipsum magna ut anim irure
-                    velit sit sint aliqua elit. Culpa ullamco sint quis aliqua
-                    excepteur reprehenderit enim ex velit deserunt. Labore nulla
-                    enim et aliquip ea anim dolore ea pariatur labore ullamco
-                    sunt minim eiusmod. Voluptate laboris aute nostrud laboris
-                    officia deserunt non sint culpa sunt. Sunt occaecat ea velit
-                    ut. Eu sunt reprehenderit qui cillum ullamco cupidatat aute
-                    mollit velit duis deserunt in quis enim. Et elit consequat
-                    eu deserunt do tempor cillum eu et sunt sint nisi eu.
-                    Consectetur quis do nulla nostrud velit dolore eu non
-                    voluptate cillum. Velit cillum deserunt Lorem ut Lorem
-                    deserunt sunt tempor irure eu laborum laboris cupidatat
-                    laboris. Quis fugiat occaecat aute aliqua exercitation ea ex
-                    occaecat sint laborum id laborum proident sunt. Exercitation
-                    in consectetur ad aliquip aliquip dolor qui proident commodo
-                    qui esse voluptate. Cupidatat non adipisicing incididunt
-                    proident cillum ut velit Lorem ad incididunt cillum nisi.
-                    Quis fugiat ea commodo deserunt veniam. Aliqua nulla sint
-                    mollit ipsum aliquip commodo labore dolore eu reprehenderit
-                    laboris tempor non fugiat. Sunt dolor adipisicing labore
-                    culpa commodo. Aliquip esse velit est aliqua in voluptate.
-                    Mollit pariatur non in proident officia deserunt
-                    reprehenderit ad anim ex deserunt Lorem ex proident. Duis in
-                    fugiat dolor adipisicing voluptate est labore eiusmod. Irure
-                    do eu exercitation est elit laboris adipisicing ipsum ex ad
-                    id mollit sint labore. Voluptate pariatur cupidatat aute
-                    anim. Quis id quis occaecat qui est commodo deserunt anim.
-                    Do cupidatat excepteur amet veniam minim in commodo aliquip
-                    est consectetur. Amet amet eu officia aute irure culpa
-                    aliqua duis id adipisicing cupidatat ex ipsum nisi. Aliqua
-                    ad non pariatur quis in nostrud elit culpa. Commodo fugiat
-                    aliquip irure veniam. Commodo proident irure do do dolor
-                    tempor. Mollit enim commodo est reprehenderit ipsum.
-                </div>
+                <article id="about-me">
+                    <h2>About Me</h2>
+                </article>
+                <article id="achievements">
+                    <h2>Personal Achievements</h2>
+                    <ul>
+                        <li>
+                            <h3>x+</h3>
+                            <p>Code contributions</p>
+                        </li>
+                        <li>
+                            <h3>x+</h3>
+                            <p>GitHub Views</p>
+                        </li>
+                    </ul>
+                </article>
             </Layout>
         </>
     )

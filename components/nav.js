@@ -1,12 +1,13 @@
 import Link from 'next/link'
-import { FaCode, FaGithub, FaInstagram, FaProjectDiagram } from 'react-icons/fa'
-import { GrTechnology } from 'react-icons/gr'
+import { FaCode, FaProjectDiagram } from 'react-icons/fa'
+import { GrAchievement, GrTechnology } from 'react-icons/gr'
+import { FcAbout } from 'react-icons/fc'
 
 export default function Nav() {
     function Logo() {
         return (
-            <Link href="https://tobiaswild.de" passHref={true}>
-                <a className="flex rounded font-Space-Grotesk text-2xl items-center p-2 m-2 bg-skin-muted">
+            <Link href="/" passHref>
+                <a className="flex rounded font-Space-Grotesk text-2xl items-center p-2 m-2">
                     <span>
                         <FaCode />
                     </span>
@@ -18,34 +19,31 @@ export default function Nav() {
 
     function Links() {
         return (
-            <div className="float-right relative flex pr-1">
-                <NavLink
-                    link={'https://github.com/tobiaswild/'}
-                    icon={<FaGithub />}
-                />
-                <NavLink link={'/'} icon={<FaInstagram />} />
+            <div className="flex flex-row mobile:hidden">
+                <NavItem link="#projects" icon={<FaProjectDiagram />}>
+                    Projects
+                </NavItem>
+                <NavItem link="#technologies" icon={<GrTechnology />}>
+                    Technologies
+                </NavItem>
+                <NavItem link="#about-me" icon={<FcAbout />}>
+                    About Me
+                </NavItem>
+                <NavItem link="#achievements" icon={<GrAchievement />}>
+                    Personal Achievements
+                </NavItem>
             </div>
-        )
-    }
-
-    function NavLink({ link, icon }) {
-        return (
-            <Link href={link} passHref={true}>
-                <a
-                    className="rounded h-10 w-10 flex items-center p-2 mx-1 my-2 text-2xl hover:bg-skin-bg-accent hover:rounded-full"
-                    target="_blank">
-                    <span className="ml-0">{icon}</span>
-                </a>
-            </Link>
         )
     }
 
     function NavItem({ children, link, icon }) {
         return (
-            <Link href={link} passHref={true}>
-                <a className="rounded h-10 max-w-sm w-auto flex items-center p-2 m-2 float-left">
-                    <span className="m-1">{icon}</span>
-                    {children}
+            <Link href={link} passHref>
+                <a
+                    className="rounded h-10 max-w-sm w-auto flex items-center p-2 m-2"
+                    title={children}>
+                    <span className="m-1 text-white text-xl">{icon}</span>
+                    <span className="tablet:hidden">{children}</span>
                 </a>
             </Link>
         )
@@ -54,16 +52,10 @@ export default function Nav() {
     return (
         <>
             <nav className="fixed top-0 w-full h-14 z-10 overflow-hidden backdrop-blur">
-                <div className="float-left whitespace-nowrap flex flex-row">
+                <div className="flex justify-between max-w-4xl mx-auto">
                     <Logo />
-                    <NavItem link="#projects" icon={<FaProjectDiagram />}>
-                        Projects
-                    </NavItem>
-                    <NavItem link="#technologies" icon={<GrTechnology />}>
-                        Projects
-                    </NavItem>
+                    <Links />
                 </div>
-                <Links />
             </nav>
         </>
     )

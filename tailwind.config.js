@@ -9,50 +9,32 @@ module.exports = {
         extend: {
             textColor: {
                 skin: {
-                    base: 'var(--color-text-base)',
-                    muted: 'var(--color-text-muted)',
+                    base: 'var(--color-text)',
                 },
             },
             backgroundColor: {
                 skin: {
                     background: 'var(--color-background)',
-                    'bg-accent': 'var(--color-background-accent)',
+                    accent: 'var(--color-accent)',
                 },
             },
             fontFamily: {
-                normal: [
-                    '-apple-system',
-                    'BlinkMacSystemFont',
-                    'Segoe UI',
-                    'Roboto',
-                    'Oxygen',
-                    'Ubuntu',
-                    'Cantarell',
-                    'Fira Sans',
-                    'Droid Sans',
-                    'Helvetica Neue',
-                    'sans-serif',
-                ],
                 'Bebas-Neue': ['Bebas Neue'],
-                'Space-Grotesk': ['Space Grotesk']
-            },
-            colors: {
-                color1: '#354f52',
-                color2: '#a63a50',
-                color3: '#c3a29e',
-                color4: '#a9c5a0',
-                color5: '#8cbcb9',
-                color6: '#896978',
-                dark: '#121212',
+                'Space-Grotesk': ['Space Grotesk'],
             },
         },
         screens: {
-            sm: { min: '200px', max: '639px' },
-            md: { min: '640px', max: '1023px' },
-            lg: { min: '1024px', max: '1279px' },
-            xl: { min: '1280px', max: '1535px' },
-            '2xl': { min: '1536px' },
+            mobile: { max: '375px' },
+            tablet: { min: '376px', max: '960px' },
+            desktop: { min: '961px' },
         },
+        fill: (theme) => ({
+            white: theme('colors.white'),
+            accent: 'var(--color-accent)'
+        }),
+        stroke: (theme) => ({
+            accent: 'var(--color-accent)',
+        }),
     },
     variants: {
         extend: {},
