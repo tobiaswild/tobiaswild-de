@@ -4,15 +4,15 @@ import Footer from './footer'
 
 export default function Layout({ children }) {
     return (
-        <>
-            <div className="max-w-3xl mx-auto my-0 font-normal text-base select-text">
-                <Nav />
-                <div className="max-w-xl mx-auto my-0">
-                    <Header />
-                    <main>{children}</main>
-                    <Footer />
-                </div>
-            </div>
-        </>
+        <div
+            id="main"
+            className="w-screen min-h-screen h-full bg-skin-background font-normal text-skin-base select-text">
+            <Nav />
+            <main className="max-w-xl sm:max-w-[95%] mx-auto pt-16">
+                <Header />
+                <section>{children}</section>
+                <Footer />
+            </main>
+        </div>
     )
 }

@@ -5,6 +5,7 @@
         "Components/*": ["./components/*"],
         "Lib/*": ["./lib/*"],
         "Styles/*": ["./styles/*"],
+        "Public/*": ["./public/*"],
       }
     }
   }

@@ -1,7 +1,15 @@
+import Image from 'next/image'
+
 export default function Header() {
     return (
         <header>
-            <p>This is the Header</p>
+            <Image
+                src="/images/pexels-soumil-kumar-735911.jpg"
+                alt="headerImage"
+                layout="responsive"
+                height={350}
+                width={800}
+            />
         </header>
     )
 }
