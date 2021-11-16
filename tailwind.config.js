@@ -24,8 +24,8 @@ module.exports = {
             },
         },
         screens: {
-            mobile: { max: '375px' },
-            tablet: { min: '376px', max: '960px' },
+            mobile: { max: '420px' },
+            tablet: { min: '421px', max: '960px' },
             desktop: { min: '961px' },
         },
         fill: (theme) => ({
