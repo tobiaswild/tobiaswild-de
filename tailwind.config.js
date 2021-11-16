@@ -19,7 +19,6 @@ module.exports = {
                 },
             },
             fontFamily: {
-                'Bebas-Neue': ['Bebas Neue'],
                 'Space-Grotesk': ['Space Grotesk'],
             },
         },
