@@ -24,16 +24,11 @@ module.exports = {
             },
         },
         screens: {
-            mobile: { max: '420px' },
-            tablet: { min: '421px', max: '960px' },
-            desktop: { min: '961px' },
+            tablet: '960px',
+            desktop: '1248px',
         },
-        fill: (theme) => ({
-            white: theme('colors.white'),
-            accent: 'var(--color-accent)'
-        }),
         stroke: (theme) => ({
-            accent: 'var(--color-accent)',
+            white: theme('colors.white')
         }),
     },
     variants: {

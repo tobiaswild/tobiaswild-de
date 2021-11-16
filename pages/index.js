@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Tobias Wild</title>
+                <title>Tobias Wild | Portfolio</title>
                 <meta charSet="UTF-8" />
                 <meta
                     name="viewport"
@@ -29,22 +29,8 @@ export default function Home() {
                 <div className="rounded-lg bg-skin-accent py-3 my-6 text-center w-full">
                     Hey, I&apos;m a full-stack developer based in Germany!
                 </div>
-                <article className="flex">
-                    <div className="flex-grow">
-                        <h1 className="mt-4">Tobias Wild</h1>
-                        <p>
-                            I am a <span id="age" /> years old student from
-                            Germany. I love coding. I started learning HTML and
-                            CSS in mid 2018 when my school offered a
-                            differentiation course on it. And from there on I
-                            taught my self JS. In mid-2021, I took an online
-                            course on web development with ReactJS. Then I
-                            started learning and using NextJS.
-                        </p>
-                    </div>
-                    <div
-                        className="flex-shrink-0 desktop:ml-6 tablet:ml-6 mobile:ml-2 rounded-full max-h-32 w-32 p-1 
-                    bg-gradient-to-br from-[#7289da] to-pink-500">
+                <article>
+                    <div className="float-right tablet:ml-6 rounded-full max-h-32 w-32 p-1 bg-gradient-to-br from-[#102e97] to-pink-500">
                         <Image
                             src="/images/pexels-soumil-kumar-735911.jpg"
                             alt="headerImage"
@@ -53,6 +39,15 @@ export default function Home() {
                             className="rounded-full"
                         />
                     </div>
+                    <h1 className="mt-4">Tobias Wild</h1>
+                    <p>
+                        I am a <span id="age" /> years old student from Germany.
+                        I love coding. I started learning HTML and CSS in mid
+                        2018 when my school offered a differentiation course on
+                        it. And from there on I taught my self JS. In mid-2021,
+                        I took an online course on web development with ReactJS.
+                        Then I started learning and using NextJS.
+                    </p>
                 </article>
                 <article id="projects">
                     <h2>Projects</h2>

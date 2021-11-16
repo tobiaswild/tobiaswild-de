@@ -53,16 +53,13 @@
         @apply my-10;
     }
     ul {
-        @apply grid desktop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 gap-10 mt-4 mb-8;
+        @apply grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-10 mt-4 mb-8;
     }
     ul li {
-        @apply mobile:pl-4;
+        @apply pl-4 tablet:pl-0;
     }
     path {
-        @apply fill-white stroke-accent;
-    }
-    g {
-        @apply fill-accent;
+        @apply stroke-white;
     }
     ::-webkit-scrollbar {
         @apply w-2;
