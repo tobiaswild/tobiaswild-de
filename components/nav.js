@@ -25,7 +25,7 @@ export default function Nav() {
                 <a
                     className="rounded h-10 max-w-sm w-auto flex items-center tablet:p-2 m-2"
                     title={children}>
-                    <span className="rounded p-1 text-white tablet:text-xl bg-skin-accent">
+                    <span className="rounded p-1 text-white tablet:text-xl bg-skin-background bg-opacity-60">
                         {icon}
                     </span>
                     <span className="tablet:ml-1 hidden tablet:block">
@@ -41,7 +41,7 @@ export default function Nav() {
             <Script src="/js/scroll-up.js" />
             <nav className="fixed top-0 w-full h-14 z-10 overflow-hidden backdrop-blur">
                 <div className="flex justify-between max-w-4xl mx-auto">
-                    <Link href="/" passHref>
+                    <Link href="#" passHref>
                         <a
                             id="top"
                             className="flex rounded font-Space-Grotesk tablet:text-2xl text-lg items-center p-2 m-2">

@@ -1,11 +1,11 @@
-import { DiMongodb } from 'react-icons/di'
-import { FaHtml5, FaInfinity, FaJava, FaPython, FaServer } from 'react-icons/fa'
+import { GrDeploy } from 'react-icons/gr'
+import { FaHtml5, FaCode, FaServer, FaDatabase } from 'react-icons/fa'
 
 const data = [
     {
         icon: <FaHtml5 />,
         name: 'Frontend',
-        text: 'HTML5, CSS3, JS, NextJS',
+        text: 'HTML, CSS, JS, NextJS, ReactJS',
     },
     {
         icon: <FaServer />,
@@ -13,24 +13,19 @@ const data = [
         text: 'NodeJS',
     },
     {
-        icon: <DiMongodb />,
+        icon: <FaDatabase />,
         name: 'Databases',
         text: 'MongoDB',
     },
     {
-        icon: <FaInfinity />,
-        name: 'Devops',
+        icon: <GrDeploy />,
+        name: 'Deployment',
         text: 'Netlify, Heroku',
     },
     {
-        icon: <FaJava />,
-        name: 'Java',
-        text: '',
-    },
-    {
-        icon: <FaPython />,
-        name: 'Python',
-        text: '',
+        icon: <FaCode />,
+        name: 'Other',
+        text: 'Java and Python',
     },
 ]
 
@@ -43,6 +38,7 @@ export default function Technologies() {
                     <li key={index}>
                         <span className="text-2xl">{card.icon}</span>
                         <h3>{card.name}</h3>
+                        <p>Experience with</p>
                         <p>{card.text}</p>
                     </li>
                 ))}
