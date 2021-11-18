@@ -14,7 +14,7 @@ export default function Home() {
                 <title>Tobias Wild | Portfolio</title>
                 <meta
                     name="description"
-                    content="I am a 16 years old student from Germany. I love coding. Since 2018 I am using HTML, CSS and JS to create small websites for my self."
+                    content="I am a 16 years old student from Germany and I love coding."
                 />
                 <meta charSet="UTF-8" />
                 <meta
@@ -35,15 +35,16 @@ export default function Home() {
                             height={120}
                             width={120}
                             className="rounded-full"
+                            title="Just a stock photo I found online."
                         />
                     </div>
                     <h1 className="mt-4">Tobias Wild</h1>
                     <p>
                         I am a <span id="age">16</span> years old student from
-                        Germany. I love coding. I started learning HTML and CSS
-                        in mid 2018 when my school offered a differentiation
-                        course on it. And from there on I taught my self JS. In
-                        mid-2021, I took an online course on web development
+                        Germany and I love coding. I started learning HTML and
+                        CSS in mid 2018 when my school offered a differentiation
+                        course on it. And from there on I thought my self JS. In
+                        mid 2021, I took an online course on web development
                         with ReactJS. Then I started learning and using NextJS.
                     </p>
                 </article>

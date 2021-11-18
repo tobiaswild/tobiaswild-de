@@ -9,6 +9,7 @@ export default function Header() {
                 layout="responsive"
                 height={350}
                 width={800}
+                title="Just a stock photo I found online."
             />
         </header>
     )
