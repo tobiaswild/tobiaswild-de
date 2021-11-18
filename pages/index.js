@@ -14,10 +14,7 @@ export default function Home() {
                 <title>Tobias Wild | Portfolio</title>
                 <meta
                     name="description"
-                    content="I am a 16 years old student from Germany.
-                        I love coding. I started learning HTML and CSS 
-                        in mid 2018. And from there on I taught my self 
-                        JS. Then I started learning and using NextJS."
+                    content="I am a 16 years old student from Germany. I love coding. Since 2018 I am using HTML, CSS and JS to create small websites for my self."
                 />
                 <meta charSet="UTF-8" />
                 <meta
