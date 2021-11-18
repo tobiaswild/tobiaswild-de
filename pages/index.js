@@ -15,11 +15,9 @@ export default function Home() {
                 <meta
                     name="description"
                     content="I am a 16 years old student from Germany.
-                        I love coding. I started learning HTML and CSS in mid
-                        2018 when my school offered a differentiation course on
-                        it. And from there on I taught my self JS. In mid-2021,
-                        I took an online course on web development with ReactJS.
-                        Then I started learning and using NextJS."
+                        I love coding. I started learning HTML and CSS 
+                        in mid 2018. And from there on I taught my self 
+                        JS. Then I started learning and using NextJS."
                 />
                 <meta charSet="UTF-8" />
                 <meta
