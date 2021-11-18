@@ -9,6 +9,7 @@
         --color-text: #ffffff;
         --color-background: #202023;
         --color-accent: #7289da;
+        --color-see: rgba(32, 32, 35, 0.2);
     }
     * {
         @apply box-border;

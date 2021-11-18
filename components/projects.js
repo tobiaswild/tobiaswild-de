@@ -36,7 +36,11 @@ export default function Projects() {
                     <li key={index} className="shadow-2xl p-4">
                         <h3>{card.name}</h3>
                         <p>{card.text}</p>
-                        <p className="px-4 my-2" title="what i used to create this project">{card.components}</p>
+                        <p
+                            className="px-4 my-2"
+                            title="what i used to create this project">
+                            {card.components}
+                        </p>
                         <Link
                             href={`https://github.com/tobiaswild/${card.github}`}
                             passHref>

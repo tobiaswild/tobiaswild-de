@@ -16,6 +16,7 @@ module.exports = {
                 skin: {
                     background: 'var(--color-background)',
                     accent: 'var(--color-accent)',
+                    see: 'var(--color-see)',
                 },
             },
             fontFamily: {
@@ -23,7 +24,7 @@ module.exports = {
             },
         },
         screens: {
-            tablet: '960px',
+            tablet: '640px',
             desktop: '1248px',
         },
         stroke: (theme) => ({
