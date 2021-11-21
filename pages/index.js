@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
 import Layout from 'Components/layout'
-import Achievements from 'Components/achievements'
-import AboutMe from 'Components/about-me'
 import Technologies from 'Components/technologies'
 import Projects from 'Components/projects'
 
@@ -30,12 +28,13 @@ export default function Home() {
                 <article className="pt-0">
                     <div className="float-right tablet:ml-6 rounded-full max-h-32 w-32 p-1 bg-gradient-to-br from-blue-700 to-pink-500">
                         <Image
-                            src="/images/pexels-soumil-kumar-735911.jpg"
+                            src="/images/me.png"
                             alt="headerImage"
                             height={120}
                             width={120}
                             className="rounded-full"
                             title="Just a stock photo I found online."
+                            priority
                         />
                     </div>
                     <h1 className="mt-4">Tobias Wild</h1>

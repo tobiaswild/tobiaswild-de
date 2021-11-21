@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header>
             <Image
-                src="/images/pexels-soumil-kumar-735911.jpg"
+                src="/images/me.png"
                 alt="headerImage"
                 layout="responsive"
                 height={350}
