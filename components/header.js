@@ -5,11 +5,11 @@ export default function Header() {
         <header>
             <Image
                 src="/images/me.png"
-                alt="headerImage"
+                alt="The Header Image"
                 layout="responsive"
                 height={350}
                 width={800}
-                title="Just a stock photo I found online."
+                priority
             />
         </header>
     )

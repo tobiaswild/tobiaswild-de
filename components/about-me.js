@@ -1,5 +1,6 @@
 const data = [
-    { year: 2021, text: 'Web Dev Online Course' },
+    { year: 2021, text: 'Web Development Online course ' },
+    { year: 2018, text: 'School differentiation course on HTML & CSS' },
     { year: 2005, text: 'Born in Germany' },
 ]
 
