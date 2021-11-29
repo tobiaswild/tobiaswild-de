@@ -4,9 +4,9 @@ import Footer from './footer'
 
 export default function Layout({ children }) {
     return (
-        <div className="w-screen min-h-screen h-full bg-skin-background text-skin-base select-text">
+        <div className="w-screen min-h-screen h-full bg-skin-background text-skin-base">
             <Nav />
-            <main className="desktop:max-w-2xl tablet:max-w-xl max-w-[90%] mx-auto pt-16">
+            <main className="desktop:w-[672px] tablet:w-[576px] max-w-[90%] mx-auto pt-16">
                 <Header />
                 <section>{children}</section>
                 <Footer />

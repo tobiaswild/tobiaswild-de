@@ -10,6 +10,7 @@ module.exports = {
             textColor: {
                 skin: {
                     base: 'var(--color-text)',
+                    accent: 'var(--color-accent)',
                 },
             },
             backgroundColor: {

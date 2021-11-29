@@ -17,7 +17,7 @@
     }
     html,
     body {
-        @apply p-0 m-0 font-normal overflow-x-hidden;
+        @apply p-0 m-0 font-normal text-base overflow-x-hidden select-none;
         scroll-behavior: smooth;
     }
     a {
@@ -53,13 +53,13 @@
         @apply pt-14;
     }
     ul {
-        @apply grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-10 mt-4 mb-8;
+        @apply grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-10 my-4;
     }
     ul li {
         @apply p-2;
     }
-    ul li a {
-        @apply ml-2 tablet:ml-0 text-blue-600;
+    ul li a:hover {
+        @apply underline;
     }
     path {
         @apply stroke-white;
