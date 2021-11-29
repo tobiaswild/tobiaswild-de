@@ -5,7 +5,7 @@ const data = [
     {
         icon: <FaHtml5 />,
         name: 'Frontend',
-        text: 'HTML, CSS, JS, NextJS, ReactJS',
+        text: 'HTML, CSS, JS, ReactJS, NextJS',
     },
     {
         icon: <FaServer />,
@@ -15,7 +15,7 @@ const data = [
     {
         icon: <FaDatabase />,
         name: 'Databases',
-        text: 'MongoDB',
+        text: 'MongoDB, SQL',
     },
     {
         icon: <GrDeploy />,
@@ -36,8 +36,10 @@ export default function Technologies() {
             <ul>
                 {data.map((card, index) => (
                     <li key={index}>
-                        <span className="text-2xl">{card.icon}</span>
-                        <h3>{card.name}</h3>
+                        <h3 className="flex items-center">
+                            <span className="text-2xl">{card.icon} </span>
+                            <span className="ml-2">{card.name}</span>
+                        </h3>
                         <p>Experience with</p>
                         <p>{card.text}</p>
                     </li>

@@ -10,6 +10,7 @@ module.exports = {
             textColor: {
                 skin: {
                     base: 'var(--color-text)',
+                    accent: 'var(--color-accent)',
                 },
             },
             backgroundColor: {
@@ -20,6 +21,19 @@ module.exports = {
                 },
             },
             fontFamily: {
+                normal: [
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    'Segoe UI',
+                    'Roboto',
+                    'Oxygen',
+                    'Ubuntu',
+                    'Cantarell',
+                    'Fira Sans',
+                    'Droid Sans',
+                    'Helvetica Neue',
+                    'sans-serif',
+                ],
                 'Space-Grotesk': ['Space Grotesk'],
             },
         },
@@ -28,7 +42,7 @@ module.exports = {
             desktop: '1248px',
         },
         stroke: (theme) => ({
-            white: theme('colors.white')
+            white: theme('colors.white'),
         }),
     },
     variants: {

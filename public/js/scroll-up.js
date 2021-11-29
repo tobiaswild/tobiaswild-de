@@ -5,4 +5,4 @@ function topFunction() {
     document.documentElement.scrollTop = 0
 }
 
-mybutton.addEventListener('click', topFunction())
+mybutton.addEventListener('click', topFunction)

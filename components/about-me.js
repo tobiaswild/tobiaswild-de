@@ -1,5 +1,6 @@
-const data = [
-    { year: 2021, text: 'Web Dev Online Course' },
+const bio = [
+    { year: 2021, text: 'Web Development Online course ' },
+    { year: 2018, text: 'School differentiation course on HTML & CSS' },
     { year: 2005, text: 'Born in Germany' },
 ]
 
@@ -9,7 +10,7 @@ export default function AboutMe() {
             <h2>About Me</h2>
             <h3>Bio</h3>
             <ul className="grid-cols-1 gap-0 mt-0">
-                {data.map((card, index) => (
+                {bio.map((card, index) => (
                     <li key={index} className="">
                         <span className="font-semibold mr-4">{card.year}</span>
                         {card.text}
