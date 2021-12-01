@@ -30,7 +30,7 @@ export default function Nav() {
         <>
             <Script src="/js/scroll-up.js" />
             <nav className="fixed top-0 w-full h-14 z-10 overflow-hidden backdrop-blur">
-                <div className="flex justify-between tablet:max-w-3xl max-w-[96%] mx-auto">
+                <div className="flex justify-between tablet:w-[768px] max-w-[96%] mx-auto">
                     <a
                         id="top"
                         href="#"

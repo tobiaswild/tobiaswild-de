@@ -26,17 +26,17 @@ export default function Home() {
                     Hey, I&apos;m a full-stack developer based in Germany!
                 </div>
                 <article className="pt-0">
-                    <div className="float-right tablet:ml-6 rounded-full max-h-32 w-32 p-1  bg-gradient-to-br from-blue-700 to-pink-500">
+                    <div className="float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-gradient-to-br from-blue-700 to-pink-500">
                         <Image
                             src="/images/me.png"
-                            alt="headerImage"
+                            alt="Profile picture"
                             height={120}
                             width={120}
                             className="rounded-full"
                             priority
                         />
                     </div>
-                    <h1>Tobias Wild</h1>
+                    <h1 className="tablet:text-4xl text-3xl">Tobias Wild</h1>
                     <p>
                         I am a <span id="age">16</span> years old student from
                         Germany and I love coding. I started learning HTML and
