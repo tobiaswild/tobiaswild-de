@@ -31,7 +31,7 @@ const data = [
 
 export default function Technologies() {
     return (
-        <article id="technologies">
+        <section id="technologies">
             <h2>Technologies</h2>
             <ul>
                 {data.map((card, index) => (
@@ -45,6 +45,6 @@ export default function Technologies() {
                     </li>
                 ))}
             </ul>
-        </article>
+        </section>
     )
 }

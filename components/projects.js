@@ -34,7 +34,7 @@ const data = [
 
 export default function Projects() {
     return (
-        <article id="projects">
+        <section id="projects">
             <h2>Projects</h2>
             <ul className="desktop:grid-cols-2 grid-cols-1">
                 {data.map((card, index) => (
@@ -47,7 +47,7 @@ export default function Projects() {
                     </li>
                 ))}
             </ul>
-        </article>
+        </section>
     )
 }
 

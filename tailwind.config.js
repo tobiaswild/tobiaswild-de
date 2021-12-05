@@ -43,6 +43,11 @@ module.exports = {
         },
         stroke: (theme) => ({
             white: theme('colors.white'),
+            red: theme('colors.red'),
+        }),
+        fill: (theme) => ({
+            white: theme('colors.white'),
+            red: theme('colors.red'),
         }),
     },
     variants: {

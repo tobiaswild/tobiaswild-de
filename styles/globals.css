@@ -49,7 +49,7 @@
     h6 {
         @apply text-sm;
     }
-    article {
+    section {
         @apply pt-14;
     }
     ul {
@@ -73,4 +73,8 @@
     ::-webkit-scrollbar-thumb {
         @apply bg-skin-accent;
     }
+}
+
+.active {
+    @apply border-b-2 border-red-700;
 }

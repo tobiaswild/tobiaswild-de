@@ -20,12 +20,21 @@ export default function Home() {
                     content="width=device-width, initial-scale=1.0"
                 />
             </Head>
-            <Script src="/js/age.js" />
             <Layout home>
+                <header>
+                    <Image
+                        src="/images/me.png"
+                        alt="The Header Image"
+                        layout="responsive"
+                        height={350}
+                        width={800}
+                        priority
+                    />
+                </header>
                 <div className="rounded bg-skin-accent py-3 my-4 text-center w-full">
                     Hey, I&apos;m a full-stack developer based in Germany!
                 </div>
-                <article className="pt-0">
+                <section id="info" className="pt-0">
                     <div className="float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-gradient-to-br from-blue-700 to-pink-500">
                         <Image
                             src="/images/me.png"
@@ -45,10 +54,11 @@ export default function Home() {
                         mid 2021, I took an online course on web development
                         with ReactJS. Then I started learning and using NextJS.
                     </p>
-                </article>
+                </section>
                 <Projects />
                 <Technologies />
             </Layout>
+            <Script src="/js/age.js" />
         </>
     )
 }

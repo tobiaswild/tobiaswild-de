@@ -6,7 +6,7 @@ const bio = [
 
 export default function AboutMe() {
     return (
-        <article id="about-me">
+        <section id="about-me">
             <h2>About Me</h2>
             <h3>Bio</h3>
             <ul className="grid-cols-1 gap-0 mt-0">
@@ -17,6 +17,6 @@ export default function AboutMe() {
                     </li>
                 ))}
             </ul>
-        </article>
+        </section>
     )
 }

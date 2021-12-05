@@ -8,7 +8,7 @@ const data = [
 
 export default function Achievements() {
     return (
-        <article id="achievements">
+        <section id="achievements">
             <h2>Personal Achievements</h2>
             <ul>
                 {data.map((card, index) => (
@@ -18,6 +18,6 @@ export default function Achievements() {
                     </li>
                 ))}
             </ul>
-        </article>
+        </section>
     )
 }
