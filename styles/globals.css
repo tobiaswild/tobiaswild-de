@@ -10,6 +10,8 @@
         --color-background: #202023;
         --color-accent: #7289da;
         --color-see: rgba(32, 32, 35, 0.2);
+        --color-seebit: rgba(32, 32, 35, 0.4);
+        --color-seemore: rgba(32, 32, 35, 0.8);
         --color-shadow: #232355;
     }
     * {
@@ -17,7 +19,7 @@
     }
     html,
     body {
-        @apply p-0 m-0 font-normal text-base overflow-x-hidden select-none;
+        @apply p-0 m-0 font-normal text-base dark:bg-skin-background dark:text-skin-base overflow-x-hidden select-none;
         scroll-behavior: smooth;
     }
     a {
@@ -62,7 +64,7 @@
         @apply underline;
     }
     path {
-        @apply stroke-white;
+        @apply stroke-black dark:stroke-white fill-black dark:fill-white;
     }
     ::-webkit-scrollbar {
         @apply w-1;

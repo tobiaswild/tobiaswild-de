@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Script from 'next/script'
 import Layout from 'Components/layout'
 import Technologies from 'Components/technologies'
 import Projects from 'Components/projects'
+import useTranslation from 'next-translate/useTranslation'
 
 export default function Home() {
+    const { t } = useTranslation('common')
+
     return (
         <>
             <Head>
@@ -31,8 +33,8 @@ export default function Home() {
                         priority
                     />
                 </header>
-                <div className="rounded bg-skin-accent py-3 my-4 text-center w-full">
-                    Hey, I&apos;m a full-stack developer based in Germany!
+                <div className="rounded bg-skin-accent text-skin-base py-3 my-4 text-center w-full">
+                    {t('desc')}
                 </div>
                 <section id="info" className="pt-0">
                     <div className="float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-gradient-to-br from-blue-700 to-pink-500">
@@ -46,19 +48,11 @@ export default function Home() {
                         />
                     </div>
                     <h1 className="tablet:text-4xl text-3xl">Tobias Wild</h1>
-                    <p>
-                        I am a <span id="age">16</span> years old student from
-                        Germany and I love coding. I started learning HTML and
-                        CSS in mid 2018 when my school offered a differentiation
-                        course on it. And from there on I thought my self JS. In
-                        mid 2021, I took an online course on web development
-                        with ReactJS. Then I started learning and using NextJS.
-                    </p>
+                    <p>{t('info', { age: 16 })}</p>
                 </section>
                 <Projects />
                 <Technologies />
             </Layout>
-            <Script src="/js/age.js" />
         </>
     )
 }

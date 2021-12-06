@@ -1,5 +1,6 @@
 import { GrDeploy } from 'react-icons/gr'
 import { FaHtml5, FaCode, FaServer, FaDatabase } from 'react-icons/fa'
+import useTranslation from 'next-translate/useTranslation'
 
 const data = [
     {
@@ -30,9 +31,11 @@ const data = [
 ]
 
 export default function Technologies() {
+    const { t } = useTranslation('common')
+
     return (
         <section id="technologies">
-            <h2>Technologies</h2>
+            <h2>{t('technologies')}</h2>
             <ul>
                 {data.map((card, index) => (
                     <li key={index}>
@@ -40,7 +43,7 @@ export default function Technologies() {
                             <span className="text-2xl">{card.icon} </span>
                             <span className="ml-2">{card.name}</span>
                         </h3>
-                        <p>Experience with</p>
+                        <p>{t('experience')}</p>
                         <p>{card.text}</p>
                     </li>
                 ))}

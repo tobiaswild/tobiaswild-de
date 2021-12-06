@@ -4,7 +4,7 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
-    darkMode: false,
+    darkMode: 'media',
     theme: {
         extend: {
             textColor: {
@@ -18,6 +18,8 @@ module.exports = {
                     background: 'var(--color-background)',
                     accent: 'var(--color-accent)',
                     see: 'var(--color-see)',
+                    seebit: 'var(--color-seebit)',
+                    seemore: 'var(--color-seemore)',
                 },
             },
             fontFamily: {
@@ -36,6 +38,11 @@ module.exports = {
                 ],
                 'Space-Grotesk': ['Space Grotesk'],
             },
+            width: {
+                xl: '36rem',
+                '2xl': '42rem',
+                '3xl': '48rem',
+            },
         },
         screens: {
             tablet: '640px',
@@ -43,11 +50,11 @@ module.exports = {
         },
         stroke: (theme) => ({
             white: theme('colors.white'),
-            red: theme('colors.red'),
+            black: theme('colors.black'),
         }),
         fill: (theme) => ({
             white: theme('colors.white'),
-            red: theme('colors.red'),
+            black: theme('colors.black'),
         }),
     },
     variants: {

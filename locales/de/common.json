@@ -1,0 +1,7 @@
+{
+    "projects": "Projekte",
+    "technologies": "Technologien",
+    "experience": "Erfahrung mit",
+    "desc": "Hey, ich bin ein Full-Stack Entwickler aus Deutschland.",
+    "info": "Ich bin eine {{age}}-jähriger Schüler aus Deutschland und ich liebe das Programmieren. Ich habe Mitte 2018 angefangen, HTML und CSS zu lernen, als meine Schule einen Differenzierungskurs dazu angeboten hat. Und von da an habe ich mir selbst für JavaScript beigebracht. Mitte 2021 habe ich an einen Online-Kurs über Webentwicklung mit ReactJS teilgenommen. Danach habe ich angefangen, NextJS zu lernen und zu benutzen."
+}

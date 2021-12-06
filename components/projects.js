@@ -1,31 +1,32 @@
 import Link from 'next/link'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
+import useTranslation from 'next-translate/useTranslation'
 
 const data = [
     {
-        name: 'Storyblog',
-        text: 'A blog project for my girlfriend, because she really likes to write stories and texts.',
+        id: 'storyblog',
+        title: 'Storyblog',
         components: 'NextJS, TailwindCSS',
-        link: 'https://storyblog.netlify.app/',
+        web: 'https://storyblog.netlify.app/',
         github: 'storyblog',
     },
     {
-        name: 'JS Code Examples',
-        text: 'A collection of different JavaScript Examples,  I think could be useful for other projects in the future.',
+        id: 'js-code-examples',
+        title: 'JS Code Examples',
         components: 'HTML, CSS, JS',
-        link: 'https://tobiaswild.github.io/js-code-examples/',
+        web: 'https://tobiaswild.github.io/js-code-examples/',
         github: 'js-code-examples',
     },
     {
-        name: 'Facebook Clone',
-        text: 'Clone of Facebook I build in the web development online course. It is not fully finished. But it was the end project of the course.',
+        id: 'facebook-clone',
+        title: 'Facebook Clone',
         components: 'ReactJS, NodeJS',
         link: '',
         github: 'facebook-klon',
     },
     {
-        name: 'Timer Plugin',
-        text: 'A small Timer Plugin for Minecraft. Useful for speed runs or other Games when you have to track the time.',
+        id: 'timer-plugin',
+        title: 'Timer Plugin',
         components: 'Java',
         link: '',
         github: 'Timer',
@@ -33,16 +34,18 @@ const data = [
 ]
 
 export default function Projects() {
+    const { t } = useTranslation('projects')
+
     return (
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>{t('name')}</h2>
             <ul className="desktop:grid-cols-2 grid-cols-1">
                 {data.map((card, index) => (
                     <li key={index}>
-                        <h3>{card.name}</h3>
-                        <p>{card.text}</p>
+                        <h3>{card.title}</h3>
+                        <p>{t(`${card.id}.text`)}</p>
                         <p className="pl-5 my-1">{card.components}</p>
-                        <WebLink link={card.link} />
+                        <WebLink link={card.web} />
                         <GitHubLink github={card.github} />
                     </li>
                 ))}
@@ -52,7 +55,7 @@ export default function Projects() {
 }
 
 function WebLink({ link }) {
-    if (link == '') {
+    if (link == undefined) {
         return null
     }
     return (
@@ -70,7 +73,7 @@ function WebLink({ link }) {
 }
 
 function GitHubLink({ github }) {
-    if (github == '') {
+    if (github == undefined) {
         return null
     }
     return (
