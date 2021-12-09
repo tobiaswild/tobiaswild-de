@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Layout from 'Components/layout'
-import Technologies from 'Components/technologies'
-import Projects from 'Components/projects'
+import Layout from 'Components/Layout'
+import Technologies from 'Components/Technologies'
+import Projects from 'Components/Projects'
+import Contact from 'Components/Contact'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
                 />
             </Head>
             <Layout home>
-                <header>
+                <header id="top" className="header">
                     <Image
                         src="/images/me.png"
                         alt="The Header Image"
@@ -33,11 +34,9 @@ export default function Home() {
                         priority
                     />
                 </header>
-                <div className="rounded bg-skin-accent text-skin-base py-3 my-4 text-center w-full">
-                    {t('desc')}
-                </div>
-                <section id="info" className="pt-0">
-                    <div className="float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-gradient-to-br from-blue-700 to-pink-500">
+                <div className="bar">{t('desc')}</div>
+                <section id="info">
+                    <div>
                         <Image
                             src="/images/me.png"
                             alt="Profile picture"
@@ -47,11 +46,12 @@ export default function Home() {
                             priority
                         />
                     </div>
-                    <h1 className="tablet:text-4xl text-3xl">Tobias Wild</h1>
+                    <h1>Tobias Wild</h1>
                     <p>{t('info', { age: 16 })}</p>
                 </section>
                 <Projects />
                 <Technologies />
+                <Contact />
             </Layout>
         </>
     )

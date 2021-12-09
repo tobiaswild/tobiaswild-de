@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -8,28 +9,28 @@ const data = [
         title: 'Storyblog',
         components: 'NextJS, TailwindCSS',
         web: 'https://storyblog.netlify.app/',
-        github: 'storyblog',
+        github: 'tobiaswild/storyblog',
     },
     {
         id: 'js-code-examples',
         title: 'JS Code Examples',
         components: 'HTML, CSS, JS',
         web: 'https://tobiaswild.github.io/js-code-examples/',
-        github: 'js-code-examples',
+        github: 'tobiaswild/js-code-examples',
     },
     {
         id: 'facebook-clone',
         title: 'Facebook Clone',
         components: 'ReactJS, NodeJS',
         link: '',
-        github: 'facebook-klon',
+        github: 'tobiaswild/facebook-klon',
     },
     {
         id: 'timer-plugin',
         title: 'Timer Plugin',
         components: 'Java',
         link: '',
-        github: 'Timer',
+        github: 'tobiaswild/Timer',
     },
 ]
 
@@ -38,18 +39,33 @@ export default function Projects() {
 
     return (
         <section id="projects">
-            <h2>{t('name')}</h2>
-            <ul className="desktop:grid-cols-2 grid-cols-1">
+            <h2 className="section-header">{t('title')}</h2>
+            <div className="projects-container">
                 {data.map((card, index) => (
-                    <li key={index}>
-                        <h3>{card.title}</h3>
-                        <p>{t(`${card.id}.text`)}</p>
-                        <p className="pl-5 my-1">{card.components}</p>
-                        <WebLink link={card.web} />
-                        <GitHubLink github={card.github} />
-                    </li>
+                    <div key={index} className="project">
+                        <div className="project-image">
+                            <Image
+                                src={`/images/${card.id}.png`}
+                                alt={`Project Picture of ${card.title}`}
+                                height={720}
+                                width={1280}
+                                priority
+                            />
+                        </div>
+                        <div className="project-info">
+                            <h3 className="project-title">{card.title}</h3>
+                            <p className="project-text">
+                                {t(`${card.id}.text`)}
+                            </p>
+                            <p className="project-components">
+                                {card.components}
+                            </p>
+                            <WebLink link={card.web} />
+                            <GitHubLink github={card.github} />
+                        </div>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </section>
     )
 }
@@ -61,8 +77,8 @@ function WebLink({ link }) {
     return (
         <p>
             <Link href={`${link}`} passHref>
-                <a target="_blank" className="flex items-center">
-                    <span className="mr-1">
+                <a target="_blank" className="project-link">
+                    <span>
                         <FaGlobe />
                     </span>
                     View on the Web
@@ -78,9 +94,9 @@ function GitHubLink({ github }) {
     }
     return (
         <p>
-            <Link href={`https://github.com/tobiaswild/${github}`} passHref>
-                <a target="_blank" className="flex items-center">
-                    <span className="mr-1">
+            <Link href={`https://github.com/${github}`} passHref>
+                <a target="_blank" className="project-link">
+                    <span>
                         <FaGithub />
                     </span>
                     View on GitHub

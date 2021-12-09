@@ -17,9 +17,6 @@ module.exports = {
                 skin: {
                     background: 'var(--color-background)',
                     accent: 'var(--color-accent)',
-                    see: 'var(--color-see)',
-                    seebit: 'var(--color-seebit)',
-                    seemore: 'var(--color-seemore)',
                 },
             },
             fontFamily: {
@@ -42,20 +39,22 @@ module.exports = {
                 xl: '36rem',
                 '2xl': '42rem',
                 '3xl': '48rem',
+                '4xl': '56rem',
+            },
+            fill: {
+                accent: 'var(--color-accent)',
+            },
+            from: {
+                accent: 'var(--color-accent)',
+            },
+            to: {
+                accent: 'var(--color-accent)',
             },
         },
         screens: {
             tablet: '640px',
             desktop: '1248px',
         },
-        stroke: (theme) => ({
-            white: theme('colors.white'),
-            black: theme('colors.black'),
-        }),
-        fill: (theme) => ({
-            white: theme('colors.white'),
-            black: theme('colors.black'),
-        }),
     },
     variants: {
         extend: {},

@@ -1,53 +1,146 @@
-import { GrDeploy } from 'react-icons/gr'
-import { FaHtml5, FaCode, FaServer, FaDatabase } from 'react-icons/fa'
+import Image from 'next/image'
+import {
+    FaHtml5,
+    FaCode,
+    FaCss3,
+    FaJs,
+    FaReact,
+    FaGithub,
+    FaGitAlt,
+    FaNodeJs,
+} from 'react-icons/fa'
+import {
+    SiHeroku,
+    SiMongodb,
+    SiNetlify,
+    SiSqlite,
+    SiTailwindcss,
+    SiVisualstudiocode,
+} from 'react-icons/si'
 import useTranslation from 'next-translate/useTranslation'
 
-const data = [
+const frontend = [
     {
         icon: <FaHtml5 />,
-        name: 'Frontend',
-        text: 'HTML, CSS, JS, ReactJS, NextJS',
+        name: 'HTML5',
     },
     {
-        icon: <FaServer />,
-        name: 'Backend',
-        text: 'NodeJS',
+        icon: <FaCss3 />,
+        name: 'CSS3',
     },
     {
-        icon: <FaDatabase />,
+        icon: <FaJs />,
+        name: 'JavaScript',
+    },
+    {
+        icon: <FaReact />,
+        name: 'ReactJS',
+    },
+    {
+        icon: (
+            <Image
+                alt="nextjs"
+                src="/icons/nextjs.svg"
+                height={36}
+                width={36}
+            />
+        ),
+        name: 'NextJS',
+    },
+    {
+        icon: <SiTailwindcss />,
+        name: 'TailwindCSS',
+    },
+]
+
+const backend = [
+    {
+        icon: <FaNodeJs />,
+        name: 'NodeJS',
+    },
+
+    {
+        icon: <SiMongodb />,
+        name: 'MongoDB',
+    },
+    {
+        icon: <SiSqlite />,
         name: 'Databases',
-        text: 'MongoDB, SQL',
-    },
-    {
-        icon: <GrDeploy />,
-        name: 'Deployment',
-        text: 'Netlify, Heroku',
     },
     {
         icon: <FaCode />,
         name: 'Other',
-        text: 'Java and Python',
+    },
+]
+
+const general = [
+    {
+        icon: <FaGitAlt />,
+        name: 'Git',
+    },
+    {
+        icon: <FaGithub />,
+        name: 'GitHub',
+    },
+    {
+        icon: <SiNetlify />,
+        name: 'Netlify',
+    },
+    {
+        icon: <SiHeroku />,
+        name: 'Heroku',
+    },
+    {
+        icon: <SiVisualstudiocode />,
+        name: 'VS Code',
     },
 ]
 
 export default function Technologies() {
-    const { t } = useTranslation('common')
+    const { t } = useTranslation('technologies')
 
     return (
-        <section id="technologies">
-            <h2>{t('technologies')}</h2>
-            <ul>
-                {data.map((card, index) => (
-                    <li key={index}>
-                        <h3 className="flex items-center">
-                            <span className="text-2xl">{card.icon} </span>
-                            <span className="ml-2">{card.name}</span>
-                        </h3>
-                        <p>{t('experience')}</p>
-                        <p>{card.text}</p>
-                    </li>
-                ))}
-            </ul>
+        <section id="technologies" className="toolbox-cards-wrapper">
+            <h2 className="section-header">{t('title')}</h2>
+            <div className="toolbox-card">
+                <h3 className="toolbox-card-header">Front-end</h3>
+                <div className="tools-container">
+                    <ul>
+                        {frontend.map((card, index) => (
+                            <li key={index} className="tool">
+                                <span className="tool-icon">{card.icon}</span>
+                                {card.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="toolbox-card">
+                <h3 className="toolbox-card-header">Back-end</h3>
+                <div className="tools-container">
+                    <ul>
+                        {backend.map((card, index) => (
+                            <li key={index} className="tool">
+                                <span className="tool-icon">{card.icon}</span>
+                                {card.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="toolbox-card">
+                <h3 className="toolbox-card-header">General</h3>
+                <div className="tools-container">
+                    <ul>
+                        {general.map((card, index) => (
+                            <li key={index} className="tool">
+                                <span className="tool-icon">{card.icon}</span>
+                                {card.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </section>
     )
 }

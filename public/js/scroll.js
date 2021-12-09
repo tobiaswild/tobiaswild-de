@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll('section')
-const navLi = document.querySelectorAll('nav div div a')
+const navLi = document.querySelectorAll('#all > nav > div > div > a')
 
 window.addEventListener('scroll', () => {
     let current = ''
@@ -14,6 +14,7 @@ window.addEventListener('scroll', () => {
         a.classList.remove('active')
         if (a.classList.contains(current)) {
             a.classList.add('active')
+            console.log(a)
         }
     })
 })

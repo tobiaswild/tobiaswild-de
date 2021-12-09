@@ -1,19 +1,6 @@
-let all = document.getElementById('all')
-let popup = document.getElementById('popup')
+let body = document.getElementsByTagName('body')[0]
 
-all.addEventListener('contextmenu', function (e) {
-    e.preventDefault()
-    popup.style.setProperty('visibility', 'visible')
-    return false
-})
-
-popup.addEventListener('mousedown', function (e) {
-    e.preventDefault()
-    popup.style.setProperty('visibility', 'hidden')
-    return false
-})
-
-popup.addEventListener('contextmenu', function (e) {
-    e.preventDefault()
+body.addEventListener('contextmenu', function (event) {
+    event.preventDefault()
     return false
 })

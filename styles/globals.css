@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk');
 
 @tailwind base;
 @tailwind components;
@@ -9,10 +9,6 @@
         --color-text: #ffffff;
         --color-background: #202023;
         --color-accent: #7289da;
-        --color-see: rgba(32, 32, 35, 0.2);
-        --color-seebit: rgba(32, 32, 35, 0.4);
-        --color-seemore: rgba(32, 32, 35, 0.8);
-        --color-shadow: #232355;
     }
     * {
         @apply box-border;
@@ -51,21 +47,11 @@
     h6 {
         @apply text-sm;
     }
+
     section {
-        @apply pt-14;
+        @apply pt-32 tablet:pt-14;
     }
-    ul {
-        @apply grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-10 my-4;
-    }
-    ul li {
-        @apply p-2;
-    }
-    ul li a:hover {
-        @apply underline;
-    }
-    path {
-        @apply stroke-black dark:stroke-white fill-black dark:fill-white;
-    }
+
     ::-webkit-scrollbar {
         @apply w-1;
     }
@@ -77,6 +63,132 @@
     }
 }
 
+@layer components {
+    #all {
+        @apply w-screen min-h-screen h-full;
+    }
+    .wrapper {
+        @apply desktop:w-3xl tablet:w-2xl max-w-[90%] mx-auto;
+    }
+
+    .nav {
+        @apply fixed top-0 w-full z-10 overflow-hidden dark:bg-transparent backdrop-blur;
+    }
+    .nav-container {
+        @apply flex flex-col tablet:flex-row tablet:justify-between tablet:w-4xl max-w-[95%] mx-auto;
+    }
+    .logo {
+        @apply rounded font-Space-Grotesk desktop:text-2xl tablet:text-xl text-lg items-center p-2 tablet:m-1 m-2;
+    }
+    .nav-link {
+        @apply h-10 max-w-sm w-auto flex items-center p-2 m-2 text-gray-400;
+    }
+
+    .header {
+        @apply pt-32 tablet:pt-16;
+    }
+    .bar {
+        @apply shadow-sm rounded bg-skin-accent text-skin-base py-3 my-4 text-center w-full;
+    }
+    #info {
+        @apply pt-0;
+    }
+    #info div {
+        @apply float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-skin-accent;
+    }
+    #info h1 {
+        @apply tablet:text-4xl text-3xl;
+    }
+
+    #contact {
+        @apply bg-gray-800 rounded-xl;
+    }
+    .contactform {
+        @apply tablet:w-4/5 mx-auto;
+    }
+    .contactform input,
+    .contactform textarea {
+        @apply w-full p-1 outline-none text-black;
+    }
+    .contactform label {
+        @apply leading-8;
+    }
+    .contactform input[type='submit'] {
+        @apply bg-skin-accent p-1 mt-2 font-bold text-white;
+    }
+    .contactform fieldset {
+        @apply py-2 tablet:py-5 px-4 tablet:px-10;
+    }
+
+    .footer {
+        @apply py-8 text-center text-gray-500 text-sm;
+    }
+
+    .section-header {
+        @apply font-black leading-none text-center text-4xl tablet:text-5xl mb-8 tablet:mb-16;
+    }
+
+    .toolbox-cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .toolbox-card {
+        @apply py-4 flex items-center flex-col;
+    }
+    .tools-container ul {
+        @apply flex flex-row flex-wrap justify-center;
+    }
+    .tool {
+        @apply rounded-lg h-28 w-28 p-4 m-2 shadow-sm flex justify-end items-center flex-col bg-gray-800;
+    }
+    .tool-icon {
+        @apply text-4xl;
+    }
+    .tool-icon svg {
+        @apply fill-accent;
+    }
+
+    .projects-container {
+        @apply mx-auto grid grid-flow-row tablet:grid-cols-2 gap-4;
+    }
+    .project {
+        @apply rounded-lg p-4 bg-gray-800 shadow-sm;
+    }
+    .project-image {
+        @apply rounded;
+    }
+    .project-info {
+        @apply rounded-xl;
+    }
+    .project-title {
+    }
+    .project-text::first-letter {
+    }
+    .project-components {
+        @apply pl-5 my-1;
+    }
+    .project-link {
+        @apply flex items-center;
+    }
+    .project-link:hover {
+        @apply underline;
+    }
+    .project-link span {
+        @apply mr-1;
+    }
+
+    .list {
+        @apply grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-10 my-4;
+    }
+    .list li {
+        @apply p-2;
+    }
+    .list li a:hover {
+        @apply underline;
+    }
+}
+
 .active {
-    @apply border-b-2 border-red-700;
+    @apply text-skin-accent;
 }
