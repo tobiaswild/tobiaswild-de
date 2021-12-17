@@ -15,8 +15,7 @@
     }
     html,
     body {
-        @apply p-0 m-0 font-normal text-base dark:bg-skin-background dark:text-skin-base overflow-x-hidden select-none;
-        scroll-behavior: smooth;
+        @apply p-0 m-0 font-normal dark:bg-background dark:text-base overflow-x-hidden select-none scroll-smooth;
     }
     a {
         @apply no-underline;
@@ -29,12 +28,15 @@
     h6 {
         @apply font-Space-Grotesk font-semibold;
     }
+    /* JUST MY NAME */
     h1 {
         @apply text-4xl font-black;
     }
+    /* SECTION HEADERS */
     h2 {
-        @apply text-3xl font-extrabold;
+        @apply font-black leading-none text-center text-4xl tablet:text-5xl mb-8 tablet:mb-16;
     }
+    /* SUB-SECTION HEADERS */
     h3 {
         @apply text-2xl font-bold;
     }
@@ -49,21 +51,22 @@
     }
 
     section {
-        @apply pt-32 tablet:pt-14;
+        @apply py-12 scroll-mt-24 tablet:scroll-mt-12;
     }
 
     ::-webkit-scrollbar {
         @apply w-1;
     }
-    ::-webkit-scrollbar-track {
-        @apply bg-skin-background;
-    }
     ::-webkit-scrollbar-thumb {
-        @apply bg-skin-accent;
+        @apply bg-accent rounded-xl;
     }
 }
 
 @layer components {
+    .box {
+        @apply rounded-xl shadow shadow-gray-300 dark:shadow-gray-800 bg-gray-300 dark:bg-gray-800;
+    }
+
     #all {
         @apply w-screen min-h-screen h-full;
     }
@@ -72,60 +75,96 @@
     }
 
     .nav {
-        @apply fixed top-0 w-full z-10 overflow-hidden dark:bg-transparent backdrop-blur;
+        @apply fixed top-0 w-full z-10 overflow-hidden bg-white dark:bg-background;
     }
     .nav-container {
         @apply flex flex-col tablet:flex-row tablet:justify-between tablet:w-4xl max-w-[95%] mx-auto;
     }
     .logo {
-        @apply rounded font-Space-Grotesk desktop:text-2xl tablet:text-xl text-lg items-center p-2 tablet:m-1 m-2;
+        @apply font-Space-Grotesk text-2xl items-center p-2 m-2;
+    }
+    .nav-links {
+        @apply flex flex-row;
     }
     .nav-link {
-        @apply h-10 max-w-sm w-auto flex items-center p-2 m-2 text-gray-400;
+        @apply h-10 max-w-sm w-auto flex items-center p-2 m-2 text-gray-700 dark:text-gray-400;
     }
 
     .header {
         @apply pt-32 tablet:pt-16;
     }
     .bar {
-        @apply shadow-sm rounded bg-skin-accent text-skin-base py-3 my-4 text-center w-full;
+        @apply shadow-sm rounded-xl bg-accent text-base py-3 my-4 text-center w-full;
     }
     #info {
         @apply pt-0;
     }
     #info div {
-        @apply float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-skin-accent;
+        @apply float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-accent;
     }
     #info h1 {
         @apply tablet:text-4xl text-3xl;
     }
 
+    /* CONTACT FORM */
     #contact {
-        @apply bg-gray-800 rounded-xl;
+        @apply box;
     }
-    .contactform {
+    .form {
         @apply tablet:w-4/5 mx-auto;
     }
-    .contactform input,
-    .contactform textarea {
-        @apply w-full p-1 outline-none text-black;
-    }
-    .contactform label {
-        @apply leading-8;
-    }
-    .contactform input[type='submit'] {
-        @apply bg-skin-accent p-1 mt-2 font-bold text-white;
-    }
-    .contactform fieldset {
+
+    .form fieldset {
         @apply py-2 tablet:py-5 px-4 tablet:px-10;
+    }
+    .form-item {
+        @apply w-full relative h-20 overflow-hidden;
+    }
+    .form-item input,
+    .form-item textarea {
+        @apply w-full h-full dark:text-white box pt-5 border-none outline-none;
+    }
+    .form-item label {
+        @apply absolute bottom-0 left-0 h-full w-full pointer-events-none border-b-2 border-solid border-black;
+    }
+    .form-item label::after {
+        @apply absolute left-0 bottom-[-2px] h-full w-full border-b-4 border-solid border-accent transition-all;
+        content: '';
+        transition-duration: 0.3s;
+        transform: translateX(-101%);
+    }
+    /* NAME FIELD */
+    .content {
+        @apply absolute bottom-1 left-0 transition-all;
+        transition-duration: 0.3s;
+    }
+    /* small problem with email field here. if no "sth@sth" then it does not detect as valid */
+    .form-item input:focus + .label .content,
+    .form-item input:valid + .label .content,
+    .form-item textarea:focus + .label .content,
+    .form-item textarea:valid + .label .content {
+        transform: translateY(-150%);
+        @apply text-lg font-medium text-accent;
+    }
+    .form-item input:focus + .label::after,
+    .form-item input:valid + .label::after,
+    .form-item textarea:focus + .label::after,
+    .form-item textarea:valid + .label::after {
+        transform: translatex(0%);
+    }
+    /* SUB FROM */
+    .form .submit-btn {
+        @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
+    }
+    .or-email {
+        @apply text-center pt-2 tablet:pt-5;
+    }
+    .or-email a {
+        @apply underline hover:decoration-accent;
     }
 
     .footer {
         @apply py-8 text-center text-gray-500 text-sm;
-    }
-
-    .section-header {
-        @apply font-black leading-none text-center text-4xl tablet:text-5xl mb-8 tablet:mb-16;
     }
 
     .toolbox-cards-wrapper {
@@ -140,7 +179,7 @@
         @apply flex flex-row flex-wrap justify-center;
     }
     .tool {
-        @apply rounded-lg h-28 w-28 p-4 m-2 shadow-sm flex justify-end items-center flex-col bg-gray-800;
+        @apply box h-28 w-28 p-4 m-2 flex justify-end items-center flex-col;
     }
     .tool-icon {
         @apply text-4xl;
@@ -153,10 +192,10 @@
         @apply mx-auto grid grid-flow-row tablet:grid-cols-2 gap-4;
     }
     .project {
-        @apply rounded-lg p-4 bg-gray-800 shadow-sm;
+        @apply box p-4 shadow;
     }
     .project-image {
-        @apply rounded;
+        @apply rounded-xl;
     }
     .project-info {
         @apply rounded-xl;
@@ -189,6 +228,9 @@
     }
 }
 
+@layer utilities {
+}
+
 .active {
-    @apply text-skin-accent;
+    @apply text-accent;
 }

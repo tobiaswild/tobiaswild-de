@@ -1,9 +1,7 @@
 {
     "title": "Kontakt",
     "your-name": "Dein Name",
-    "your-email": "Deine Email-Adresse",
+    "your-email": "Deine Email",
     "your-message": "Deine Nachricht",
-    "enter-your-name": "Trage deinen Name ein",
-    "enter-your-email": "Trage deine Email-Adresse ein",
-    "enter-your-message": "Trage deine Nachricht ein"
+    "or-email": "Oder schreibe mir eine Email an:"
 }

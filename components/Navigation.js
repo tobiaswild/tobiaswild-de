@@ -1,19 +1,10 @@
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
-import { FaCode } from 'react-icons/fa'
 
 const data = [{ id: 'projects' }, { id: 'technologies' }, { id: 'contact' }]
 
 export default function Nav() {
     const { t } = useTranslation()
-
-    function NavItem({ id, children }) {
-        return (
-            <Link href={`javascript:goTo("${id}");`} passHref>
-                <a className={`${id} nav-link`}>{children}</a>
-            </Link>
-        )
-    }
 
     return (
         <nav className="nav">
@@ -21,11 +12,16 @@ export default function Nav() {
                 <a href="javascript:goTo('top');" className="logo">
                     Tobias Wild
                 </a>
-                <div className="flex flex-row">
+                <div className="nav-links">
                     {data.map((card, index) => (
-                        <NavItem key={index} id={card.id}>
-                            {t(`${card.id}:title`)}
-                        </NavItem>
+                        <Link
+                            key={index}
+                            href={`javascript:goTo("${card.id}");`}
+                            passHref>
+                            <a className={`${card.id} nav-link`}>
+                                {t(`${card.id}:title`)}
+                            </a>
+                        </Link>
                     ))}
                 </div>
             </div>

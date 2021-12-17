@@ -7,7 +7,7 @@ const bio = [
 export default function AboutMe() {
     return (
         <section id="about-me">
-            <h2 className="section-header">About Me</h2>
+            <h2>About Me</h2>
             <h3>Bio</h3>
             <ul className="grid-cols-1 gap-0 mt-0">
                 {bio.map((card, index) => (

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function Contact() {
@@ -5,47 +6,60 @@ export default function Contact() {
 
     return (
         <section id="contact">
-            <h2 className="section-header">{t('title')}</h2>
+            <h2>{t('title')}</h2>
             <form
-                className="contactform"
+                className="form"
                 name="contact"
+                autoComplete="off"
+                action="https://getform.io/f/6dc37dda-1b69-4324-9586-5d78b174fde1"
                 method="POST"
                 data-netlify="true">
                 <fieldset>
-                    <div className="form-control">
-                        <label htmlFor="name">{t('your-name')}</label>
+                    <div className="form-item">
                         <input
-                            type="name"
-                            id="name"
-                            placeholder={t('enter-your-name')}
+                            type="text"
+                            name="name"
+                            autoComplete="off"
                             required
                         />
+                        <label htmlFor="name" className="label">
+                            <span className="content">{t('your-name')}</span>
+                        </label>
                     </div>
-
-                    <div className="form-control">
-                        <label htmlFor="email">{t('your-email')}</label>
+                    <div className="form-item">
                         <input
                             type="email"
-                            id="email"
-                            placeholder={t('enter-your-email')}
+                            name="email"
+                            autoComplete="off"
                             required
                         />
+                        <label htmlFor="email" className="label">
+                            <span className="content">{t('your-email')}</span>
+                        </label>
                     </div>
-
-                    <div className="form-control">
-                        <label htmlFor="message">{t('your-message')}</label>
-                        <textarea
-                            id="message"
-                            cols="30"
-                            rows="10"
-                            placeholder={t('enter-your-message')}
-                            required></textarea>
+                    <div className="form-item">
+                        {/* USE TEXTAREA INSTEAD OF INPUT HERE */}
+                        <input
+                            type="text"
+                            name="message"
+                            autoComplete="off"
+                            required
+                        />
+                        <label htmlFor="message" className="label">
+                            <span className="content">{t('your-message')}</span>
+                        </label>
                     </div>
                     <input
                         type="submit"
                         value="Senden!"
                         className="submit-btn"
                     />
+                    <p className="or-email">
+                        {t('or-email')}{' '}
+                        <Link href="mailto:hello@tobiaswild.de">
+                            <a target="_blank">hello@tobiaswild.de</a>
+                        </Link>
+                    </p>
                 </fieldset>
             </form>
         </section>

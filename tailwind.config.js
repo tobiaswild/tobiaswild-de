@@ -7,17 +7,10 @@ module.exports = {
     darkMode: 'media',
     theme: {
         extend: {
-            textColor: {
-                skin: {
-                    base: 'var(--color-text)',
-                    accent: 'var(--color-accent)',
-                },
-            },
-            backgroundColor: {
-                skin: {
-                    background: 'var(--color-background)',
-                    accent: 'var(--color-accent)',
-                },
+            colors: {
+                base: 'var(--color-text)',
+                accent: 'var(--color-accent)',
+                background: 'var(--color-background)',
             },
             fontFamily: {
                 normal: [
@@ -40,15 +33,6 @@ module.exports = {
                 '2xl': '42rem',
                 '3xl': '48rem',
                 '4xl': '56rem',
-            },
-            fill: {
-                accent: 'var(--color-accent)',
-            },
-            from: {
-                accent: 'var(--color-accent)',
-            },
-            to: {
-                accent: 'var(--color-accent)',
             },
         },
         screens: {

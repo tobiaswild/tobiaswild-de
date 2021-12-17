@@ -2,6 +2,6 @@
     "locales": ["de", "en"],
     "defaultLocale": "de",
     "pages": {
-        "*": ["common", "contact", "projects", "technologies"]
+        "*": ["certificates", "common", "contact", "projects", "technologies"]
     }
 }

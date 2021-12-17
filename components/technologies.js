@@ -65,7 +65,7 @@ const backend = [
     },
     {
         icon: <SiSqlite />,
-        name: 'Databases',
+        name: 'SQL-DBs',
     },
     {
         icon: <FaCode />,
@@ -101,9 +101,9 @@ export default function Technologies() {
 
     return (
         <section id="technologies" className="toolbox-cards-wrapper">
-            <h2 className="section-header">{t('title')}</h2>
+            <h2>{t('title')}</h2>
             <div className="toolbox-card">
-                <h3 className="toolbox-card-header">Front-end</h3>
+                <h3 className="toolbox-card-header">Frontend</h3>
                 <div className="tools-container">
                     <ul>
                         {frontend.map((card, index) => (
@@ -116,7 +116,7 @@ export default function Technologies() {
                 </div>
             </div>
             <div className="toolbox-card">
-                <h3 className="toolbox-card-header">Back-end</h3>
+                <h3 className="toolbox-card-header">Backend</h3>
                 <div className="tools-container">
                     <ul>
                         {backend.map((card, index) => (

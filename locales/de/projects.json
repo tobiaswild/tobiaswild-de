@@ -1,5 +1,7 @@
 {
     "title": "Projekte",
+    "view-web": "Zeige es mir im Web",
+    "view-github": "Zeige es mir auf GitHub",
     "storyblog": {
         "text": "Ein Blog Projekt für meine Freundin, weil sie sehr gerne Geschichten und Texte schreibt."
     },
@@ -7,6 +9,7 @@
         "text": "Eine Sammlung von verschiedenen JavaScript Beispielen, die für andere Projekte in Zukunft nützlich sein könnten."
     },
     "facebook-clone": {
+        "name": "Facebook Klon",
         "text": "Ein Klon von Facebook, den ich im Web-Entwicklung Online-Kurs programmiert habe. Ist nicht vollständig funktionstüchig. Aber es war das Endprojekt des Kurses."
     },
     "timer-plugin": {
