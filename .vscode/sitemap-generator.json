@@ -4,13 +4,13 @@
         "DomainName": "tobiaswild.de",
         "Root": "./pages",
         "IncludeExt": [".js"],
-        "Exclude": ["_app.js"],
+        "Exclude": ["_app.js", "test.js"],
         "TagsToInclude": ["priority", "lastmod"],
         "DefaultChangeFrequency": "monthly",
         "TabCharacters": "\t",
         "bIncludeWWW": false,
         "bRemoveFileExtentions": true,
-        "bUseTrailingSlash": true,
+        "bUseTrailingSlash": false,
         "bAutomaticallyUpdateSitemap": true,
         "bMinimized": false
     }

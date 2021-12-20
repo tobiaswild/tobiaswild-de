@@ -226,6 +226,18 @@
     .list li a:hover {
         @apply underline;
     }
+
+    .faq-button {
+        @apply flex justify-between w-full px-4 py-2 text-sm font-medium text-left bg-accent rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75;
+    }
+
+    .faq-icon {
+        @apply w-5 h-5;
+    }
+
+    .faq-panel {
+        @apply px-4 pt-4 pb-2 text-sm;
+    }
 }
 
 @layer utilities {

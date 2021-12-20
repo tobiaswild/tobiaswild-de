@@ -11,7 +11,6 @@ export default function Contact() {
                 className="form"
                 name="contact"
                 autoComplete="off"
-                action="https://getform.io/f/6dc37dda-1b69-4324-9586-5d78b174fde1"
                 method="POST"
                 data-netlify="true">
                 <fieldset>
