@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 
-const data = [{ id: 'projects' }, { id: 'technologies' }, { id: 'contact' }]
+const nav = [{ id: 'projects' }, { id: 'technologies' }, { id: 'contact' }]
 
-export default function Nav() {
+const navblog = [{ name: 'Test' }]
+
+export function Navigation() {
     const { t } = useTranslation()
 
     return (
@@ -13,7 +15,7 @@ export default function Nav() {
                     Tobias Wild
                 </a>
                 <div className="nav-links">
-                    {data.map((card, index) => (
+                    {nav.map((card, index) => (
                         <Link
                             key={index}
                             href={`javascript:goTo("${card.id}");`}
@@ -21,6 +23,25 @@ export default function Nav() {
                             <a className={`${card.id} nav-link`}>
                                 {t(`${card.id}:title`)}
                             </a>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </nav>
+    )
+}
+
+export function NavigationOther() {
+    return (
+        <nav className="nav">
+            <div className="nav-container">
+                <Link href="/">
+                    <a className="logo">Tobias Wild</a>
+                </Link>
+                <div className="nav-links">
+                    {navblog.map((card, index) => (
+                        <Link key={index} href="/" passHref>
+                            <a className="nav-link">{card.name}</a>
                         </Link>
                     ))}
                 </div>

@@ -129,7 +129,7 @@ export default function Technologies() {
                 </div>
             </div>
             <div className="toolbox-card">
-                <h3 className="toolbox-card-header">General</h3>
+                <h3 className="toolbox-card-header">{t('general')}</h3>
                 <div className="tools-container">
                     <ul>
                         {general.map((card, index) => (

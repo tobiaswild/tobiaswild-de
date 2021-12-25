@@ -50,6 +50,10 @@
         @apply text-sm;
     }
 
+    main {
+        @apply pt-32 tablet:pt-16;
+    }
+
     section {
         @apply py-12 scroll-mt-24 tablet:scroll-mt-12;
     }
@@ -67,11 +71,12 @@
         @apply rounded-xl shadow shadow-gray-300 dark:shadow-gray-800 bg-gray-300 dark:bg-gray-800;
     }
 
-    #all {
-        @apply w-screen min-h-screen h-full;
-    }
     .wrapper {
         @apply desktop:w-3xl tablet:w-2xl max-w-[90%] mx-auto;
+    }
+
+    .header {
+        @apply scroll-mt-24 tablet:scroll-mt-12;
     }
 
     .nav {
@@ -90,9 +95,6 @@
         @apply h-10 max-w-sm w-auto flex items-center p-2 m-2 text-gray-700 dark:text-gray-400;
     }
 
-    .header {
-        @apply pt-32 tablet:pt-16;
-    }
     .bar {
         @apply shadow-sm rounded-xl bg-accent text-base py-3 my-4 text-center w-full;
     }

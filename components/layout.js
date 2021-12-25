@@ -1,20 +1,17 @@
 import Script from 'next/script'
-import Navigation from './Navigation'
+import { Navigation, NavigationOther } from './Navigation'
 import Footer from './Footer'
 
-export default function Layout({ children, home, test }) {
+export default function Layout({ children, home }) {
     return (
         <>
-            <div id="all">
-                {home && <Navigation />}
-                <div className="wrapper">
-                    <main>{children}</main>
-                    {!test && <Footer />}
-                </div>
+            {home && <Navigation />}
+            {!home && <NavigationOther />}
+            <div className="wrapper">
+                <main>{children}</main>
+                <Footer />
             </div>
-
-            <Script src="/js/scroll.js" />
-            <Script src="/js/context.js" />
+            <Script src="/js/script.js" />
         </>
     )
 }

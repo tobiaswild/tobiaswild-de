@@ -1,11 +1,17 @@
-const sections = document.querySelectorAll('section')
-const navLi = document.querySelectorAll('#all > nav > div > div > a')
+let body = document.getElementsByTagName('body')[0]
+let navLi = document.querySelectorAll('nav > div > div > a')
+let sections = document.querySelectorAll('section')
+
+body.addEventListener('contextmenu', function (event) {
+    event.preventDefault()
+    return false
+})
 
 window.addEventListener('scroll', () => {
     let current = ''
     sections.forEach((section) => {
-        const sectionTop = section.offsetTop
-        const sectionHeight = section.clientHeight
+        let sectionTop = section.offsetTop
+        let sectionHeight = section.clientHeight
         if (scrollY >= sectionTop - sectionHeight / 2) {
             current = section.getAttribute('id')
         }

@@ -38,11 +38,12 @@ export default function AboutMe() {
                                 </span>
                                 <FaArrowDown
                                     className={`${
-                                        open ? 'transform rotate-180' : ''
+                                        open
+                                            ? 'transform rotate-180 transition-transform'
+                                            : ''
                                     } faq-icon`}
                                 />
                             </Disclosure.Button>
-
                             <Disclosure.Panel className="faq-panel">
                                 {card.message}
                             </Disclosure.Panel>
