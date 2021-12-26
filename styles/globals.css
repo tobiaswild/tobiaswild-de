@@ -65,6 +65,9 @@
     form fieldset {
         @apply py-2 tablet:py-5 px-4 tablet:px-10;
     }
+    form .submit-btn {
+        @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
+    }
 
     ::-webkit-scrollbar {
         @apply w-1;
@@ -163,9 +166,7 @@
         transform: translatex(0%);
     }
     /* SUB FROM */
-    .form .submit-btn {
-        @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
-    }
+
     .or-email {
         @apply text-center pt-2 tablet:pt-5;
     }

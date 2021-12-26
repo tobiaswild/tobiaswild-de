@@ -31,11 +31,7 @@ export default function Contact() {
                             <span className="content">{t('your-message')}</span>
                         </label>
                     </div>
-                    <input
-                        type="submit"
-                        value={t('send')}
-                        className="submit-btn"
-                    />
+                    <input type="submit" className="submit-btn" />
                     <p className="or-email">
                         {t('or-email')}{' '}
                         <Link href="mailto:hello@tobiaswild.de">
