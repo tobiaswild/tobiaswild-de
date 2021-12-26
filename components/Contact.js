@@ -10,9 +10,9 @@ export default function Contact() {
             <form
                 className="form"
                 name="contact"
+                action="/thanks"
                 method="POST"
-                data-netlify="true"
-                netlify>
+                data-netlify="true">
                 <fieldset>
                     <div className="form-item">
                         <input
