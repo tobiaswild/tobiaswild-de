@@ -61,7 +61,7 @@ export default function Home() {
                     <div>
                         <Image
                             src="/images/me.png"
-                            alt="Profile picture"
+                            alt=""
                             height={120}
                             width={120}
                             className="rounded-full"
