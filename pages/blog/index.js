@@ -10,8 +10,13 @@ export default function More() {
                 <title>{title}</title>
             </Head>
             <Layout blog>
-                Here U will be able to see my blog. But it will take some time
-                to create it.
+                <section id="faq">
+                    <h2>Blog</h2>
+                    <p>
+                        Here you will be able to see my blog. But it will take
+                        some time to programme it. So please be patient.
+                    </p>
+                </section>
             </Layout>
         </>
     )

@@ -1,19 +1,18 @@
 import Image from 'next/image'
 import {
     FaHtml5,
-    FaCode,
     FaCss3,
     FaJs,
     FaReact,
     FaGithub,
     FaGitAlt,
     FaNodeJs,
+    FaRaspberryPi,
 } from 'react-icons/fa'
 import {
     SiHeroku,
     SiMongodb,
     SiNetlify,
-    SiSqlite,
     SiTailwindcss,
     SiVisualstudiocode,
 } from 'react-icons/si'
@@ -63,14 +62,6 @@ const backend = [
         icon: <SiMongodb />,
         name: 'MongoDB',
     },
-    {
-        icon: <SiSqlite />,
-        name: 'SQL-DBs',
-    },
-    {
-        icon: <FaCode />,
-        name: 'Other',
-    },
 ]
 
 const general = [
@@ -93,6 +84,10 @@ const general = [
     {
         icon: <SiVisualstudiocode />,
         name: 'VS Code',
+    },
+    {
+        icon: <FaRaspberryPi />,
+        name: 'RPi',
     },
 ]
 

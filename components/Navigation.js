@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
+import { FaProjectDiagram, FaSitemap, FaMailBulk } from 'react-icons/fa'
 
-const nav = [{ id: 'projects' }, { id: 'technologies' }, { id: 'contact' }]
-
-const navblog = [{ name: 'Test' }]
+const nav = [
+    { id: 'projects', icon: <FaProjectDiagram /> },
+    { id: 'technologies', icon: <FaSitemap /> },
+    { id: 'contact', icon: <FaMailBulk /> },
+]
 
 export function Navigation() {
     const { t } = useTranslation()
@@ -21,7 +24,12 @@ export function Navigation() {
                             href={`javascript:goTo("${card.id}");`}
                             passHref>
                             <a className={`${card.id} nav-link`}>
-                                {t(`${card.id}:title`)}
+                                <span className="nav-link-icon">
+                                    {card.icon}
+                                </span>
+                                <span className="nav-link-text">
+                                    {t(`${card.id}:title`)}
+                                </span>
                             </a>
                         </Link>
                     ))}
@@ -38,13 +46,6 @@ export function NavigationOther() {
                 <Link href="/">
                     <a className="logo">Tobias Wild</a>
                 </Link>
-                <div className="nav-links">
-                    {navblog.map((card, index) => (
-                        <Link key={index} href="/" passHref>
-                            <a className="nav-link">{card.name}</a>
-                        </Link>
-                    ))}
-                </div>
             </div>
         </nav>
     )
