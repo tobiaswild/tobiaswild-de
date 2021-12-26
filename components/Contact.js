@@ -10,7 +10,6 @@ export default function Contact() {
             <form
                 className="form"
                 name="contact"
-                autoComplete="off"
                 method="POST"
                 data-netlify="true">
                 <fieldset>
@@ -50,7 +49,7 @@ export default function Contact() {
                     </div>
                     <input
                         type="submit"
-                        value="Senden!"
+                        value={t('send')}
                         className="submit-btn"
                     />
                     <p className="or-email">
