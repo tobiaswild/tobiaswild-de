@@ -4,21 +4,13 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
-    darkMode: false,
+    darkMode: 'media',
     theme: {
         extend: {
-            textColor: {
-                skin: {
-                    base: 'var(--color-text)',
-                    accent: 'var(--color-accent)',
-                },
-            },
-            backgroundColor: {
-                skin: {
-                    background: 'var(--color-background)',
-                    accent: 'var(--color-accent)',
-                    see: 'var(--color-see)',
-                },
+            colors: {
+                base: 'var(--color-text)',
+                accent: 'var(--color-accent)',
+                background: 'var(--color-background)',
             },
             fontFamily: {
                 normal: [
@@ -36,14 +28,17 @@ module.exports = {
                 ],
                 'Space-Grotesk': ['Space Grotesk'],
             },
+            width: {
+                xl: '36rem',
+                '2xl': '42rem',
+                '3xl': '48rem',
+                '4xl': '56rem',
+            },
         },
         screens: {
             tablet: '640px',
             desktop: '1248px',
         },
-        stroke: (theme) => ({
-            white: theme('colors.white'),
-        }),
     },
     variants: {
         extend: {},

@@ -1,35 +1,67 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Script from 'next/script'
-import Layout from 'Components/layout'
-import Technologies from 'Components/technologies'
-import Projects from 'Components/projects'
+import Layout from 'Components/Layout'
+import Technologies from 'Components/Technologies'
+import Projects from 'Components/Projects'
+import Contact from 'Components/Contact'
+import useTranslation from 'next-translate/useTranslation'
 
 export default function Home() {
+    const { t } = useTranslation('common')
+
+    const title = 'Tobias Wild | Portfolio'
+
     return (
         <>
             <Head>
-                <title>Tobias Wild | Portfolio</title>
-                <meta
-                    name="description"
-                    content="I am a 16 years old student from Germany and I love coding."
-                />
+                {/* HTML Meta Tags */}
+                <title>{title}</title>
+                <meta name="description" content={t('info-short')} />
                 <meta charSet="UTF-8" />
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
+                {/* Facebook Meta Tags */}
+                <meta property="og:url" content="https://tobiaswild.de/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={t('info-short')} />
+                <meta
+                    property="og:image"
+                    content="https://tobiaswild.de/images/preview.png"
+                />
+                {/* Twitter Meta Tags */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:domain" content="tobiaswild.de" />
+                <meta property="twitter:url" content="https://tobiaswild.de/" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={t('info-short')} />
+                <meta
+                    name="twitter:image"
+                    content="https://tobiaswild.de/images/preview.png"
+                />
             </Head>
-            <Script src="/js/age.js" />
             <Layout home>
-                <div className="rounded bg-skin-accent py-3 my-4 text-center w-full">
-                    Hey, I&apos;m a full-stack developer based in Germany!
-                </div>
-                <article className="pt-0">
-                    <div className="float-right tablet:ml-6 rounded-full max-h-32 w-32 p-1  bg-gradient-to-br from-blue-700 to-pink-500">
+                <header id="top" className="header">
+                    <picture>
+                        <source
+                            srcSet="/images/big-light.png"
+                            media="(prefers-color-scheme: light)"
+                            className="rounded-xl"
+                        />
+                        <img
+                            src="/images/big-dark.png"
+                            className="rounded-xl"
+                        />
+                    </picture>
+                </header>
+                <div className="bar">{t('desc')}</div>
+                <section id="info">
+                    <div>
                         <Image
                             src="/images/me.png"
-                            alt="headerImage"
+                            alt="Profile picture"
                             height={120}
                             width={120}
                             className="rounded-full"
@@ -37,17 +69,11 @@ export default function Home() {
                         />
                     </div>
                     <h1>Tobias Wild</h1>
-                    <p>
-                        I am a <span id="age">16</span> years old student from
-                        Germany and I love coding. I started learning HTML and
-                        CSS in mid 2018 when my school offered a differentiation
-                        course on it. And from there on I thought my self JS. In
-                        mid 2021, I took an online course on web development
-                        with ReactJS. Then I started learning and using NextJS.
-                    </p>
-                </article>
+                    <p>{t('info', { age: 16 })}</p>
+                </section>
                 <Projects />
                 <Technologies />
+                <Contact />
             </Layout>
         </>
     )

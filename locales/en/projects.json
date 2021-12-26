@@ -1,0 +1,16 @@
+{
+    "title": "Projects",
+    "storyblog": {
+        "text": "A blog project for my girlfriend, because she really likes to write stories and texts."
+    },
+    "js-code-examples": {
+        "text": "A collection of different JavaScript Examples,  I think could be useful for other projects in the future."
+    },
+    "facebook-clone": {
+        "name": "Facebook Clone",
+        "text": "Clone of Facebook I build in the web development online course. It is not fully finished. But it was the end project of the course."
+    },
+    "timer-plugin": {
+        "text": "A small Timer Plugin for Minecraft. Useful for speed runs or other Games when you have to track the time."
+    }
+}
