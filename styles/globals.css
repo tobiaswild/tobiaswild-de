@@ -125,14 +125,11 @@
         @apply w-full text-green-500;
     }
     .form-item {
-        @apply w-full relative h-20 overflow-hidden;
+        @apply w-full relative min-h-[5rem] overflow-hidden;
     }
     .form-item input,
     .form-item textarea {
-        @apply w-full box outline outline-zinc-600 p-1 pl-2;
-    }
-    .form-item textarea {
-        height: auto;
+        @apply w-11/12 box outline outline-zinc-600 p-1 pl-2 m-1;
     }
     .form .submit-btn {
         @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;

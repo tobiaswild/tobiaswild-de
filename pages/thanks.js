@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Layout from 'Components/Layout'
+import useTranslation from 'next-translate/useTranslation'
 
 export default function More() {
-    const title = 'Tobias Wild | Thanks'
+    const { t } = useTranslation('contact')
+
+    const title = `Tobias Wild | ${t('thanks')}`
 
     return (
         <>
@@ -10,8 +13,9 @@ export default function More() {
                 <title>{title}</title>
             </Head>
             <Layout thanks>
-                <section id="faq">
-                    <h2>Thanks</h2>
+                <section id="thanks">
+                    <h2>{t('thanks')}</h2>
+                    <p>{t('thanks-text')}</p>
                 </section>
             </Layout>
         </>
