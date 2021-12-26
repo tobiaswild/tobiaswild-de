@@ -10,57 +10,41 @@ export default function Contact() {
             <form
                 className="form"
                 name="contact"
-                autoComplete="off"
                 method="POST"
+                action="/thanks"
                 data-netlify="true">
-                <fieldset>
-                    <div className="form-item">
-                        <input
-                            type="text"
-                            name="name"
-                            autoComplete="off"
-                            required
-                        />
-                        <label htmlFor="name" className="label">
-                            <span className="content">{t('your-name')}</span>
-                        </label>
-                    </div>
-                    <div className="form-item">
-                        <input
-                            type="email"
-                            name="email"
-                            autoComplete="off"
-                            required
-                        />
-                        <label htmlFor="email" className="label">
-                            <span className="content">{t('your-email')}</span>
-                        </label>
-                    </div>
-                    <div className="form-item">
-                        {/* USE TEXTAREA INSTEAD OF INPUT HERE */}
-                        <input
-                            type="text"
-                            name="message"
-                            autoComplete="off"
-                            required
-                        />
-                        <label htmlFor="message" className="label">
-                            <span className="content">{t('your-message')}</span>
-                        </label>
-                    </div>
-                    <input
-                        type="submit"
-                        value="Senden!"
-                        className="submit-btn"
-                    />
-                    <p className="or-email">
-                        {t('or-email')}{' '}
-                        <Link href="mailto:hello@tobiaswild.de">
-                            <a target="_blank">hello@tobiaswild.de</a>
-                        </Link>
-                    </p>
-                </fieldset>
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="form-item">
+                    <label htmlFor="name">{t('your-name')}</label>
+                    <br />
+                    <input type="text" id="name" name="name" required />
+                </p>
+                <p className="form-item">
+                    <label htmlFor="email">{t('your-email')}</label>
+                    <br />
+                    <input type="text" id="email" name="email" required />
+                </p>
+                <p className="form-item">
+                    <label htmlFor="message">{t('your-message')}</label>
+                    <br />
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required></textarea>
+                </p>
+                <p>
+                    <button type="submit" className="submit-btn">
+                        {t('send')}
+                    </button>
+                </p>
             </form>
+            <p className="or-email">
+                {t('or-email')}{' '}
+                <Link href="mailto:hello@tobiaswild.de">
+                    <a target="_blank">hello@tobiaswild.de</a>
+                </Link>
+            </p>
         </section>
     )
 }
