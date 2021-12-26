@@ -8,7 +8,6 @@ export default function Contact() {
         <section id="contact">
             <h2>{t('title')}</h2>
             <form
-                className="form"
                 name="contact"
                 action="/thanks"
                 method="POST"

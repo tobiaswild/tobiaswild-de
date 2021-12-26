@@ -58,6 +58,14 @@
         @apply py-12 scroll-mt-24 tablet:scroll-mt-12;
     }
 
+    form {
+        @apply tablet:w-4/5 mx-auto;
+    }
+
+    form fieldset {
+        @apply py-2 tablet:py-5 px-4 tablet:px-10;
+    }
+
     ::-webkit-scrollbar {
         @apply w-1;
     }
@@ -115,16 +123,7 @@
     }
 
     /* CONTACT FORM */
-    #contact {
-        @apply box;
-    }
-    .form {
-        @apply tablet:w-4/5 mx-auto;
-    }
 
-    .form fieldset {
-        @apply py-2 tablet:py-5 px-4 tablet:px-10;
-    }
     .form-item {
         @apply w-full relative h-20 overflow-hidden;
     }
