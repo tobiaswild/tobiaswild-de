@@ -58,17 +58,6 @@
         @apply py-12 scroll-mt-24 tablet:scroll-mt-12;
     }
 
-    form {
-        @apply tablet:w-4/5 mx-auto;
-    }
-
-    form fieldset {
-        @apply py-2 tablet:py-5 px-4 tablet:px-10;
-    }
-    form .submit-btn {
-        @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
-    }
-
     ::-webkit-scrollbar {
         @apply w-1;
     }
@@ -129,44 +118,23 @@
     #contact {
         @apply box;
     }
-
+    .form {
+        @apply tablet:w-4/5 mx-auto;
+    }
     .form-item {
         @apply w-full relative h-20 overflow-hidden;
     }
     .form-item input,
     .form-item textarea {
-        @apply w-full h-full dark:text-white box pt-5 border-none outline-none;
+        @apply w-full box outline outline-zinc-600 p-1 pl-2;
     }
-    .form-item label {
-        @apply absolute bottom-0 left-0 h-full w-full pointer-events-none border-b-2 border-solid border-black;
+    .form-item textarea {
+        height: auto;
     }
-    .form-item label::after {
-        @apply absolute left-0 bottom-[-2px] h-full w-full border-b-4 border-solid border-accent transition-all;
-        content: '';
-        transition-duration: 0.3s;
-        transform: translateX(-101%);
-    }
-    /* NAME FIELD */
-    .content {
-        @apply absolute bottom-1 left-0 transition-all;
-        transition-duration: 0.3s;
-    }
-    /* small problem with email field here. if no "sth@sth" then it does not detect as valid */
-    .form-item input:focus + .label .content,
-    .form-item input:valid + .label .content,
-    .form-item textarea:focus + .label .content,
-    .form-item textarea:valid + .label .content {
-        transform: translateY(-150%);
-        @apply text-lg font-medium text-accent;
-    }
-    .form-item input:focus + .label::after,
-    .form-item input:valid + .label::after,
-    .form-item textarea:focus + .label::after,
-    .form-item textarea:valid + .label::after {
-        transform: translatex(0%);
+    .form .submit-btn {
+        @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
     }
     /* SUB FROM */
-
     .or-email {
         @apply text-center pt-2 tablet:pt-5;
     }
@@ -210,10 +178,6 @@
     }
     .project-info {
         @apply rounded-xl;
-    }
-    .project-title {
-    }
-    .project-text::first-letter {
     }
     .project-components {
         @apply pl-5 my-1;

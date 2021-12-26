@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function Contact() {
@@ -18,29 +19,40 @@ export default function Contact() {
             {success && (
                 <p style={{ color: 'green' }}>Successfully submitted form!</p>
             )}
-
             <form
+                className="form"
                 name="contact"
                 method="POST"
                 action="/?success=true"
                 data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
-                <p>
-                    <label htmlFor="name">Name</label>
+                <p className="form-item">
+                    <label htmlFor="name">{t('your-name')}</label>
+                    <br />
                     <input type="text" id="name" name="name" />
                 </p>
-                <p>
-                    <label htmlFor="email">Email</label>
+                <p className="form-item">
+                    <label htmlFor="email">{t('your-email')}</label>
+                    <br />
                     <input type="text" id="email" name="email" />
                 </p>
-                <p>
-                    <label htmlFor="message">Message</label>
+                <p className="form-item">
+                    <label htmlFor="message">{t('your-message')}</label>
+                    <br />
                     <textarea id="message" name="message"></textarea>
                 </p>
                 <p>
-                    <button type="submit">Send</button>
+                    <button type="submit" className="submit-btn">
+                        Send
+                    </button>
                 </p>
             </form>
+            <p className="or-email">
+                {t('or-email')}{' '}
+                <Link href="mailto:hello@tobiaswild.de">
+                    <a target="_blank">hello@tobiaswild.de</a>
+                </Link>
+            </p>
         </section>
     )
 }
