@@ -123,6 +123,9 @@
     }
 
     /* CONTACT FORM */
+    #contact {
+        @apply box;
+    }
 
     .form-item {
         @apply w-full relative h-20 overflow-hidden;

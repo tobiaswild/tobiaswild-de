@@ -14,35 +14,19 @@ export default function Contact() {
                 data-netlify="true">
                 <fieldset>
                     <div className="form-item">
-                        <input
-                            type="text"
-                            name="name"
-                            autoComplete="off"
-                            required
-                        />
+                        <input type="text" name="name" required />
                         <label htmlFor="name" className="label">
                             <span className="content">{t('your-name')}</span>
                         </label>
                     </div>
                     <div className="form-item">
-                        <input
-                            type="email"
-                            name="email"
-                            autoComplete="off"
-                            required
-                        />
+                        <input type="email" name="email" required />
                         <label htmlFor="email" className="label">
                             <span className="content">{t('your-email')}</span>
                         </label>
                     </div>
                     <div className="form-item">
-                        {/* USE TEXTAREA INSTEAD OF INPUT HERE */}
-                        <input
-                            type="text"
-                            name="message"
-                            autoComplete="off"
-                            required
-                        />
+                        <input type="text" name="message" required />
                         <label htmlFor="message" className="label">
                             <span className="content">{t('your-message')}</span>
                         </label>
