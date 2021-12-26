@@ -11,7 +11,8 @@ export default function Contact() {
                 className="form"
                 name="contact"
                 method="POST"
-                data-netlify="true">
+                data-netlify="true"
+                netlify>
                 <fieldset>
                     <div className="form-item">
                         <input
