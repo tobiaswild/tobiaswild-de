@@ -121,6 +121,9 @@
     .form {
         @apply tablet:w-4/5 mx-auto;
     }
+    .success {
+        @apply w-full text-green-500;
+    }
     .form-item {
         @apply w-full relative h-20 overflow-hidden;
     }

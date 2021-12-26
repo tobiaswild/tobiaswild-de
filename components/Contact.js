@@ -16,14 +16,12 @@ export default function Contact() {
     return (
         <section id="contact">
             <h2>{t('title')}</h2>
-            {success && (
-                <p style={{ color: 'green' }}>Successfully submitted form!</p>
-            )}
+            {success && <p className="success">Successfully submitted form!</p>}
             <form
                 className="form"
                 name="contact"
                 method="POST"
-                action="/?success=true"
+                action="#contact?success=true"
                 data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="form-item">
