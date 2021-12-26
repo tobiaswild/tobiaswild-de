@@ -17,17 +17,21 @@ export default function Contact() {
                 <p className="form-item">
                     <label htmlFor="name">{t('your-name')}</label>
                     <br />
-                    <input type="text" id="name" name="name" />
+                    <input type="text" id="name" name="name" required />
                 </p>
                 <p className="form-item">
                     <label htmlFor="email">{t('your-email')}</label>
                     <br />
-                    <input type="text" id="email" name="email" />
+                    <input type="text" id="email" name="email" required />
                 </p>
                 <p className="form-item">
                     <label htmlFor="message">{t('your-message')}</label>
                     <br />
-                    <textarea id="message" name="message" rows="4"></textarea>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required></textarea>
                 </p>
                 <p>
                     <button type="submit" className="submit-btn">

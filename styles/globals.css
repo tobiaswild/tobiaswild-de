@@ -114,7 +114,6 @@
         @apply tablet:text-4xl text-3xl;
     }
 
-    /* CONTACT FORM */
     #contact {
         @apply box;
     }
@@ -125,16 +124,15 @@
         @apply w-full text-green-500;
     }
     .form-item {
-        @apply w-full relative min-h-[5rem] overflow-hidden;
+        @apply w-full relative min-h-[5rem] overflow-hidden p-2;
     }
     .form-item input,
     .form-item textarea {
-        @apply w-11/12 box outline outline-zinc-600 p-1 pl-2 m-1;
+        @apply box w-full p-1 pl-2 outline outline-1 outline-slate-700;
     }
     .form .submit-btn {
         @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
     }
-    /* SUB FROM */
     .or-email {
         @apply text-center pt-2 tablet:pt-5;
     }
