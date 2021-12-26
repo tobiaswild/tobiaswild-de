@@ -1,44 +1,45 @@
-import Link from 'next/link'
+import { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function Contact() {
     const { t } = useTranslation('contact')
 
+    const [success, setSuccess] = useState(false)
+
+    useEffect(() => {
+        if (window.location.search.includes('success=true')) {
+            setSuccess(true)
+        }
+    }, [])
+
     return (
         <section id="contact">
             <h2>{t('title')}</h2>
+            {success && (
+                <p style={{ color: 'green' }}>Successfully submitted form!</p>
+            )}
+
             <form
                 name="contact"
-                action="/thanks"
                 method="POST"
+                action="/?success=true"
                 data-netlify="true">
-                <fieldset>
-                    <div className="form-item">
-                        <input type="text" name="name" required />
-                        <label htmlFor="name" className="label">
-                            <span className="content">{t('your-name')}</span>
-                        </label>
-                    </div>
-                    <div className="form-item">
-                        <input type="email" name="email" required />
-                        <label htmlFor="email" className="label">
-                            <span className="content">{t('your-email')}</span>
-                        </label>
-                    </div>
-                    <div className="form-item">
-                        <input type="text" name="message" required />
-                        <label htmlFor="message" className="label">
-                            <span className="content">{t('your-message')}</span>
-                        </label>
-                    </div>
-                    <input type="submit" className="submit-btn" />
-                    <p className="or-email">
-                        {t('or-email')}{' '}
-                        <Link href="mailto:hello@tobiaswild.de">
-                            <a target="_blank">hello@tobiaswild.de</a>
-                        </Link>
-                    </p>
-                </fieldset>
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" id="name" name="name" />
+                </p>
+                <p>
+                    <label htmlFor="email">Email</label>
+                    <input type="text" id="email" name="email" />
+                </p>
+                <p>
+                    <label htmlFor="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
             </form>
         </section>
     )
