@@ -5,19 +5,17 @@ export default function More() {
     const title = 'Tobias Wild | Blog'
 
     return (
-        <>
+        <Layout blog>
             <Head>
                 <title>{title}</title>
             </Head>
-            <Layout blog>
-                <section id="faq">
-                    <h2>Blog</h2>
-                    <p>
-                        Here you will be able to see my blog. But it will take
-                        some time to programme it. So please be patient.
-                    </p>
-                </section>
-            </Layout>
-        </>
+            <section id="faq">
+                <h2>Blog</h2>
+                <p>
+                    Here you will be able to see my blog. But it will take some
+                    time to programme it. So please be patient.
+                </p>
+            </section>
+        </Layout>
     )
 }

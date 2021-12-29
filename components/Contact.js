@@ -30,7 +30,7 @@ export default function Contact() {
                     <textarea
                         id="message"
                         name="message"
-                        rows="5"
+                        rows={5}
                         required></textarea>
                 </p>
                 <p>
