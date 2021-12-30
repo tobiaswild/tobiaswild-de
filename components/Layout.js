@@ -14,7 +14,10 @@ export default function Layout({ children, home }) {
             <Head>
                 {/* HTML Meta Tags */}
                 <title>{title}</title>
-                <meta name="description" content={t('info-short')} />
+                <meta
+                    name="description"
+                    content={t('info-short', { age: 16 })}
+                />
                 <meta charSet="UTF-8" />
                 <meta
                     name="viewport"
@@ -102,7 +105,10 @@ export default function Layout({ children, home }) {
                 <meta property="og:url" content="https://tobiaswild.de/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={title} />
-                <meta property="og:description" content={t('info-short')} />
+                <meta
+                    property="og:description"
+                    content={t('info-short', { age: 16 })}
+                />
                 <meta
                     property="og:image"
                     content="https://tobiaswild.de/images/preview.png"
@@ -112,7 +118,10 @@ export default function Layout({ children, home }) {
                 <meta property="twitter:domain" content="tobiaswild.de" />
                 <meta property="twitter:url" content="https://tobiaswild.de/" />
                 <meta name="twitter:title" content={title} />
-                <meta name="twitter:description" content={t('info-short')} />
+                <meta
+                    name="twitter:description"
+                    content={t('info-short', { age: 16 })}
+                />
                 <meta
                     name="twitter:image"
                     content="https://tobiaswild.de/images/preview.png"

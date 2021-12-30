@@ -1,7 +1,7 @@
 {
     "title": "Projekte",
-    "view-web": "Zeige es mir im Web",
-    "view-github": "Zeige es mir auf GitHub",
+    "web": "Projekt-Webseite",
+    "github": "Projekt auf GitHub",
     "storyblog": {
         "text": "Ein Blog Projekt für meine Freundin, weil sie sehr gerne Geschichten und Texte schreibt."
     },

@@ -50,7 +50,7 @@ export default function Projects() {
                         <span>
                             <FaGlobe />
                         </span>
-                        {t('view-web')}
+                        {t('web')}
                     </a>
                 </Link>
             </p>
@@ -66,7 +66,7 @@ export default function Projects() {
                         <span>
                             <FaGithub />
                         </span>
-                        {t('view-github')}
+                        {t('github')}
                     </a>
                 </Link>
             </p>
