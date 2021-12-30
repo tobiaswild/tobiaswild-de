@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Navigation, NavigationOther } from './Navigation'
 import Footer from './Footer'
 import useTranslation from 'next-translate/useTranslation'
+import { FaArrowUp } from 'react-icons/fa'
 
 export default function Layout({ children, home }) {
     const { t } = useTranslation('common')
@@ -20,6 +21,7 @@ export default function Layout({ children, home }) {
                     content="width=device-width, initial-scale=1.0"
                 />
                 {/* Favicon Icons */}
+                <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
                 <link
                     rel="apple-touch-icon"
                     sizes="57x57"
@@ -122,6 +124,9 @@ export default function Layout({ children, home }) {
                 <main>{children}</main>
                 <Footer />
             </div>
+            <a href="javascript:goTo('top');" id="topBtn" title="Go to top">
+                <FaArrowUp />
+            </a>
             <Script src="/js/script.js" />
         </>
     )

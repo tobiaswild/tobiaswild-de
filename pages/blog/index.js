@@ -9,7 +9,7 @@ export default function More() {
             <Head>
                 <title>{title}</title>
             </Head>
-            <section id="faq">
+            <section id="blog">
                 <h2>Blog</h2>
                 <p>
                     Here you will be able to see my blog. But it will take some
