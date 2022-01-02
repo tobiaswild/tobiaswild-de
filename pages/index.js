@@ -17,12 +17,14 @@ export default function Home() {
                         type="image/webp"
                         media="(prefers-color-scheme: light)"
                         className="rounded-xl"
+                        height="100%"
                         width="100%"
                     />
                     <img
                         src="/images/big-dark.webp"
                         type="image/webp"
                         className="rounded-xl"
+                        height="100%"
                         width="100%"
                     />
                 </picture>
