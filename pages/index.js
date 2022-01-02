@@ -13,8 +13,21 @@ export default function Home() {
             <header id="top" className="header">
                 <picture>
                     <source
+                        srcSet="/images/big-light.webp"
+                        type="image/webp"
+                        media="(prefers-color-scheme: light) and (max-width: 640px)"
+                        className="rounded-xl"
+                    />
+                    <source
                         srcSet="/images/big-light.png"
+                        type="image/png"
                         media="(prefers-color-scheme: light)"
+                        className="rounded-xl"
+                    />
+                    <source
+                        srcSet="/images/big-dark.webp"
+                        type="image/webp"
+                        media="(prefers-color-scheme: dark) and (max-width: 640px)"
                         className="rounded-xl"
                     />
                     <img src="/images/big-dark.png" className="rounded-xl" />

@@ -85,14 +85,14 @@ export default function Projects() {
                                 alt={`Project Picture of ${card.title}`}
                                 height={720}
                                 width={1280}
+                                className="rounded"
                             />
                         </div>
                         <div className="project-info">
                             <h3 className="project-title">{card.title}</h3>
                             <p className="project-text">{card.text}</p>
-                            <p className="project-components">
-                                {card.components}
-                            </p>
+                        </div>
+                        <div className="project-links">
                             <WebLink url={card.web} />
                             <GitHubLink repo={card.github} />
                         </div>

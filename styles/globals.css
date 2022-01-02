@@ -76,7 +76,7 @@
     }
 
     #topBtn {
-        @apply hidden fixed bottom-5 right-8 z-50 border-none outline-none bg-accent text-white cursor-pointer p-4 rounded;
+        @apply hidden fixed bottom-5 right-8 z-50 border-none outline-none bg-accent text-white cursor-pointer p-4 rounded-xl;
     }
 
     .header {
@@ -162,15 +162,6 @@
     }
     .project {
         @apply box p-4 shadow;
-    }
-    .project-image {
-        @apply rounded-xl;
-    }
-    .project-info {
-        @apply rounded-xl;
-    }
-    .project-components {
-        @apply pl-5 my-1;
     }
     .project-link {
         @apply flex items-center;
