@@ -11,26 +11,22 @@ export default function Home() {
     return (
         <Layout home>
             <header id="top" className="header">
-                <picture>
+                <picture className="aspect-video">
                     <source
                         srcSet="/images/big-light.webp"
                         type="image/webp"
-                        media="(prefers-color-scheme: light) and (max-width: 640px)"
-                        className="rounded-xl"
-                    />
-                    <source
-                        srcSet="/images/big-light.png"
-                        type="image/png"
                         media="(prefers-color-scheme: light)"
                         className="rounded-xl"
+                        height="100%"
+                        width="100%"
                     />
-                    <source
-                        srcSet="/images/big-dark.webp"
+                    <img
+                        src="/images/big-dark.webp"
                         type="image/webp"
-                        media="(prefers-color-scheme: dark) and (max-width: 640px)"
                         className="rounded-xl"
+                        height="100%"
+                        width="100%"
                     />
-                    <img src="/images/big-dark.png" className="rounded-xl" />
                 </picture>
             </header>
             <div className="bar">{t('desc')}</div>
