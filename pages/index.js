@@ -11,17 +11,19 @@ export default function Home() {
     return (
         <Layout home>
             <header id="top" className="header">
-                <picture>
+                <picture className="aspect-video">
                     <source
                         srcSet="/images/big-light.webp"
                         type="image/webp"
                         media="(prefers-color-scheme: light)"
-                        className="rounded-xl w-full"
+                        className="rounded-xl"
+                        width="100%"
                     />
                     <img
                         src="/images/big-dark.webp"
                         type="image/webp"
-                        className="rounded-xl w-full"
+                        className="rounded-xl"
+                        width="100%"
                     />
                 </picture>
             </header>
