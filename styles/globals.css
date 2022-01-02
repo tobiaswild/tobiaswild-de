@@ -30,7 +30,7 @@
     }
     /* JUST MY NAME */
     h1 {
-        @apply text-4xl font-black;
+        @apply tablet:text-4xl text-3xl font-black;
     }
     /* SECTION HEADERS */
     h2 {
@@ -68,11 +68,15 @@
 
 @layer components {
     .box {
-        @apply rounded-xl bg-gray-200 dark:bg-gray-800 shadow shadow-gray-200 dark:shadow-gray-800;
+        @apply rounded-xl bg-neutral-200 dark:bg-neutral-800 shadow shadow-neutral-200 dark:shadow-neutral-800;
     }
 
     .wrapper {
         @apply desktop:w-3xl tablet:w-2xl max-w-[90%] mx-auto;
+    }
+
+    #topBtn {
+        @apply hidden fixed bottom-5 right-8 z-50 border-none outline-none bg-accent text-white cursor-pointer p-4 rounded-xl;
     }
 
     .header {
@@ -107,11 +111,8 @@
     #info {
         @apply pt-0;
     }
-    #info div {
-        @apply float-right ml-2 mb-2 rounded-full max-h-32 w-32 p-1 bg-accent;
-    }
-    #info h1 {
-        @apply tablet:text-4xl text-3xl;
+    .info-img {
+        @apply float-right ml-1 mb-1 rounded-full max-h-36 w-36 p-1 bg-black;
     }
 
     #contact {
@@ -120,15 +121,12 @@
     .form {
         @apply tablet:w-4/5 mx-auto;
     }
-    .success {
-        @apply w-full text-green-500;
-    }
     .form-item {
         @apply w-full relative min-h-[5rem] overflow-hidden p-2;
     }
     .form-item input,
     .form-item textarea {
-        @apply box w-full p-1 pl-2 outline outline-1 outline-slate-700;
+        @apply box rounded-none w-full p-1 pl-2 border-b-2 border-neutral-800 dark:border-neutral-200 outline-none focus:border-accent transition-all;
     }
     .form .submit-btn {
         @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
@@ -137,17 +135,11 @@
         @apply text-center pt-2 tablet:pt-5;
     }
     .or-email a {
-        @apply underline hover:decoration-accent;
-    }
-
-    .footer {
-        @apply py-8 text-center text-gray-500 text-sm;
+        @apply underline hover:decoration-accent transition-all;
     }
 
     .toolbox-cards-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @apply flex flex-col items-center;
     }
     .toolbox-card {
         @apply py-4 flex items-center flex-col;
@@ -170,15 +162,6 @@
     }
     .project {
         @apply box p-4 shadow;
-    }
-    .project-image {
-        @apply rounded-xl;
-    }
-    .project-info {
-        @apply rounded-xl;
-    }
-    .project-components {
-        @apply pl-5 my-1;
     }
     .project-link {
         @apply flex items-center;
@@ -210,6 +193,10 @@
 
     .faq-panel {
         @apply px-4 pt-4 pb-2 text-sm;
+    }
+
+    .footer {
+        @apply py-8 text-center text-gray-500 text-sm;
     }
 }
 

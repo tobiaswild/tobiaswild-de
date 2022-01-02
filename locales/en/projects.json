@@ -1,5 +1,7 @@
 {
     "title": "Projects",
+    "web": "Project Website",
+    "github": "Project on GitHub",
     "storyblog": {
         "text": "A blog project for my girlfriend, because she really likes to write stories and texts."
     },

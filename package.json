@@ -5,12 +5,11 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "export": "next build && next export",
-        "start": "next start",
-        "lint": "next lint"
+        "start": "next start"
     },
     "dependencies": {
         "@headlessui/react": "^1.4.2",
+        "framer-motion": "^5.5.5",
         "next": "^12.0.7",
         "next-translate": "^1.2.0",
         "react": "^17.0.2",

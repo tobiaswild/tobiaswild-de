@@ -6,7 +6,7 @@ import useTranslation from 'next-translate/useTranslation'
 export default function Projects() {
     const { t } = useTranslation('projects')
 
-    const data = [
+    const projects = [
         {
             id: 'storyblog',
             title: 'Storyblog',
@@ -41,32 +41,32 @@ export default function Projects() {
         },
     ]
 
-    function WebLink({ link }) {
-        if (link == undefined) return null
+    function WebLink({ url }) {
+        if (url === undefined) return null
         return (
             <p>
-                <Link href={`${link}`} passHref>
+                <Link href={`${url}`} passHref>
                     <a target="_blank" className="project-link">
                         <span>
                             <FaGlobe />
                         </span>
-                        {t('view-web')}
+                        {t('web')}
                     </a>
                 </Link>
             </p>
         )
     }
 
-    function GitHubLink({ github }) {
-        if (github == undefined) return null
+    function GitHubLink({ repo }) {
+        if (repo === undefined) return null
         return (
             <p>
-                <Link href={`https://github.com/${github}`} passHref>
+                <Link href={`https://github.com/${repo}`} passHref>
                     <a target="_blank" className="project-link">
                         <span>
                             <FaGithub />
                         </span>
-                        {t('view-github')}
+                        {t('github')}
                     </a>
                 </Link>
             </p>
@@ -77,7 +77,7 @@ export default function Projects() {
         <section id="projects">
             <h2>{t('title')}</h2>
             <div className="projects-container">
-                {data.map((card, index) => (
+                {projects.map((card, index) => (
                     <div key={index} className="project">
                         <div className="project-image">
                             <Image
@@ -85,17 +85,16 @@ export default function Projects() {
                                 alt={`Project Picture of ${card.title}`}
                                 height={720}
                                 width={1280}
-                                priority
+                                className="rounded"
                             />
                         </div>
                         <div className="project-info">
                             <h3 className="project-title">{card.title}</h3>
                             <p className="project-text">{card.text}</p>
-                            <p className="project-components">
-                                {card.components}
-                            </p>
-                            <WebLink link={card.web} />
-                            <GitHubLink github={card.github} />
+                        </div>
+                        <div className="project-links">
+                            <WebLink url={card.web} />
+                            <GitHubLink repo={card.github} />
                         </div>
                     </div>
                 ))}
