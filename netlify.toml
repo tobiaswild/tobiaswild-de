@@ -1,6 +1,6 @@
 [build]
   base = "/"
-  publish = "/"
+  publish = ".next/"
   command = "npm run build"
 
 [[plugins]]
