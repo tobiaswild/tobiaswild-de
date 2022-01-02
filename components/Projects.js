@@ -81,7 +81,7 @@ export default function Projects() {
                     <div key={index} className="project">
                         <div className="project-image">
                             <Image
-                                src={`/images/${card.id}.png`}
+                                src={`/images/${card.id}.webp`}
                                 alt={`Project Picture of ${card.title}`}
                                 height={720}
                                 width={1280}
