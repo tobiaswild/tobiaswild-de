@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Layout from 'Components/Layout'
-import Technologies from 'Components/Technologies'
 import Projects from 'Components/Projects'
+import Technologies from 'Components/Technologies'
 import Contact from 'Components/Contact'
 import useTranslation from 'next-translate/useTranslation'
 

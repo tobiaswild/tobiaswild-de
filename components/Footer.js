@@ -13,6 +13,7 @@ export default function Footer() {
             <Link href="https://www.netlify.com/">
                 <a target="_blank">Netlify</a>
             </Link>
+            .
         </footer>
     )
 }

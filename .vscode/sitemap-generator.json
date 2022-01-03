@@ -4,7 +4,7 @@
         "DomainName": "tobiaswild.de",
         "Root": "./pages",
         "IncludeExt": [".js"],
-        "Exclude": ["_app.js", "test.js"],
+        "Exclude": ["_app.js"],
         "TagsToInclude": ["priority", "lastmod"],
         "DefaultChangeFrequency": "monthly",
         "TabCharacters": "\t",

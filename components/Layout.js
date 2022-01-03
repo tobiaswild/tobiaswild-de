@@ -1,6 +1,6 @@
 import Script from 'next/script'
 import Head from 'next/head'
-import { Navigation, NavigationOther } from './Navigation'
+import { Navigation, NavigationSmall } from './Navigation'
 import Footer from './Footer'
 import useTranslation from 'next-translate/useTranslation'
 import { FaArrowUp } from 'react-icons/fa'
@@ -137,14 +137,11 @@ export default function Layout({ children, home }) {
                 />
             </Head>
             {home && <Navigation />}
-            {!home && <NavigationOther />}
+            {!home && <NavigationSmall />}
             <div className="wrapper">
                 <main>{children}</main>
                 <Footer />
             </div>
-            <a href="javascript:goTo('top');" id="topBtn" title="Go to top">
-                <FaArrowUp />
-            </a>
             <Script src="/js/script.js" />
         </>
     )

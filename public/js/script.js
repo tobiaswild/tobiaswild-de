@@ -1,7 +1,6 @@
 let body = document.getElementsByTagName('body')[0]
 let navLi = document.querySelectorAll('nav > div > div > a')
 let sections = document.querySelectorAll('section')
-let topBtn = document.getElementById('topBtn')
 
 body.addEventListener('contextmenu', function (event) {
     event.preventDefault()
@@ -23,16 +22,6 @@ window.addEventListener('scroll', () => {
             a.classList.add('active')
         }
     })
-
-    let distance = 500
-    if (
-        document.body.scrollTop > distance ||
-        document.documentElement.scrollTop > distance
-    ) {
-        topBtn.style.display = 'block'
-    } else {
-        topBtn.style.display = 'none'
-    }
 })
 
 function goTo(name) {
