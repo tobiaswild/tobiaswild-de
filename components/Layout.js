@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { Navigation, NavigationSmall } from './Navigation'
 import Footer from './Footer'
 import useTranslation from 'next-translate/useTranslation'
-import { FaArrowUp } from 'react-icons/fa'
 
 export default function Layout({ children, home }) {
     const { t } = useTranslation('common')
