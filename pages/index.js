@@ -119,7 +119,9 @@ export async function getStaticProps() {
         return {
             headers: {
                 ...headers,
-                authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+                authorization: process.env.GITHUB_ACCESS_TOKEN
+                    ? `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`
+                    : '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',
             },
         }
     })
