@@ -1,10 +1,15 @@
 {
     "title": "Kontakt",
-    "your-name": "Dein Name",
-    "your-email": "Deine Email",
-    "your-message": "Deine Nachricht",
+    "name": "Dein Name",
+    "email": "Deine Email",
+    "topic": "Dein Thema",
+    "topics": {
+        "general": "Allgemein",
+        "other": "Anderes"
+    },
+    "message": "Deine Nachricht",
     "send": "Senden!",
     "or-email": "Oder schreibe mir eine Email an:",
     "thanks": "Danke!",
-    "thanks-text": "Vielen Dank für deine Nachricht!"
+    "thanks-text": "Vielen Dank für deine Nachricht! Ich werde dir schnellstmöglich antworten."
 }

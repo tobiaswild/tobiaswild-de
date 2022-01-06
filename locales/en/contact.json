@@ -1,10 +1,15 @@
 {
     "title": "Contact",
-    "your-name": "Your Name",
-    "your-email": "Your Email",
-    "your-message": "Your Message",
+    "name": "Your Name",
+    "email": "Your Email",
+    "topic": "Your Topic",
+    "topics": {
+        "general": "General",
+        "other": "Other"
+    },
+    "message": "Your Message",
     "send": "Send!",
-    "or-email": "Or write me an email to:",
+    "or-email": "Or send me an email to:",
     "thanks": "Thanks!",
-    "thanks-text": "Thank you for your message! Click on the top left to return to the homepage."
+    "thanks-text": "Thank you very much for your message! I will reply as soon as possible."
 }
