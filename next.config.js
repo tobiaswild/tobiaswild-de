@@ -2,6 +2,7 @@ const nextTranslate = require('next-translate')
 
 module.exports = {
     reactStrictMode: true,
+    swcMinify: true,
     ...nextTranslate(),
     headers: [
         {
@@ -9,4 +10,10 @@ module.exports = {
             value: 'max-age=31536000',
         },
     ],
+    images: {
+        domains: [
+            'repository-images.githubusercontent.com',
+            'avatars.githubusercontent.com',
+        ],
+    },
 }

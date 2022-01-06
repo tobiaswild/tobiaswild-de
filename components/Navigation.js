@@ -39,7 +39,7 @@ export function Navigation() {
     )
 }
 
-export function NavigationOther() {
+export function NavigationSmall() {
     return (
         <nav className="nav">
             <div className="nav-container">
