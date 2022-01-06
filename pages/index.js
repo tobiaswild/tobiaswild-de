@@ -119,9 +119,7 @@ export async function getServerSideProps() {
         return {
             headers: {
                 ...headers,
-                authorization: process.env.GITHUB_ACCESS_TOKEN
-                    ? `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`
-                    : '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',
+                authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
             },
         }
     })
