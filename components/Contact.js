@@ -1,10 +1,8 @@
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
-import { useRouter } from 'next/router'
 
 export default function Contact() {
     const { t } = useTranslation('contact')
-    let router = useRouter()
 
     return (
         <section id="contact">
@@ -12,7 +10,6 @@ export default function Contact() {
             <form
                 className="form"
                 name="contact"
-                action={`${router.locale}/thanks`}
                 method="POST"
                 data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
