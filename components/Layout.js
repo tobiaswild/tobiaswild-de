@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import Navigation from './Navigation'
+import Navigation, { NavigationSmall } from './Navigation'
 import Footer from './Footer'
 import useTranslation from 'next-translate/useTranslation'
 import OpengraphMeta from './meta/opengraph'
 import TwitterMeta from './meta/twitter'
 import FaviconMeta from './meta/favicon'
 
-export default function Layout({ children }) {
+export default function Layout({ children, home }) {
     const { t } = useTranslation('common')
     const title = 'Tobias Wild | Portfolio'
 
@@ -31,7 +31,8 @@ export default function Layout({ children }) {
                 <OpengraphMeta t={t} title={title} />
                 <TwitterMeta t={t} title={title} />
             </Head>
-            <Navigation />
+            {home && <Navigation />}
+            {!home && <NavigationSmall />}
             <div className="wrapper">
                 <main id="top">{children}</main>
                 <Footer />
