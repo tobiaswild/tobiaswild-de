@@ -26,7 +26,7 @@ module.exports = {
                     'Helvetica Neue',
                     'sans-serif',
                 ],
-                'Space-Grotesk': ['Space Grotesk'],
+                'Space-Grotesk': ['Space Grotesk', 'sans-serif'],
             },
             width: {
                 xl: '36rem',

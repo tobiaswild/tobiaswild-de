@@ -18,7 +18,7 @@ export default function Home({ pinnedItems }) {
 
     return (
         <Layout home>
-            <header id="top" className="header">
+            <header className="header">
                 <Image
                     src="/images/big.webp"
                     alt="header-image"
