@@ -95,7 +95,7 @@ export default function Contact() {
                     <br />
                     <input type="text" id="email" name="email" required />
                 </p>
-                <p className="form-item">
+                {/* <p className="form-item">
                     <label htmlFor="topic">{t('topic')}</label>
                     <br />
                     <select name="topic" id="topic" required>
@@ -106,7 +106,7 @@ export default function Contact() {
                             {t('topics.other')}
                         </option>
                     </select>
-                </p>
+                </p> */}
                 <p className="form-item">
                     <label htmlFor="message">{t('message')}</label>
                     <br />
