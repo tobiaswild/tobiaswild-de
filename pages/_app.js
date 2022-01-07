@@ -5,6 +5,7 @@ function MyApp({ Component, pageProps, router }) {
     return (
         <AnimatePresence>
             <motion.div
+                onContextMenu={(e) => e.preventDefault()}
                 key={router.route}
                 initial="pageInitial"
                 animate="pageAnimate"

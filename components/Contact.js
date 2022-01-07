@@ -1,11 +1,13 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function Contact() {
     const { t } = useTranslation('contact')
     const [success, setSuccess] = useState(false)
+    let router = useRouter()
 
     useEffect(() => {
         if (window.location.search.includes('success=true')) {
@@ -80,26 +82,38 @@ export default function Contact() {
                 className="form"
                 name="contact"
                 method="POST"
-                action="/?success=true"
+                action={`${router.locale}/?success=true`}
                 data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="form-item">
-                    <label htmlFor="name">{t('your-name')}</label>
+                    <label htmlFor="name">{t('name')}</label>
                     <br />
                     <input type="text" id="name" name="name" required />
                 </p>
                 <p className="form-item">
-                    <label htmlFor="email">{t('your-email')}</label>
+                    <label htmlFor="email">{t('email')}</label>
                     <br />
                     <input type="text" id="email" name="email" required />
                 </p>
+                {/* <p className="form-item">
+                    <label htmlFor="topic">{t('topic')}</label>
+                    <br />
+                    <select name="topic" id="topic" required>
+                        <option value={t('topics.general').toLocaleLowerCase()}>
+                            {t('topics.general')}
+                        </option>
+                        <option value={t('topics.other').toLocaleLowerCase()}>
+                            {t('topics.other')}
+                        </option>
+                    </select>
+                </p> */}
                 <p className="form-item">
-                    <label htmlFor="message">{t('your-message')}</label>
+                    <label htmlFor="message">{t('message')}</label>
                     <br />
                     <textarea
                         id="message"
                         name="message"
-                        rows={5}
+                        rows={4}
                         required></textarea>
                 </p>
                 <p>

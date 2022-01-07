@@ -2,8 +2,12 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            &copy; {new Date().getFullYear()} No rights reserved.
+        <footer>
+            &copy; {new Date().getFullYear()}{' '}
+            <Link href="https://github.com/tobiaswild">
+                <a target="_blank">Tobias Wild</a>
+            </Link>
+            . No rights reserved.
             <br />
             This Website was created with{' '}
             <Link href="https://nextjs.org/">

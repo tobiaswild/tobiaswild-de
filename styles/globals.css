@@ -55,7 +55,11 @@
     }
 
     section {
-        @apply py-12 scroll-mt-24 tablet:scroll-mt-12;
+        @apply py-12 scroll-mt-16;
+    }
+
+    footer {
+        @apply py-8 text-center text-gray-500 text-sm;
     }
 
     ::-webkit-scrollbar {
@@ -75,12 +79,8 @@
         @apply desktop:w-3xl tablet:w-2xl max-w-[90%] mx-auto;
     }
 
-    #topBtn {
-        @apply hidden fixed bottom-5 right-8 z-50 border-none outline-none bg-accent text-white cursor-pointer p-4 rounded-xl;
-    }
-
     .header {
-        @apply scroll-mt-24 tablet:scroll-mt-12;
+        @apply scroll-mt-24 tablet:scroll-mt-16;
     }
 
     .nav {
@@ -119,12 +119,13 @@
         @apply box;
     }
     .form {
-        @apply tablet:w-4/5 mx-auto;
+        @apply tablet:w-4/5 w-[90%] mx-auto;
     }
     .form-item {
         @apply w-full relative min-h-[5rem] overflow-hidden p-2;
     }
     .form-item input,
+    .form-item select,
     .form-item textarea {
         @apply box rounded-none w-full p-1 pl-2 border-b-2 border-neutral-800 dark:border-neutral-200 outline-none focus:border-accent transition-all;
     }
@@ -181,10 +182,6 @@
     }
     .list li a:hover {
         @apply underline;
-    }
-
-    .footer {
-        @apply py-8 text-center text-gray-500 text-sm;
     }
 }
 

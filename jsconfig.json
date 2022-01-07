@@ -3,9 +3,8 @@
         "baseUrl": ".",
         "paths": {
             "Components/*": ["./components/*"],
-            "Lib/*": ["./lib/*"],
-            "Styles/*": ["./styles/*"],
-            "Public/*": ["./public/*"]
+            "Public/*": ["./public/*"],
+            "Styles/*": ["./styles/*"]
         }
     }
 }
