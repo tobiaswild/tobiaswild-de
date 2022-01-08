@@ -1,5 +1,4 @@
 import { Link } from 'react-scroll'
-import NextLink from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import { FaProjectDiagram, FaSitemap, FaMailBulk } from 'react-icons/fa'
 
@@ -34,18 +33,6 @@ export default function Navigation() {
                         </Link>
                     ))}
                 </div>
-            </div>
-        </nav>
-    )
-}
-
-export function NavigationSmall() {
-    return (
-        <nav className="nav">
-            <div className="nav-container">
-                <NextLink href="/">
-                    <a className="logo">Tobias Wild</a>
-                </NextLink>
             </div>
         </nav>
     )

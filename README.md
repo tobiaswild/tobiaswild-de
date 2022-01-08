@@ -2,16 +2,9 @@
 
 [https://tobiaswild.de/](https://tobiaswild.de/)
 
-## Table of contents
-
--   [General info](#general-info)
--   [Stack](#stack)
--   [Setup](#setup)
--   [Project structure](#project-structure)
-
 ## General info
 
-This project is for my personal website.
+This is the project of my personal website.
 
 ## Stack
 
@@ -21,32 +14,15 @@ This project is for my personal website.
 -   [Next Translate](https://github.com/vinissimus/next-translate) - Next.js plugin + i18n API for Next.js
 -   [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 
-## Setup
-
-To run this project, install it locally using npm:
-
-```
-$ npm install
-$ npm run dev
-```
-
 ## Project structure
 
 ```
-$PROJECT_ROOT
-│
-│   # React component files
-├── components
-│
-│   # Language files
-├── locales
-│
-│   # Page files
-├── pages
-│
-│   # Static images and javascript files
-├── public
-│
-│   # CSS files (TailwindCSS)
-└── styles
+.
+├── components              # React component files
+├── locales                 # Language files
+├── pages                   # Page files
+├── public                  # Static images and javascript files
+├── styles                  # CSS files (TailwindCSS)
+├── LICENSE
+└── README.md
 ```

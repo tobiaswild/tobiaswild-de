@@ -4,16 +4,11 @@ module.exports = {
     reactStrictMode: true,
     swcMinify: true,
     ...nextTranslate(),
-    headers: [
-        {
-            key: 'Cache-Control',
-            value: 'max-age=31536000',
-        },
-    ],
     images: {
         domains: [
             'repository-images.githubusercontent.com',
             'avatars.githubusercontent.com',
+            'res.cloudinary.com',
         ],
     },
 }
