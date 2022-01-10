@@ -53,11 +53,9 @@
     main {
         @apply pt-16;
     }
-
     section {
-        @apply py-12 scroll-mt-16;
+        @apply py-12;
     }
-
     footer {
         @apply py-8 text-center text-gray-500 text-sm;
     }
@@ -77,10 +75,6 @@
 
     .wrapper {
         @apply desktop:w-3xl tablet:w-2xl max-w-[90%] mx-auto;
-    }
-
-    .header {
-        @apply scroll-mt-24 tablet:scroll-mt-16;
     }
 
     .nav {

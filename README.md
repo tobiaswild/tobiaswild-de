@@ -10,7 +10,6 @@ This is the project of my personal website.
 
 -   [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
 -   [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
--   [HeadlessUI](https://headlessui.dev/) - Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
 -   [Next Translate](https://github.com/vinissimus/next-translate) - Next.js plugin + i18n API for Next.js
 -   [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 

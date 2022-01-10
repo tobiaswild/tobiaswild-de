@@ -1,13 +1,13 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Head from 'next/head'
-import Layout from 'Components/Layout'
-import Technologies from 'Components/Technologies'
 import Contact from 'Components/Contact'
+import Layout from 'Components/Layout'
+import Projects from 'Components/Projects'
+import Technologies from 'Components/Technologies'
 import { GitHubUserInfo, GitHubPinnedRepos } from 'Lib/GitHub'
-import { FaGithub, FaGlobe, FaStar } from 'react-icons/fa'
 import useTranslation from 'next-translate/useTranslation'
 import { v2 as cloudinary } from 'cloudinary'
+import big from 'Public/images/big.webp'
 
 export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
     const { t } = useTranslation()
@@ -135,7 +135,7 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
             </Head>
             <header className="header">
                 <Image
-                    src={ogImageUrl}
+                    src={big}
                     alt="header-image"
                     width={1012}
                     height={506}
@@ -157,63 +157,10 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
                 <h1>Tobias Wild</h1>
                 <p>{t('common:info', { age: 16 })}</p>
             </section>
-            <section id="projects">
-                <h2>{t('projects:title')}</h2>
-                <div className="projects-container">
-                    {pinnedItems.map((item) => {
-                        return (
-                            <div key={item.id} className="project">
-                                <div className="project-image">
-                                    <Image
-                                        src={item.openGraphImageUrl}
-                                        alt={item.name}
-                                        height={640}
-                                        width={1280}
-                                        className="rounded"
-                                    />
-                                </div>
-                                <h3 className="project-name">{item.name}</h3>
-                                <p className="project-desc">
-                                    {item.description}
-                                </p>
-                                <p className="project-link hover:no-underline">
-                                    <span>
-                                        <FaStar />
-                                    </span>
-                                    {item.stargazers.totalCount}
-                                </p>
-                                <SuperLink url={item.homepageUrl} />
-                                <Link href={item.url} passHref>
-                                    <a target="_blank" className="project-link">
-                                        <span>
-                                            <FaGithub />
-                                        </span>
-                                        {t('projects:github')}
-                                    </a>
-                                </Link>
-                            </div>
-                        )
-                    })}
-                </div>
-            </section>
+            <Projects pinnedItems={pinnedItems} />
             <Technologies />
             <Contact />
         </Layout>
-    )
-}
-
-export function SuperLink({ url }) {
-    const { t } = useTranslation('projects')
-    if (url === '') return null
-    return (
-        <Link href={url} passHref>
-            <a target="_blank" className="project-link">
-                <span>
-                    <FaGlobe />
-                </span>
-                {t('web')}
-            </a>
-        </Link>
     )
 }
 

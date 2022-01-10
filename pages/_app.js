@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, router }) {
                         opacity: 0,
                     },
                 }}
-                transition={{ duration: 0.4 }}>
+                transition={{ duration: 0.3 }}>
                 <Component {...pageProps} />
             </motion.div>
         </AnimatePresence>
