@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import FaviconMeta from './FaviconMeta'
 const {
     site_title,
     site_keywords,
@@ -17,6 +18,8 @@ export default function BasicMeta({ url, t }) {
             <meta name="keywords" content={site_keywords} />
             <meta name="author" content={author} />
             <link rel="canonical" href={base_url + url} />
+            <link rel="manifest" href="/manifest.json" />
+            <FaviconMeta />
         </Head>
     )
 }

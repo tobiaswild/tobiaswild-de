@@ -1,5 +1,4 @@
 [build]
-  base = "/"
   publish = ".next/"
   command = "yarn build"
 
@@ -11,16 +10,3 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-	cache-control = '''
-	max-age=31536000,
-	no-cache,
-	no-store,
-	must-revalidate'''
-    Basic-Auth = "someuser:somepassword anotheruser:anotherpassword"
-
-[functions]
-  directory = "functions/"
-
-[[edge_handlers]]
-  path = "/*"
-  handler = "filterRequests"

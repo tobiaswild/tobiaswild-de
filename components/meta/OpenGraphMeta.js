@@ -12,6 +12,10 @@ export default function OpenGraphMeta({ url, t, ogImageUrl }) {
                 content={t('common:info-short', { age: 16 })}
             />
             <meta property="og:image" content={ogImageUrl} />
+            <meta
+                property="og:image:alt"
+                content={base_url + '/og_image.png'}
+            />
             <meta property="og:type" content="article" />
         </Head>
     )
