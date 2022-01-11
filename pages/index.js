@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Head from 'next/head'
 import Contact from 'Components/Contact'
 import Layout from 'Components/Layout'
 import Projects from 'Components/Projects'
