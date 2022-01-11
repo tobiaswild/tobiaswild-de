@@ -8,15 +8,19 @@ import { GitHubUserInfo, GitHubPinnedRepos } from 'Lib/GitHub'
 import useTranslation from 'next-translate/useTranslation'
 import { v2 as cloudinary } from 'cloudinary'
 import big from 'Public/images/big.webp'
+import BasicMeta from 'Components/meta/BasicMeta'
+import OpenGraphMeta from 'Components/meta/OpenGraphMeta'
+import TwitterCardMeta from 'Components/meta/TwitterCardMeta'
 
 export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
     const { t } = useTranslation()
-    const title = 'Tobias Wild | Portfolio'
 
     return (
         <Layout home>
-            <Head>
-                {/* HTML Meta Tags */}
+            <BasicMeta url="/" t={t} />
+            <OpenGraphMeta url="/" t={t} ogImageUrl={ogImageUrl} />
+            <TwitterCardMeta url="/" t={t} />
+            {/* <Head>
                 <title>{title}</title>
                 <meta
                     name="description"
@@ -113,7 +117,7 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
                 />
                 <meta name="msapplication-TileColor" content="#ffffff" />
                 <meta name="theme-color" content="#ffffff" />
-                {/* OpenGraph */}
+              
                 <meta property="og:title" content={title} />
                 <meta
                     property="og:description"
@@ -122,7 +126,7 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
                 <meta property="og:image" content={ogImageUrl} />
                 <meta property="og:url" content="https://tobiaswild.de/" />
                 <meta property="og:type" content="website" />
-                {/* Twitter */}
+               
                 <meta name="twitter:title" content={title} />
                 <meta
                     name="twitter:description"
@@ -132,7 +136,7 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="tobiaswild.de" />
                 <meta property="twitter:url" content="https://tobiaswild.de/" />
-            </Head>
+            </Head> */}
             <header className="header">
                 <Image
                     src={big}
