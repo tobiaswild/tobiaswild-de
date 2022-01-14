@@ -167,16 +167,6 @@
     .project-link span {
         @apply mr-1;
     }
-
-    .list {
-        @apply grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-10 my-4;
-    }
-    .list li {
-        @apply p-2;
-    }
-    .list li a:hover {
-        @apply underline;
-    }
 }
 
 @layer utilities {

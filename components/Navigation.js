@@ -1,11 +1,11 @@
 import { Link } from 'react-scroll'
 import useTranslation from 'next-translate/useTranslation'
-import { FaProjectDiagram, FaSitemap, FaMailBulk } from 'react-icons/fa'
+import { FaProjectDiagram, FaSitemap, FaEnvelope } from 'react-icons/fa'
 
 const nav = [
     { id: 'projects', icon: <FaProjectDiagram /> },
     { id: 'technologies', icon: <FaSitemap /> },
-    { id: 'contact', icon: <FaMailBulk /> },
+    { id: 'contact', icon: <FaEnvelope /> },
 ]
 
 export default function Navigation() {
