@@ -10,7 +10,7 @@ export default function TwitterCardMeta({ url, t }) {
             <meta property="twitter:title" content={title} />
             <meta
                 property="twitter:description"
-                content={t('common:info-short', { age: 16 })}
+                content={t('common:info-short')}
             />
         </Head>
     )

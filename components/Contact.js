@@ -2,11 +2,11 @@ import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function Contact() {
-    const { t } = useTranslation('contact')
+    const { t } = useTranslation('common')
 
     return (
         <section id="contact">
-            <h2>{t('title')}</h2>
+            <h2>{t('contact.title')}</h2>
             <form
                 className="form"
                 name="contact"
@@ -14,29 +14,29 @@ export default function Contact() {
                 data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="form-item">
-                    <label htmlFor="name">{t('name')}</label>
+                    <label htmlFor="name">{t('contact.name')}</label>
                     <br />
                     <input type="text" id="name" name="name" required />
                 </p>
                 <p className="form-item">
-                    <label htmlFor="email">{t('email')}</label>
+                    <label htmlFor="email">{t('contact.email')}</label>
                     <br />
                     <input type="text" id="email" name="email" required />
                 </p>
                 {/* <p className="form-item">
-                    <label htmlFor="topic">{t('topic')}</label>
+                    <label htmlFor="topic">{t('contact.topic')}</label>
                     <br />
                     <select name="topic" id="topic" required>
-                        <option value={t('topics.general').toLocaleLowerCase()}>
-                            {t('topics.general')}
+                        <option value={t('contact.topics.general').toLocaleLowerCase()}>
+                            {t('contact.topics.general')}
                         </option>
-                        <option value={t('topics.other').toLocaleLowerCase()}>
-                            {t('topics.other')}
+                        <option value={t('contact.topics.other').toLocaleLowerCase()}>
+                            {t('contact.topics.other')}
                         </option>
                     </select>
                 </p> */}
                 <p className="form-item">
-                    <label htmlFor="message">{t('message')}</label>
+                    <label htmlFor="message">{t('contact.message')}</label>
                     <br />
                     <textarea
                         id="message"
@@ -46,12 +46,12 @@ export default function Contact() {
                 </p>
                 <p>
                     <button type="submit" className="submit-btn">
-                        {t('send')}
+                        {t('contact.send')}
                     </button>
                 </p>
             </form>
             <p className="or-email">
-                {t('or-email')}{' '}
+                {t('contact.or-email')}{' '}
                 <Link href="mailto:hello@tobiaswild.de">
                     <a target="_blank">hello@tobiaswild.de</a>
                 </Link>

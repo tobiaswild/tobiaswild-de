@@ -9,26 +9,26 @@ const nav = [
 ]
 
 export default function Navigation() {
-    const { t } = useTranslation()
+    const { t } = useTranslation('common')
 
     return (
-        <nav className="nav">
-            <div className="nav-container">
-                <Link to="top" className="logo">
+        <nav>
+            <div className='nav-container'>
+                <Link to='top' className='logo'>
                     Tobias Wild
                 </Link>
-                <div className="nav-links">
+                <div className='nav-links'>
                     {nav.map((card, index) => (
                         <Link
-                            activeClass="active"
+                            activeClass='active'
                             spy={true}
                             key={index}
                             to={card.id}
-                            offset={-65}
+                            offset={-60}
                             className={`${card.id} nav-link`}>
-                            <span className="nav-link-icon">{card.icon}</span>
-                            <span className="nav-link-text">
-                                {t(`${card.id}:title`)}
+                            <span className='nav-link-icon'>{card.icon}</span>
+                            <span className='nav-link-text'>
+                                {t(`${card.id}.title`)}
                             </span>
                         </Link>
                     ))}

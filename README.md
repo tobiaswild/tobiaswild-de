@@ -4,7 +4,7 @@
 
 ## General info
 
-This is the project of my personal website.
+My personal portfolio website, build with Next.js, JavaScript and TailwindCSS.
 
 ## Stack
 
@@ -20,7 +20,7 @@ This is the project of my personal website.
 ├── components              # React component files
 ├── locales                 # Language files
 ├── pages                   # Page files
-├── public                  # Static images and javascript files
+├── public                  # Static images and other files
 ├── styles                  # CSS files (TailwindCSS)
 ├── LICENSE
 └── README.md

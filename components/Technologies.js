@@ -92,11 +92,11 @@ const general = [
 ]
 
 export default function Technologies() {
-    const { t } = useTranslation('technologies')
+    const { t } = useTranslation('common')
 
     return (
         <section id="technologies" className="toolbox-cards-wrapper">
-            <h2>{t('title')}</h2>
+            <h2>{t('technologies.title')}</h2>
             <div className="toolbox-card">
                 <h3 className="toolbox-card-header">Frontend</h3>
                 <div className="tools-container">
@@ -124,7 +124,9 @@ export default function Technologies() {
                 </div>
             </div>
             <div className="toolbox-card">
-                <h3 className="toolbox-card-header">{t('general')}</h3>
+                <h3 className="toolbox-card-header">
+                    {t('technologies.general')}
+                </h3>
                 <div className="tools-container">
                     <ul>
                         {general.map((card, index) => (

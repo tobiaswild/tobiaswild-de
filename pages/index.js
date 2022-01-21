@@ -16,32 +16,32 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
 
     return (
         <Layout home>
-            <BasicMeta url="/" t={t} />
-            <OpenGraphMeta url="/" t={t} ogImageUrl={ogImageUrl} />
-            <TwitterCardMeta url="/" t={t} />
-            <header className="header">
+            <BasicMeta url='/' t={t} />
+            <OpenGraphMeta url='/' t={t} ogImageUrl={ogImageUrl} />
+            <TwitterCardMeta url='/' t={t} />
+            <header className='header'>
                 <Image
                     src={big}
-                    alt="header-image"
+                    alt='header-image'
                     width={1012}
                     height={506}
-                    className="rounded-xl"
+                    className='rounded-xl'
                 />
             </header>
-            <div className="bar">{t('common:desc')}</div>
-            <section id="info">
-                <div className="info-img">
+            <div className='bar'>{t('common:desc')}</div>
+            <section id='info'>
+                <div className='info-img'>
                     <Image
                         src={profilePic}
-                        alt=""
+                        alt=''
                         height={150}
                         width={150}
-                        className="rounded-full"
+                        className='rounded-full'
                         priority
                     />
                 </div>
                 <h1>Tobias Wild</h1>
-                <p>{t('common:info', { age: 16 })}</p>
+                <p>{t('common:info')}</p>
             </section>
             <Projects pinnedItems={pinnedItems} />
             <Technologies />

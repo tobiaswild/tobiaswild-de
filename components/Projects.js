@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaGithub, FaGlobe, FaStar } from 'react-icons/fa'
+import { FaGithub, FaGlobe, FaStar, FaUser, FaEye } from 'react-icons/fa'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function Projects({ pinnedItems }) {
-    const { t } = useTranslation('projects')
+    const { t } = useTranslation('common')
 
     return (
         <section id="projects">
-            <h2>{t('title')}</h2>
+            <h2>{t('projects.title')}</h2>
             <div className="projects-container">
                 {pinnedItems.map((item) => {
                     return (
@@ -24,19 +24,33 @@ export default function Projects({ pinnedItems }) {
                             </div>
                             <h3 className="project-name">{item.name}</h3>
                             <p className="project-desc">{item.description}</p>
-                            <p className="project-link hover:no-underline">
-                                <span>
-                                    <FaStar />
-                                </span>
-                                {item.stargazers.totalCount}
-                            </p>
+                            <div className="flex justify-between">
+                                <p className="project-link w-1/3 justify-center">
+                                    <span>
+                                        <FaStar />
+                                    </span>
+                                    {item.stargazers.totalCount}
+                                </p>
+                                <p className="project-link w-1/3 justify-center">
+                                    <span>
+                                        <FaEye />
+                                    </span>
+                                    {item.watchers.totalCount}
+                                </p>
+                                <p className="project-link w-1/3 justify-center">
+                                    <span>
+                                        <FaUser />
+                                    </span>
+                                    {item.collaborators.totalCount}
+                                </p>
+                            </div>
                             <SuperLink url={item.homepageUrl} />
                             <Link href={item.url} passHref>
                                 <a target="_blank" className="project-link">
                                     <span>
                                         <FaGithub />
                                     </span>
-                                    {t('github')}
+                                    {t('projects.github')}
                                 </a>
                             </Link>
                         </div>
@@ -48,7 +62,7 @@ export default function Projects({ pinnedItems }) {
 }
 
 function SuperLink({ url }) {
-    const { t } = useTranslation('projects')
+    const { t } = useTranslation('common')
     if (url === '') return null
     return (
         <Link href={url} passHref>
@@ -56,7 +70,7 @@ function SuperLink({ url }) {
                 <span>
                     <FaGlobe />
                 </span>
-                {t('web')}
+                {t('projects.web')}
             </a>
         </Link>
     )
