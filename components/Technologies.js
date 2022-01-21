@@ -1,13 +1,14 @@
+import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import {
-    FaHtml5,
     FaCss3,
-    FaJs,
-    FaReact,
-    FaGithub,
     FaGitAlt,
+    FaGithub,
+    FaHtml5,
+    FaJs,
     FaNodeJs,
     FaRaspberryPi,
+    FaReact,
 } from 'react-icons/fa'
 import {
     SiHeroku,
@@ -16,7 +17,6 @@ import {
     SiTailwindcss,
     SiVisualstudiocode,
 } from 'react-icons/si'
-import useTranslation from 'next-translate/useTranslation'
 
 const frontend = [
     {

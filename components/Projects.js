@@ -1,7 +1,7 @@
+import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaGithub, FaGlobe, FaStar, FaUser, FaEye } from 'react-icons/fa'
-import useTranslation from 'next-translate/useTranslation'
+import { FaEye, FaGithub, FaGlobe, FaStar, FaUser } from 'react-icons/fa'
 
 export default function Projects({ pinnedItems }) {
     const { t } = useTranslation('common')

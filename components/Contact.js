@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
+import Link from 'next/link'
 
 export default function Contact() {
     const { t } = useTranslation('common')

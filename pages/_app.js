@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import 'Styles/globals.css'
 
 function MyApp({ Component, pageProps, router }) {

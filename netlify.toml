@@ -2,9 +2,6 @@
   publish = ".next/"
   command = "yarn build"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [[headers]]
   for = "/*"
   [headers.values]
