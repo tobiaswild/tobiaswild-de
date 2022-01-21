@@ -1,49 +1,49 @@
 {
-    "name": "Tobias Wild | Portfolio",
-    "short_name": "Tobias Wild",
-    "description": "Portfolio von Tobias Wild",
-    "theme_color": "#fff",
     "background_color": "#fff",
+    "description": "Portfolio von Tobias Wild",
     "display": "standalone",
-    "orientation": "portrait",
-    "scope": "/",
-    "start_url": "/",
     "icons": [
         {
-            "src": "/icons/android-icon-36x36.png",
+            "density": "0.75",
             "sizes": "36x36",
-            "type": "image/png",
-            "density": "0.75"
+            "src": "/icons/android-icon-36x36.png",
+            "type": "image/png"
         },
         {
-            "src": "/icons/android-icon-48x48.png",
+            "density": "1.0",
             "sizes": "48x48",
-            "type": "image/png",
-            "density": "1.0"
+            "src": "/icons/android-icon-48x48.png",
+            "type": "image/png"
         },
         {
-            "src": "/icons/android-icon-72x72.png",
+            "density": "1.5",
             "sizes": "72x72",
-            "type": "image/png",
-            "density": "1.5"
+            "src": "/icons/android-icon-72x72.png",
+            "type": "image/png"
         },
         {
-            "src": "/icons/android-icon-96x96.png",
+            "density": "2.0",
             "sizes": "96x96",
-            "type": "image/png",
-            "density": "2.0"
+            "src": "/icons/android-icon-96x96.png",
+            "type": "image/png"
         },
         {
-            "src": "/icons/android-icon-144x144.png",
+            "density": "3.0",
             "sizes": "144x144",
-            "type": "image/png",
-            "density": "3.0"
+            "src": "/icons/android-icon-144x144.png",
+            "type": "image/png"
         },
         {
-            "src": "/icons/android-icon-192x192.png",
+            "density": "4.0",
             "sizes": "192x192",
-            "type": "image/png",
-            "density": "4.0"
+            "src": "/icons/android-icon-192x192.png",
+            "type": "image/png"
         }
-    ]
+    ],
+    "name": "Tobias Wild | Portfolio",
+    "orientation": "portrait",
+    "scope": "/",
+    "short_name": "Tobias Wild",
+    "start_url": "/",
+    "theme_color": "#fff"
 }

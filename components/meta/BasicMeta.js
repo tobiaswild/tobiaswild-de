@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import FaviconMeta from './FaviconMeta'
 const {
-    site_title,
+    title,
     site_keywords,
     author,
     base_url,
@@ -10,7 +10,7 @@ const {
 export default function BasicMeta({ url, t }) {
     return (
         <Head>
-            <title>{site_title}</title>
+            <title>{title}</title>
             <meta name="description" content={t('common:info-short')} />
             <meta name="keywords" content={site_keywords} />
             <meta name="author" content={author} />

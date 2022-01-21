@@ -1,8 +1,7 @@
 {
-    "site_title": "Tobias Wild | Portfolio",
-    "title": "Tobias Wild | Portfolio",
-    "site_keywords": "Tobias Wild, Tobias, Wild, Schüler, Programmieren, Coding, NextJS, HTML, CSS, JS, JavaScript",
     "author": "Tobias Wild",
     "base_url": "https://tobiaswild.de",
+    "keywords": "Tobias Wild, Tobias, Wild, Schüler, Programmieren, Coding, NextJS, HTML, CSS, JS, JavaScript",
+    "title": "Tobias Wild | Portfolio",
     "twitter_account": "none"
 }
