@@ -11,19 +11,6 @@ module.exports = {
                 background: 'var(--color-background)',
             },
             fontFamily: {
-                normal: [
-                    '-apple-system',
-                    'BlinkMacSystemFont',
-                    'Segoe UI',
-                    'Roboto',
-                    'Oxygen',
-                    'Ubuntu',
-                    'Cantarell',
-                    'Fira Sans',
-                    'Droid Sans',
-                    'Helvetica Neue',
-                    'sans-serif',
-                ],
                 'Space-Grotesk': ['Space Grotesk', 'sans-serif'],
             },
             width: {

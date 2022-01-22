@@ -15,7 +15,7 @@
     }
     html,
     body {
-        @apply p-0 m-0 font-normal bg-background text-base overflow-x-hidden select-none scroll-smooth;
+        @apply p-0 m-0 font-sans bg-background text-base overflow-x-hidden select-none scroll-smooth;
     }
     a {
         @apply no-underline;
@@ -32,7 +32,7 @@
     h1 {
         @apply tablet:text-4xl text-3xl font-black;
     }
-    /* Sextion Headings */
+    /* Section Headings */
     h2 {
         @apply font-black leading-none text-center text-4xl tablet:text-5xl mb-8 tablet:mb-16;
     }

@@ -8,10 +8,7 @@ export default function TwitterCardMeta({ url, t }) {
             <meta property="twitter:site" content={twitter_account} />
             <meta property="twitter:url" content={base_url + url} />
             <meta property="twitter:title" content={title} />
-            <meta
-                property="twitter:description"
-                content={t('common:info-short')}
-            />
+            <meta property="twitter:description" content={t('info-short')} />
         </Head>
     )
 }
