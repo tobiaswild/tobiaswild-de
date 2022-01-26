@@ -15,7 +15,7 @@
     }
     html,
     body {
-        @apply p-0 m-0 font-sans bg-background text-base overflow-x-hidden select-none scroll-smooth;
+        @apply p-0 m-0 text-base font-sans bg-background overflow-x-hidden select-none scroll-smooth;
     }
     a {
         @apply no-underline;
@@ -63,7 +63,7 @@
         @apply py-12;
     }
     footer {
-        @apply py-8 text-center text-gray-500 text-sm;
+        @apply py-8 text-center text-neutral-400 text-sm;
     }
 
     ::-webkit-scrollbar {
@@ -76,7 +76,7 @@
 
 @layer components {
     .box {
-        @apply rounded-xl bg-neutral-800 shadow shadow-neutral-800;
+        @apply rounded-xl bg-neutral-800 shadow-sm shadow-neutral-800;
     }
     .wrapper {
         @apply desktop:w-3xl tablet:w-2xl max-w-[90%] mx-auto;
@@ -104,7 +104,7 @@
 
     /* Info */
     .bar {
-        @apply shadow-sm rounded-xl bg-accent text-base py-3 my-4 text-center w-full;
+        @apply rounded-xl bg-accent py-3 my-4 text-center w-full;
     }
     #info {
         @apply pt-0;
@@ -118,7 +118,7 @@
         @apply mx-auto grid grid-flow-row tablet:grid-cols-2 gap-4 items-start;
     }
     .project {
-        @apply box p-4 shadow;
+        @apply box p-4;
     }
     .project-link {
         @apply flex items-center;
@@ -160,16 +160,16 @@
     .form-item input,
     .form-item select,
     .form-item textarea {
-        @apply box rounded-none w-full p-1 pl-2 border-b-2 border-neutral-200 outline-none focus:border-accent transition-all;
+        @apply box rounded-none w-full p-1 pl-2 border-b-2 border-neutral-400 outline-none focus:border-accent transition-all;
     }
     .form .submit-btn {
-        @apply bg-accent p-1 mt-4 font-bold text-white rounded-xl border-none w-full;
+        @apply bg-accent p-1 mt-4 font-bold rounded-xl border-none w-full;
     }
     .or-email {
         @apply text-center pt-2 tablet:pt-5;
     }
     .or-email a {
-        @apply decoration-accent transition-all;
+        @apply decoration-accent;
     }
 }
 

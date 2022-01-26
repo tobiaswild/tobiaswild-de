@@ -1,4 +1,3 @@
-import { v2 as cloudinary } from 'cloudinary'
 import Contact from 'Components/Contact'
 import Layout from 'Components/Layout'
 import BasicMeta from 'Components/meta/BasicMeta'
@@ -6,6 +5,7 @@ import OpenGraphMeta from 'Components/meta/OpenGraphMeta'
 import TwitterCardMeta from 'Components/meta/TwitterCardMeta'
 import Projects from 'Components/Projects'
 import Technologies from 'Components/Technologies'
+import { Cloudinary } from 'Lib/Cloudinary'
 import { GitHub } from 'Lib/GitHub'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
@@ -53,96 +53,7 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
 export const getServerSideProps = async () => {
     const user = await GitHub()
     const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
-
-    cloudinary.config({
-        cloud_name: 'dgawcrdie',
-    })
-    const cloudinaryUrl = cloudinary.url('cloudinary-background_vvmbwk', {
-        width: 1012,
-        height: 506,
-        transformation: [
-            { fetch_format: 'auto', quality: 'auto' },
-            {
-                overlay: {
-                    url: user.avatarUrl,
-                },
-            },
-            {
-                flags: 'layer_apply',
-                width: 300,
-                height: 300,
-                gravity: 'north_west',
-                x: 50,
-                y: 80,
-                radius: 250,
-            },
-            {
-                color: '#7289da',
-                width: 432,
-                crop: 'fit',
-                overlay: {
-                    font_family: 'Source Sans Pro',
-                    font_weight: 'bold',
-                    font_size: 60,
-                    text: user.name,
-                },
-            },
-            {
-                color: '#A1A1AA',
-                width: 432,
-                crop: 'fit',
-                overlay: {
-                    font_family: 'Source Sans Pro',
-                    font_weight: 'semibold',
-                    font_size: 36,
-                    text: `@${user.login}`,
-                },
-            },
-            {
-                flags: 'layer_apply',
-                gravity: 'north_west',
-                y: 'h + 15',
-            },
-            {
-                color: '#52525B',
-                width: 432,
-                crop: 'fit',
-                overlay: {
-                    font_family: 'Source Sans Pro',
-                    font_weight: 'regular',
-                    font_size: 36,
-                    text: user.bio,
-                },
-            },
-            {
-                flags: 'layer_apply',
-                gravity: 'north_west',
-                y: 'h + 20',
-            },
-            {
-                color: '#52525B',
-                width: 432,
-                crop: 'fit',
-                overlay: {
-                    font_family: 'Source Sans Pro',
-                    font_weight: 'semibold',
-                    font_size: 28,
-                    text: `Followers: ${user.followers.totalCount}`,
-                },
-            },
-            {
-                flags: 'layer_apply',
-                gravity: 'north_west',
-                y: 'h + 20',
-            },
-            {
-                flags: 'layer_apply',
-                gravity: 'north_west',
-                x: 400,
-                y: 120,
-            },
-        ],
-    })
+    const cloudinaryUrl = await Cloudinary(user)
 
     return {
         props: {
