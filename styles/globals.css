@@ -15,7 +15,7 @@
     }
     html,
     body {
-        @apply p-0 m-0 text-base font-sans bg-background overflow-x-hidden select-none scroll-smooth;
+        @apply m-0 select-none overflow-x-hidden scroll-smooth bg-background p-0 font-sans text-base;
     }
     a {
         @apply no-underline;
@@ -30,11 +30,11 @@
     }
     /* Just my name */
     h1 {
-        @apply tablet:text-4xl text-3xl font-black;
+        @apply text-3xl font-black tablet:text-4xl;
     }
     /* Section Headings */
     h2 {
-        @apply font-black leading-none text-center text-4xl tablet:text-5xl mb-8 tablet:mb-16;
+        @apply mb-8 text-center text-4xl font-black leading-none tablet:mb-16 tablet:text-5xl;
     }
     /* Sub-Section Headings */
     h3 {
@@ -54,7 +54,7 @@
     }
 
     nav {
-        @apply fixed top-0 w-full z-10 overflow-hidden bg-background;
+        @apply fixed top-0 z-10 w-full overflow-hidden bg-background;
     }
     main {
         @apply pt-16;
@@ -63,14 +63,14 @@
         @apply py-12;
     }
     footer {
-        @apply py-8 text-center text-neutral-400 text-sm;
+        @apply py-8 text-center text-sm text-neutral-400;
     }
 
     ::-webkit-scrollbar {
         @apply w-1;
     }
     ::-webkit-scrollbar-thumb {
-        @apply bg-accent rounded-xl;
+        @apply rounded-xl bg-accent;
     }
 }
 
@@ -79,43 +79,43 @@
         @apply rounded-xl bg-neutral-800 shadow-sm shadow-neutral-800;
     }
     .wrapper {
-        @apply desktop:w-3xl tablet:w-2xl max-w-[90%] mx-auto;
+        @apply mx-auto max-w-[90%] tablet:w-2xl desktop:w-3xl;
     }
 
     /* Navigation */
     .nav-container {
-        @apply flex flex-row justify-between tablet:w-4xl max-w-[95%] mx-auto;
+        @apply mx-auto flex max-w-[95%] flex-row justify-between tablet:w-4xl;
     }
     .logo {
-        @apply font-Space-Grotesk text-2xl items-center p-2 m-2 hover:no-underline;
+        @apply m-2 items-center p-2 font-Space-Grotesk text-2xl hover:no-underline;
     }
     .nav-links {
         @apply flex flex-row;
     }
     .nav-link {
-        @apply h-10 max-w-sm w-auto flex items-center p-2 m-2 text-neutral-400 hover:no-underline hover:text-neutral-500;
+        @apply m-2 flex h-10 w-auto max-w-sm items-center p-2 text-neutral-400 hover:text-neutral-500 hover:no-underline;
     }
     .nav-link-icon {
-        @apply tablet:hidden text-xl;
+        @apply text-xl tablet:hidden;
     }
     .nav-link-text {
-        @apply tablet:block hidden;
+        @apply hidden tablet:block;
     }
 
     /* Info */
     .bar {
-        @apply rounded-xl bg-accent py-3 my-4 text-center w-full;
+        @apply my-4 w-full rounded-xl bg-accent py-3 text-center;
     }
     #info {
         @apply pt-0;
     }
     .info-img {
-        @apply float-right ml-1 mb-1 rounded-full max-h-36 w-36 p-1 bg-black;
+        @apply float-right ml-1 mb-1 max-h-36 w-36 rounded-full bg-black p-1;
     }
 
     /* Projects */
     .projects-container {
-        @apply mx-auto grid grid-flow-row tablet:grid-cols-2 gap-4 items-start;
+        @apply mx-auto grid grid-flow-row items-start gap-4 tablet:grid-cols-2;
     }
     .project {
         @apply box p-4;
@@ -132,13 +132,13 @@
         @apply flex flex-col items-center;
     }
     .toolbox-card {
-        @apply py-4 flex items-center flex-col;
+        @apply flex flex-col items-center py-4;
     }
     .tools-container ul {
         @apply flex flex-row flex-wrap justify-center;
     }
     .tool {
-        @apply box h-28 w-28 p-4 m-2 flex justify-end items-center flex-col;
+        @apply box m-2 flex h-28 w-28 flex-col items-center justify-end p-4;
     }
     .tool-icon {
         @apply text-4xl;
@@ -152,21 +152,21 @@
         @apply box;
     }
     .form {
-        @apply tablet:w-4/5 w-[90%] mx-auto;
+        @apply mx-auto w-[90%] tablet:w-4/5;
     }
     .form-item {
-        @apply w-full relative min-h-[5rem] overflow-hidden p-2;
+        @apply relative min-h-[5rem] w-full overflow-hidden p-2;
     }
     .form-item input,
     .form-item select,
     .form-item textarea {
-        @apply box rounded-none w-full p-1 pl-2 border-b-2 border-neutral-400 outline-none focus:border-accent transition-all;
+        @apply box w-full rounded-none border-b-2 border-neutral-400 p-1 pl-2 outline-none transition-all focus:border-accent;
     }
     .form .submit-btn {
-        @apply bg-accent p-1 mt-4 font-bold rounded-xl border-none w-full;
+        @apply mt-4 w-full rounded-xl border-none bg-accent p-1 font-bold;
     }
     .or-email {
-        @apply text-center pt-2 tablet:pt-5;
+        @apply pt-2 text-center tablet:pt-5;
     }
     .or-email a {
         @apply decoration-accent;

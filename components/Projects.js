@@ -1,10 +1,24 @@
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaEye, FaGithub, FaGlobe, FaStar, FaUser } from 'react-icons/fa'
+import { FaGithub, FaGlobe } from 'react-icons/fa'
 
 export default function Projects({ pinnedItems }) {
     const { t } = useTranslation('common')
+
+    function SuperLink({ url }) {
+        if (url === '') return null
+        return (
+            <Link href={url} passHref>
+                <a target="_blank" className="project-link">
+                    <span>
+                        <FaGlobe />
+                    </span>
+                    {t('projects.web')}
+                </a>
+            </Link>
+        )
+    }
 
     return (
         <section id="projects">
@@ -24,7 +38,7 @@ export default function Projects({ pinnedItems }) {
                             </div>
                             <h3 className="project-name">{item.name}</h3>
                             <p className="project-desc">{item.description}</p>
-                            <div className="flex justify-between">
+                            {/* <div className="flex justify-between">
                                 <p className="project-link w-1/3 justify-center">
                                     <span>
                                         <FaStar />
@@ -43,7 +57,7 @@ export default function Projects({ pinnedItems }) {
                                     </span>
                                     {item.collaborators.totalCount}
                                 </p>
-                            </div>
+                            </div> */}
                             <SuperLink url={item.homepageUrl} />
                             <Link href={item.url} passHref>
                                 <a target="_blank" className="project-link">
@@ -58,20 +72,5 @@ export default function Projects({ pinnedItems }) {
                 })}
             </div>
         </section>
-    )
-}
-
-function SuperLink({ url }) {
-    const { t } = useTranslation('common')
-    if (url === '') return null
-    return (
-        <Link href={url} passHref>
-            <a target="_blank" className="project-link">
-                <span>
-                    <FaGlobe />
-                </span>
-                {t('projects.web')}
-            </a>
-        </Link>
     )
 }
