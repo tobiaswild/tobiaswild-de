@@ -5,8 +5,10 @@ import {
     FaGitAlt,
     FaGithub,
     FaHtml5,
+    FaJava,
     FaJs,
     FaNodeJs,
+    FaPython,
     FaRaspberryPi,
     FaReact,
 } from 'react-icons/fa'
@@ -64,6 +66,18 @@ const backend = [
     },
 ]
 
+const other = [
+    {
+        icon: <FaJava />,
+        name: 'Java',
+    },
+
+    {
+        icon: <FaPython />,
+        name: 'Python',
+    },
+]
+
 const general = [
     {
         icon: <FaGitAlt />,
@@ -115,6 +129,21 @@ export default function Technologies() {
                 <div className="tools-container">
                     <ul>
                         {backend.map((card, index) => (
+                            <li key={index} className="tool">
+                                <span className="tool-icon">{card.icon}</span>
+                                {card.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="toolbox-card">
+                <h3 className="toolbox-card-header">
+                    {t('technologies.other')}
+                </h3>
+                <div className="tools-container">
+                    <ul>
+                        {other.map((card, index) => (
                             <li key={index} className="tool">
                                 <span className="tool-icon">{card.icon}</span>
                                 {card.name}
