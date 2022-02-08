@@ -1,5 +1,30 @@
 {
     "desc": "Hey, I am a developer based in Germany!",
-    "info": "I am a {{age}} years old student from Germany and I love coding. I started learning HTML and CSS in mid 2018 when my school offered a differentiation course on it. And from there on I thought my self JS. In mid 2021, I took an online course on web development with ReactJS. Then I started learning and using NextJS.",
-    "info-short": "Hey, I am a {{age}} years old student from Germany and I love coding."
+    "info": "I am a 16 years old student from Germany and I love coding. I started learning HTML and CSS in mid 2018 when my school offered a differentiation course on it. And from there on I thought my self JS. In mid 2021, I took an online course on web development with ReactJS. Then I started learning and using NextJS.",
+    "info-short": "Hey, I am a 16 years old student from Germany and I love coding.",
+    "projects": {
+        "title": "Projects",
+        "web": "Project Website",
+        "github": "Project on GitHub"
+    },
+    "technologies": {
+        "title": "Technologies",
+        "other": "Other programming languages",
+        "general": "General"
+    },
+    "contact": {
+        "title": "Contact",
+        "name": "Your Name",
+        "email": "Your Email",
+        "topic": "Your Topic",
+        "topics": {
+            "general": "General",
+            "other": "Other"
+        },
+        "message": "Your Message",
+        "send": "Send!",
+        "or-email": "Or send me an email to:",
+        "thanks": "Thanks!",
+        "thanks-text": "Thank you very much for your message! I will reply as soon as possible."
+    }
 }

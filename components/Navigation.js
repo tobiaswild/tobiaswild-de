@@ -1,19 +1,18 @@
-import { Link } from 'react-scroll'
-import NextLink from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
-import { FaProjectDiagram, FaSitemap, FaMailBulk } from 'react-icons/fa'
+import { FaEnvelope, FaProjectDiagram, FaSitemap } from 'react-icons/fa'
+import { Link } from 'react-scroll'
 
 const nav = [
     { id: 'projects', icon: <FaProjectDiagram /> },
     { id: 'technologies', icon: <FaSitemap /> },
-    { id: 'contact', icon: <FaMailBulk /> },
+    { id: 'contact', icon: <FaEnvelope /> },
 ]
 
 export default function Navigation() {
-    const { t } = useTranslation()
+    const { t } = useTranslation('common')
 
     return (
-        <nav className="nav">
+        <nav>
             <div className="nav-container">
                 <Link to="top" className="logo">
                     Tobias Wild
@@ -25,27 +24,15 @@ export default function Navigation() {
                             spy={true}
                             key={index}
                             to={card.id}
-                            offset={-65}
+                            offset={-60}
                             className={`${card.id} nav-link`}>
                             <span className="nav-link-icon">{card.icon}</span>
                             <span className="nav-link-text">
-                                {t(`${card.id}:title`)}
+                                {t(`${card.id}.title`)}
                             </span>
                         </Link>
                     ))}
                 </div>
-            </div>
-        </nav>
-    )
-}
-
-export function NavigationSmall() {
-    return (
-        <nav className="nav">
-            <div className="nav-container">
-                <NextLink href="/">
-                    <a className="logo">Tobias Wild</a>
-                </NextLink>
             </div>
         </nav>
     )

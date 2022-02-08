@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import 'Styles/globals.css'
 
 function MyApp({ Component, pageProps, router }) {
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, router }) {
                         opacity: 0,
                     },
                 }}
-                transition={{ duration: 0.4 }}>
+                transition={{ duration: 0.3 }}>
                 <Component {...pageProps} />
             </motion.div>
         </AnimatePresence>

@@ -1,13 +1,16 @@
+import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import {
-    FaHtml5,
     FaCss3,
-    FaJs,
-    FaReact,
-    FaGithub,
     FaGitAlt,
+    FaGithub,
+    FaHtml5,
+    FaJava,
+    FaJs,
     FaNodeJs,
+    FaPython,
     FaRaspberryPi,
+    FaReact,
 } from 'react-icons/fa'
 import {
     SiHeroku,
@@ -16,7 +19,6 @@ import {
     SiTailwindcss,
     SiVisualstudiocode,
 } from 'react-icons/si'
-import useTranslation from 'next-translate/useTranslation'
 
 const frontend = [
     {
@@ -64,6 +66,18 @@ const backend = [
     },
 ]
 
+const other = [
+    {
+        icon: <FaJava />,
+        name: 'Java',
+    },
+
+    {
+        icon: <FaPython />,
+        name: 'Python',
+    },
+]
+
 const general = [
     {
         icon: <FaGitAlt />,
@@ -92,11 +106,11 @@ const general = [
 ]
 
 export default function Technologies() {
-    const { t } = useTranslation('technologies')
+    const { t } = useTranslation('common')
 
     return (
         <section id="technologies" className="toolbox-cards-wrapper">
-            <h2>{t('title')}</h2>
+            <h2>{t('technologies.title')}</h2>
             <div className="toolbox-card">
                 <h3 className="toolbox-card-header">Frontend</h3>
                 <div className="tools-container">
@@ -124,7 +138,24 @@ export default function Technologies() {
                 </div>
             </div>
             <div className="toolbox-card">
-                <h3 className="toolbox-card-header">{t('general')}</h3>
+                <h3 className="toolbox-card-header">
+                    {t('technologies.other')}
+                </h3>
+                <div className="tools-container">
+                    <ul>
+                        {other.map((card, index) => (
+                            <li key={index} className="tool">
+                                <span className="tool-icon">{card.icon}</span>
+                                {card.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="toolbox-card">
+                <h3 className="toolbox-card-header">
+                    {t('technologies.general')}
+                </h3>
                 <div className="tools-container">
                     <ul>
                         {general.map((card, index) => (

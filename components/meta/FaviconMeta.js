@@ -84,6 +84,8 @@ export default function FaviconMeta() {
                 name="msapplication-TileImage"
                 content="/icons/ms-icon-144x144.png"
             />
+            <meta name="msapplication-TileColor" content="#ffffff" />
+            <meta name="theme-color" content="#ffffff" />
         </>
     )
 }
