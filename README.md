@@ -25,3 +25,22 @@ My personal portfolio website, build with Next.js, JavaScript and TailwindCSS.
 ├── LICENSE
 └── README.md
 ```
+
+## Inspired and copied from
+
+-   Craftzdogs [Homepage](https://github.com/craftzdog/craftzdog-homepage)
+-   Mezos [Website](https://github.com/mezotv/portfolio_website)
+-   Fromthemountains [Homepage](https://github.com/Rey810/from-the-mountain)
+-   Many more
+
+## CONTRIBUTING
+
+Read the contributing instructions [here](https://github.com/tobiaswild/tobiaswild.de/blob/master/CONTRIBUTING.md)
+
+## LICENSE
+
+MIT License.
+
+You can create your own homepage for free without notifying me by forking this project under the following conditions:
+
+-   Add a link to my homepage
