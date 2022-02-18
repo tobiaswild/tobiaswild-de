@@ -79,7 +79,7 @@
         @apply rounded-xl bg-neutral-800 shadow-sm shadow-neutral-800;
     }
     .wrapper {
-        @apply mx-auto max-w-[90%] tablet:w-2xl desktop:w-3xl;
+        @apply mx-auto max-w-[85%] tablet:w-2xl desktop:w-3xl;
     }
 
     /* Navigation */
