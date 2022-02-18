@@ -5,19 +5,18 @@ import OpenGraphMeta from 'Components/meta/OpenGraphMeta'
 import TwitterCardMeta from 'Components/meta/TwitterCardMeta'
 import Projects from 'Components/Projects'
 import Technologies from 'Components/Technologies'
-import { Cloudinary } from 'Lib/Cloudinary'
 import { GitHub } from 'Lib/GitHub'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import big from 'Public/images/big.webp'
 
-export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
+export default function Home({ pinnedItems, profilePic }) {
     const { t } = useTranslation('common')
 
     return (
         <Layout home>
             <BasicMeta url="/" t={t} />
-            <OpenGraphMeta url="/" t={t} ogImageUrl={ogImageUrl} />
+            <OpenGraphMeta url="/" t={t} />
             <TwitterCardMeta url="/" t={t} />
             <header>
                 <Image
@@ -53,12 +52,10 @@ export default function Home({ pinnedItems, profilePic, ogImageUrl }) {
 export const getServerSideProps = async () => {
     const user = await GitHub()
     const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
-    const cloudinaryUrl = await Cloudinary(user)
 
     return {
         props: {
-            pinnedItems,
-            ogImageUrl: cloudinaryUrl,
+            pinnedItems: pinnedItems,
             profilePic: user.avatarUrl,
         },
     }

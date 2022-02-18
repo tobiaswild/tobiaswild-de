@@ -7,7 +7,9 @@ export default function Contact() {
     return (
         <section id="contact">
             <h2>{t('contact.title')}</h2>
-            <h3 className="text-red-500">This form is currently not working</h3>
+            <h3 className="text-center text-red-500">
+                This form is currently not working
+            </h3>
             <form
                 className="form"
                 name="contact"

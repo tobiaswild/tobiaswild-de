@@ -1,7 +1,7 @@
 import Head from 'next/head'
 const { title, base_url, twitter_account } = require('../../lib/config.json')
 
-export default function TwitterCardMeta({ url, t }) {
+export default function TwitterCardMeta({ t, url }) {
     return (
         <Head>
             <meta property="twitter:card" content="summary_large_image" />
