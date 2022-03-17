@@ -8,10 +8,10 @@ My personal portfolio website, build with Next.js, JavaScript and TailwindCSS.
 
 ## Stack
 
--   [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
--   [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
--   [Next Translate](https://github.com/vinissimus/next-translate) - Next.js plugin + i18n API for Next.js
--   [Framer Motion](https://www.framer.com/motion/) - An animation library for React
+- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
+- [Next Translate](https://github.com/vinissimus/next-translate) - Next.js plugin + i18n API for Next.js
+- [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 
 ## Project structure
 
@@ -28,10 +28,10 @@ My personal portfolio website, build with Next.js, JavaScript and TailwindCSS.
 
 ## Inspired and copied from
 
--   Craftzdogs [Homepage](https://github.com/craftzdog/craftzdog-homepage)
--   Mezos [Website](https://github.com/mezotv/portfolio_website)
--   Fromthemountains [Homepage](https://github.com/Rey810/from-the-mountain)
--   Many more
+- Craftzdogs [Homepage](https://github.com/craftzdog/craftzdog-homepage)
+- Mezos [Website](https://github.com/mezotv/portfolio_website)
+- Fromthemountains [Homepage](https://github.com/Rey810/from-the-mountain)
+- Many more
 
 ## CONTRIBUTING
 
@@ -43,4 +43,4 @@ MIT License.
 
 You can create your own homepage for free without notifying me by forking this project under the following conditions:
 
--   Add a link to my homepage
+- Add a link to my homepage
