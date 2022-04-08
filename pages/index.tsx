@@ -14,7 +14,7 @@ export default function Home({ pinnedItems, profilePic }) {
   const { t } = useTranslation('common')
 
   return (
-    <Layout home>
+    <Layout>
       <BasicMeta url="/" t={t} />
       <OpenGraphMeta url="/" t={t} />
       <TwitterCardMeta url="/" t={t} />
