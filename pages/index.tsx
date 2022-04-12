@@ -49,7 +49,7 @@ export default function Home({ pinnedItems, profilePic }) {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const user = await GitHub()
   const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
 
@@ -58,5 +58,6 @@ export const getServerSideProps = async () => {
       pinnedItems: pinnedItems,
       profilePic: user.avatarUrl,
     },
+    revalidate: 60 * 60, // one hour
   }
 }
