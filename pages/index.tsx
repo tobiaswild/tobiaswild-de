@@ -15,6 +15,7 @@ export default function Home({ pinnedItems, profilePic }) {
 
   return (
     <Layout>
+      <script async src="https://cdn.splitbee.io/sb.js"></script>
       <BasicMeta url="/" t={t} />
       <OpenGraphMeta url="/" t={t} />
       <TwitterCardMeta url="/" t={t} />
