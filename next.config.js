@@ -9,6 +9,7 @@ module.exports = {
       'repository-images.githubusercontent.com',
       'avatars.githubusercontent.com',
       'res.cloudinary.com',
+      'cdn.sanity.io',
     ],
   },
 }

@@ -48,6 +48,13 @@ export const GitHub = async () => {
                   url
                   homepageUrl
                   openGraphImageUrl
+                  repositoryTopics(first: 20) {
+                    nodes {
+                      topic {
+                        name
+                      }
+                    }
+                  }
                 }
               }
             }
