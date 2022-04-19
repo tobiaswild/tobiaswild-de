@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "nilssoderman.sitemap-generator",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
