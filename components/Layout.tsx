@@ -5,8 +5,10 @@ export default function Layout({ children }) {
   return (
     <>
       <Navigation />
-      <div className="wrapper">
-        <main id="top">{children}</main>
+      <div className="mx-auto max-w-[90%] tablet:w-2xl desktop:w-3xl">
+        <main id="top" className="pt-16">
+          {children}
+        </main>
         <Footer />
       </div>
     </>

@@ -1,28 +1,12 @@
-import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaGithub, FaGlobe } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import Weblink from './Weblink'
 
 export default function Project({ item }) {
-  const { t } = useTranslation('common')
-
-  function SuperLink({ url }) {
-    if (url === '') return null
-    return (
-      <Link href={url} passHref>
-        <a target="_blank" className="project-link">
-          <span>
-            <FaGlobe />
-          </span>
-          {t('projects.web')}
-        </a>
-      </Link>
-    )
-  }
-
   return (
-    <div key={item.id} className="project">
-      <div className="relative h-52">
+    <div key={item.id} className="box p-3">
+      <div className="relative aspect-video">
         <Image
           layout="fill"
           className="absolute rounded object-cover"
@@ -30,16 +14,15 @@ export default function Project({ item }) {
           alt={item.name}
         />
       </div>
-      <h3 className="project-name">{item.name}</h3>
-
+      <h3 className="py-0.5">{item.name}</h3>
       <p className="project-desc">{item.description}</p>
-      <SuperLink url={item.homepageUrl} />
+      <Weblink url={item.homepageUrl} />
       <Link href={item.url} passHref>
-        <a target="_blank" className="project-link">
-          <span>
+        <a target="_blank" className="flex items-center">
+          <span className="mr-1">
             <FaGithub />
           </span>
-          {t('projects.github')}
+          GitHub
         </a>
       </Link>
     </div>

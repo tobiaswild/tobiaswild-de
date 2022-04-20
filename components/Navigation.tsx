@@ -1,23 +1,22 @@
-import useTranslation from 'next-translate/useTranslation'
 import { FaEnvelope, FaProjectDiagram, FaSitemap } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 
 const nav = [
-  { id: 'projects', icon: <FaProjectDiagram /> },
-  { id: 'technologies', icon: <FaSitemap /> },
-  { id: 'contact', icon: <FaEnvelope /> },
+  { id: 'projects', name: 'Projekte', icon: <FaProjectDiagram /> },
+  { id: 'skills', name: 'Skills', icon: <FaSitemap /> },
+  { id: 'contact', name: 'Kontakt', icon: <FaEnvelope /> },
 ]
 
 export default function Navigation() {
-  const { t } = useTranslation('common')
-
   return (
-    <nav>
-      <div className="nav-container">
-        <Link to="top" className="logo">
+    <nav className="fixed top-0 z-10 w-full overflow-hidden bg-background">
+      <div className="mx-auto flex max-w-[95%] flex-row justify-between tablet:w-4xl">
+        <Link
+          to="top"
+          className="m-2 items-center p-2 font-Space-Grotesk text-2xl hover:no-underline">
           Tobias Wild
         </Link>
-        <div className="nav-links">
+        <div className="flex flex-row">
           {nav.map((card, index) => (
             <Link
               activeClass="active"
@@ -25,9 +24,9 @@ export default function Navigation() {
               key={index}
               to={card.id}
               offset={-60}
-              className={`${card.id} nav-link`}>
-              <span className="nav-link-icon">{card.icon}</span>
-              <span className="nav-link-text">{t(`${card.id}.title`)}</span>
+              className={`${card.id} m-2 flex h-10 w-auto max-w-sm items-center p-2 text-neutral-400 hover:text-neutral-500 hover:no-underline`}>
+              <span className="text-xl tablet:hidden">{card.icon}</span>
+              <span className="hidden tablet:block">{card.name}</span>
             </Link>
           ))}
         </div>
