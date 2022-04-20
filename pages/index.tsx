@@ -2,12 +2,12 @@ import Contact from 'Components/Contact'
 import Layout from 'Components/Layout'
 import BasicMeta from 'Components/meta/BasicMeta'
 import SocialMeta from 'Components/meta/SocialMeta'
+import MyImage from 'Components/MyImage'
 import Projects from 'Components/Projects'
 import Skills from 'Components/Skills'
 import { GitHub } from 'Lib/GitHub'
 import { getClient } from 'Lib/sanity.server'
 import { groq } from 'next-sanity'
-import Image from 'next/image'
 
 export default function Home({ pinnedItems, skills, profilePic }) {
   return (
@@ -18,16 +18,17 @@ export default function Home({ pinnedItems, skills, profilePic }) {
         Hey, ich bin ein Schüler und Programmierer aus Deutschland.
       </div>
       <section id="pt-0">
-        <div className="relative float-right ml-1 mb-1 h-36 w-36 rounded-full bg-black p-1">
-          <Image
+        <div className="relative float-right ml-1 mb-1 h-40 w-40 rounded-full bg-black p-1">
+          <MyImage
             src={profilePic}
-            alt=""
-            layout="fill"
-            className="absolute rounded-full object-cover"
+            alt={''}
+            clsName={'rounded-full'}
             priority
           />
         </div>
-        <h1>Tobias Wild</h1>
+        <h1 className="font-Space-Grotesk text-3xl font-black tablet:text-4xl">
+          Tobias Wild
+        </h1>
         <p>
           Ich bin ein 17 Jahre alter Schüler aus Deutschland und ich liebe das
           Programmieren. Ich habe Mitte 2018 angefangen, HTML und CSS zu lernen.

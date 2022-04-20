@@ -26,10 +26,6 @@
   h6 {
     @apply font-Space-Grotesk font-semibold;
   }
-  /* Just my name */
-  h1 {
-    @apply text-3xl font-black tablet:text-4xl;
-  }
   /* Section Headings */
   h2 {
     @apply mb-8 text-center text-4xl font-black leading-none tablet:mb-12 tablet:text-5xl;
@@ -37,15 +33,6 @@
   /* Sub-Section Headings */
   h3 {
     @apply text-2xl font-bold;
-  }
-  h4 {
-    @apply text-xl;
-  }
-  h5 {
-    @apply text-lg;
-  }
-  h6 {
-    @apply text-sm;
   }
   a {
     @apply hover:underline;
