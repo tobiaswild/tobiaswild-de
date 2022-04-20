@@ -11,6 +11,10 @@
   * {
     @apply box-border;
   }
+  html,
+  body {
+    @apply m-0 select-none overflow-x-hidden scroll-smooth bg-background p-0 font-sans text-base;
+  }
   a {
     @apply no-underline;
   }

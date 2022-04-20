@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 export default function Home({ pinnedItems, skills, profilePic }) {
   return (
-    <Layout>
+    <Layout scroll>
       <BasicMeta url="/" />
       <SocialMeta url="/" />
       <div className="my-4 w-full rounded-xl bg-accent py-3 text-center">
@@ -52,7 +52,7 @@ export const getStaticProps = async () => {
     {
       "skills": *[_type == "skill"],
     }`
-  const data = await getClient().fetch(query)
+  const data = await getClient(process.env.NODE_ENV).fetch(query)
 
   return {
     props: {

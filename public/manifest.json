@@ -1,7 +1,13 @@
 {
-  "background_color": "#fff",
+  "name": "Tobias Wild | Portfolio",
+  "short_name": "Tobias Wild",
   "description": "Portfolio von Tobias Wild",
   "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "icons": [
     {
       "density": "0.75",
@@ -39,11 +45,5 @@
       "src": "/icons/android-icon-192x192.png",
       "type": "image/png"
     }
-  ],
-  "name": "Tobias Wild | Portfolio",
-  "orientation": "portrait",
-  "scope": "/",
-  "short_name": "Tobias Wild",
-  "start_url": "/",
-  "theme_color": "#fff"
+  ]
 }

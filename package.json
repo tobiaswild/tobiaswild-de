@@ -26,6 +26,7 @@
     "@formspree/react": "^2.2.4",
     "@portabletext/react": "^1.0.6",
     "@sanity/image-url": "^1.0.1",
+    "framer-motion": "^6.3.0",
     "graphql": "^16.2.0",
     "next": "^12.0.9",
     "next-sanity": "^0.5.2",
