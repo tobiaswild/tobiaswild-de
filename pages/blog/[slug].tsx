@@ -10,8 +10,8 @@ import { groq } from 'next-sanity'
 export default function PostPage({ post }) {
   return (
     <Layout scroll={false}>
-      <BasicMeta url={`/post/${post.postSlug}`} />
-      <SocialMeta url={`/post/${post.postSlug}`} />
+      <BasicMeta url={`/post/${post.slug.current}`} />
+      <SocialMeta url={`/post/${post.slug.current}`} />
       <div className="relative aspect-video">
         <MyImage
           src={urlFor(post.mainImage).url()}
@@ -30,7 +30,6 @@ const singlePostQuery = groq`*[_type == "post" && slug.current == $slug] {
     ...,
     "authorName": author->name,
     "authorSlug": author->slug.current,
-    "postSlug": slug->current
   }[0]`
 
 export const getStaticPaths = async () => {
