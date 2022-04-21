@@ -20,7 +20,9 @@ export const getStaticProps = async () => {
     {
       "posts": *[_type == "post"]
     }`
-  const data = await getClient(process.env.NODE_ENV).fetch(query)
+  const data = await getClient(process.env.NODE_ENV === 'production').fetch(
+    query
+  )
 
   return {
     props: {

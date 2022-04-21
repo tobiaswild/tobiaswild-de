@@ -33,7 +33,9 @@ const singlePostQuery = groq`*[_type == "post" && slug.current == $slug] {
   }[0]`
 
 export const getStaticPaths = async () => {
-  const posts = await getClient(process.env.NODE_ENV).fetch(postsQuery)
+  const posts = await getClient(process.env.NODE_ENV === 'production').fetch(
+    postsQuery
+  )
   const paths = posts.map((post) => ({
     params: { slug: post.slug.current },
   }))
@@ -41,8 +43,11 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getClient(process.env.NODE_ENV).fetch(singlePostQuery, {
-    slug: params.slug,
-  })
+  const post = await getClient(process.env.NODE_ENV === 'production').fetch(
+    singlePostQuery,
+    {
+      slug: params.slug,
+    }
+  )
   return { props: { post } }
 }

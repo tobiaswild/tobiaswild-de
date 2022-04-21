@@ -53,7 +53,9 @@ export const getStaticProps = async () => {
     {
       "skills": *[_type == "skill"],
     }`
-  const data = await getClient(process.env.NODE_ENV).fetch(query)
+  const data = await getClient(process.env.NODE_ENV === 'production').fetch(
+    query
+  )
 
   return {
     props: {
