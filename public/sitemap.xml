@@ -3,21 +3,11 @@
 	<url>
 		<loc>https://tobiaswild.de</loc>
 		<priority>1.00</priority>
-		<lastmod>2022-04-20</lastmod>
+		<lastmod>2022-04-21</lastmod>
 	</url>
 	<url>
-		<loc>https://tobiaswild.de/500</loc>
+		<loc>https://tobiaswild.de/blog</loc>
 		<priority>0.50</priority>
-		<lastmod>2022-04-20</lastmod>
-	</url>
-	<url>
-		<loc>https://tobiaswild.de/_error</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-04-20</lastmod>
-	</url>
-	<url>
-		<loc>https://tobiaswild.de/404</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-04-20</lastmod>
+		<lastmod>2022-04-21</lastmod>
 	</url>
 </urlset>

@@ -1,4 +1,8 @@
 import Link from 'next/link'
+import { FaFileAlt } from 'react-icons/fa'
+import NormalNavLink from './NormalNavLink'
+
+const nav = [{ id: 'blog', name: 'Blog', icon: <FaFileAlt /> }]
 
 export default function NormalNav() {
   return (
@@ -9,6 +13,11 @@ export default function NormalNav() {
             Tobias Wild
           </a>
         </Link>
+        <div className="flex flex-row">
+          {nav.map((card, index) => (
+            <NormalNavLink key={index} card={card} />
+          ))}
+        </div>
       </div>
     </nav>
   )

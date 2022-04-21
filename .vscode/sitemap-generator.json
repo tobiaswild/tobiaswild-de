@@ -4,7 +4,7 @@
     "DomainName": "tobiaswild.de",
     "Root": "./pages",
     "IncludeExt": [".tsx"],
-    "Exclude": ["_app.tsx", "_document.tsx"],
+    "Exclude": ["_app.tsx", "_document.tsx", "500.tsx", "404.tsx", "_error.tsx", "blog/[slug].tsx"],
     "TagsToInclude": ["priority", "lastmod"],
     "DefaultChangeFrequency": "monthly",
     "TabCharacters": "\t",

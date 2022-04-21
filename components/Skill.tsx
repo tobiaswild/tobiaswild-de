@@ -1,4 +1,4 @@
-import { urlFor } from 'Lib/urlFor'
+import { urlFor } from 'Lib/sanity'
 import MyImage from './MyImage'
 
 export default function Skill({ skill }) {
