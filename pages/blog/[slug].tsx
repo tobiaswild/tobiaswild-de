@@ -26,7 +26,8 @@ export default function PostPage({ post }) {
 }
 
 const postsQuery = groq`*[_type == "post"]`
-const singlePostQuery = groq`*[_type == "post" && slug.current == $slug] {
+const singlePostQuery = groq`
+  *[_type == "post" && slug.current == $slug] {
     ...,
     "authorName": author->name,
     "authorSlug": author->slug.current,
@@ -49,5 +50,8 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     }
   )
-  return { props: { post } }
+  return {
+    props: { post },
+    revalidate: 60 * 60, // one hour
+  }
 }
