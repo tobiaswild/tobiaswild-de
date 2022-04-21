@@ -30,7 +30,7 @@ const singlePostQuery = groq`*[_type == "post" && slug.current == $slug] {
     ...,
     "authorName": author->name,
     "authorSlug": author->slug.current,
-    "postSlug": slug.current
+    "postSlug": slug->current
   }[0]`
 
 export const getStaticPaths = async () => {
