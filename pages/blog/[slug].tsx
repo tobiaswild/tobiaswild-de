@@ -25,7 +25,7 @@ export default function PostPage({ post }) {
   )
 }
 
-const postsQuery = groq`*[_type == "post"] {slug}`
+const postsQuery = groq`*[_type == "post"]`
 const singlePostQuery = groq`*[_type == "post" && slug.current == $slug] {
     ...,
     "authorName": author->name,
