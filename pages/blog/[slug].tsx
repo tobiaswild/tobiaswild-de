@@ -54,6 +54,6 @@ export async function getStaticProps(context) {
     props: {
       post,
     },
-    revalidate: 60 * 60, // one hour
+    // revalidate: 60 * 60, // one hour
   }
 }
