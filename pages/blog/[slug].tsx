@@ -8,6 +8,7 @@ import { getClient } from 'Lib/sanity.server'
 import { groq } from 'next-sanity'
 
 export default function PostPage({ post }) {
+  const { title = 'Missing title', body = [] } = post
   return (
     <Layout scroll={false}>
       <BasicMeta url={`/post/${post.slug.current}`} />
@@ -15,12 +16,12 @@ export default function PostPage({ post }) {
       <div className="relative aspect-video">
         <MyImage
           src={urlFor(post.mainImage).url()}
-          alt={post.title}
+          alt={title}
           clsName={'rounded'}
           priority={true}
         />
       </div>
-      <PortableText value={post.body} />
+      <PortableText value={body} />
     </Layout>
   )
 }
