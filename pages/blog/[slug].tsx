@@ -25,33 +25,35 @@ export default function PostPage({ post }) {
   )
 }
 
-const postsQuery = groq`*[_type == "post"]`
-const singlePostQuery = groq`
-  *[_type == "post" && slug.current == $slug] {
+const query = groq`
+  *[_type == "post" && slug.current == $slug][0]{
     ...,
     "authorName": author->name,
     "authorSlug": author->slug.current,
-  }[0]`
+    "authorImage": author->image,
+  }`
 
-export const getStaticPaths = async () => {
-  const posts = await getClient(process.env.NODE_ENV === 'production').fetch(
-    postsQuery
+export async function getStaticPaths() {
+  const paths = await getClient(process.env.NODE_ENV == 'production').fetch(
+    groq`*[_type == "post" && defined(slug.current)][].slug.current`
   )
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug.current },
-  }))
-  return { paths: paths, fallback: true }
+
+  return {
+    paths: paths.map((slug) => ({ params: { slug } })),
+    fallback: true,
+  }
 }
 
-export const getStaticProps = async ({ params }) => {
-  const post = await getClient(process.env.NODE_ENV === 'production').fetch(
-    singlePostQuery,
-    {
-      slug: params.slug,
-    }
+export async function getStaticProps(context) {
+  const { slug = '' } = context.params
+  const post = await getClient(process.env.NODE_ENV == 'production').fetch(
+    query,
+    { slug }
   )
   return {
-    props: { post },
+    props: {
+      post,
+    },
     revalidate: 60 * 60, // one hour
   }
 }
