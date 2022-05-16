@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Contact() {
   const [state, handleSubmit] = useForm('xqknbnwz')
 
-  const notify = () => toast('Here is your toast.');
+  /*const notify = () => toast('Here is your toast.');*/
 
   return (
     <section id="contact" className="box my-0 py-12">
