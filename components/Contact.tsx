@@ -1,6 +1,6 @@
 import { useForm } from '@formspree/react'
 import Link from 'next/link'
-import toast, { Toaster } from 'react-hot-toast';
+/*import toast, { Toaster } from 'react-hot-toast';*/
 
 export default function Contact() {
   const [state, handleSubmit] = useForm('xqknbnwz')
@@ -9,11 +9,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="box my-0 py-12">
-      <Toaster />
+      /*<Toaster />*/
       <h2>Kontakt</h2>
-      {state.succeeded === true ? (
+      /*{state.succeeded === true ? (
         {notify}
-      ) : null}
+      ) : null}*/
       <form
         className="mx-auto w-[90%] tablet:w-4/5"
         name="Contact"
@@ -47,7 +47,6 @@ export default function Contact() {
           </a>
         </Link>
       </p>
-      
     </section>
   )
 }
