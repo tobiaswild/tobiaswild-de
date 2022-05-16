@@ -1,53 +1,12 @@
-import useTranslation from 'next-translate/useTranslation'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FaGithub, FaGlobe } from 'react-icons/fa'
+import Project from './Project'
 
 export default function Projects({ pinnedItems }) {
-  const { t } = useTranslation('common')
-
-  function SuperLink({ url }) {
-    if (url === '') return null
-    return (
-      <Link href={url} passHref>
-        <a target="_blank" className="project-link">
-          <span>
-            <FaGlobe />
-          </span>
-          {t('projects.web')}
-        </a>
-      </Link>
-    )
-  }
-
   return (
     <section id="projects">
-      <h2>{t('projects.title')}</h2>
-      <div className="projects-container">
-        {pinnedItems.map((item) => {
-          return (
-            <div key={item.id} className="project">
-              <div className="relative h-52">
-                <Image
-                  layout="fill"
-                  className="absolute rounded object-cover"
-                  src={item.openGraphImageUrl}
-                  alt={item.name}
-                />
-              </div>
-              <h3 className="project-name">{item.name}</h3>
-              <p className="project-desc">{item.description}</p>
-              <SuperLink url={item.homepageUrl} />
-              <Link href={item.url} passHref>
-                <a target="_blank" className="project-link">
-                  <span>
-                    <FaGithub />
-                  </span>
-                  {t('projects.github')}
-                </a>
-              </Link>
-            </div>
-          )
+      <h2>Projekte</h2>
+      <div className="mx-auto grid grid-flow-row gap-4 tablet:grid-cols-2">
+        {pinnedItems.map((item, key) => {
+          return <Project key={key} item={item} />
         })}
       </div>
     </section>

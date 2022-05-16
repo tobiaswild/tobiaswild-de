@@ -5,7 +5,8 @@
       "Components/*": ["./components/*"],
       "Lib/*": ["./lib/*"],
       "Public/*": ["./public/*"],
-      "Styles/*": ["./styles/*"]
+      "Styles/*": ["./styles/*"],
+      "Svg/*": ["./svg/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

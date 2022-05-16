@@ -1,50 +1,45 @@
 import Contact from 'Components/Contact'
 import Layout from 'Components/Layout'
 import BasicMeta from 'Components/meta/BasicMeta'
-import OpenGraphMeta from 'Components/meta/OpenGraphMeta'
-import TwitterCardMeta from 'Components/meta/TwitterCardMeta'
+import SocialMeta from 'Components/meta/SocialMeta'
+import MyImage from 'Components/MyImage'
 import Projects from 'Components/Projects'
-import Technologies from 'Components/Technologies'
+import Skills from 'Components/Skills'
 import { GitHub } from 'Lib/GitHub'
-import useTranslation from 'next-translate/useTranslation'
-import Image from 'next/image'
-import big from 'Public/images/big.webp'
+import { getClient } from 'Lib/sanity.server'
+import { groq } from 'next-sanity'
 
-export default function Home({ pinnedItems, profilePic }) {
-  const { t } = useTranslation('common')
-
+export default function Home({ pinnedItems, skills, profilePic }) {
   return (
-    <Layout>
-      <script async src="https://cdn.splitbee.io/sb.js"></script>
-      <BasicMeta url="/" t={t} />
-      <OpenGraphMeta url="/" t={t} />
-      <TwitterCardMeta url="/" t={t} />
-      <header>
-        <Image
-          src={big}
-          alt="header-image"
-          width={1012}
-          height={506}
-          className="rounded-xl"
-        />
-      </header>
-      <div className="bar">{t('desc')}</div>
-      <section id="info">
-        <div className="info-img">
-          <Image
+    <Layout scroll>
+      <BasicMeta url="/" />
+      <SocialMeta url="/" />
+      <div className="my-4 w-full rounded-xl bg-accent py-3 text-center">
+        Hey, ich bin ein Schüler und Programmierer aus Deutschland.
+      </div>
+      <section id="pt-0">
+        <div className="relative float-right ml-1 mb-1 h-40 w-40 rounded-full bg-black p-1">
+          <MyImage
             src={profilePic}
-            alt=""
-            height={150}
-            width={150}
-            className="rounded-full"
+            alt={''}
+            clsName={'rounded-full'}
             priority
           />
         </div>
-        <h1>Tobias Wild</h1>
-        <p>{t('info')}</p>
+        <h1 className="font-Space-Grotesk text-3xl font-black tablet:text-4xl">
+          Tobias Wild
+        </h1>
+        <p>
+          Ich bin ein 17 Jahre alter Schüler aus Deutschland und ich liebe das
+          Programmieren. Ich habe Mitte 2018 angefangen, HTML und CSS zu lernen.
+          Und von da an habe ich mir selbst für JavaScript beigebracht. Mitte
+          2021 habe ich an einem Online-Kurs über Webentwicklung mit ReactJS
+          teilgenommen. Danach habe ich angefangen, NextJS zu lernen und zu
+          benutzen. Damit habe ich dann auch diese Webseite programmiert.
+        </p>
       </section>
       <Projects pinnedItems={pinnedItems} />
-      <Technologies />
+      <Skills skills={skills} />
       <Contact />
     </Layout>
   )
@@ -54,10 +49,19 @@ export const getStaticProps = async () => {
   const user = await GitHub()
   const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
 
+  const query = groq`
+    {
+      "skills": *[_type == "skill"],
+    }`
+  const data = await getClient(process.env.NODE_ENV === 'production').fetch(
+    query
+  )
+
   return {
     props: {
       pinnedItems: pinnedItems,
       profilePic: user.avatarUrl,
+      skills: data.skills,
     },
     revalidate: 60 * 60, // one hour
   }

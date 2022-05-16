@@ -1,47 +1,46 @@
 import { useForm } from '@formspree/react'
-import useTranslation from 'next-translate/useTranslation'
 import Link from 'next/link'
 
 export default function Contact() {
-  const { t } = useTranslation('common')
-
   const [state, handleSubmit] = useForm('xqknbnwz')
 
   return (
-    <section id="contact">
-      <h2>{t('contact.title')}</h2>
+    <section id="contact" className="box my-0 py-12">
+      <h2>Kontakt</h2>
       {state.succeeded === true ? (
         <p className="text-center text-green-500">Thanks for you Message!</p>
-      ) : (
-        <p></p>
-      )}
+      ) : null}
       <form
-        className="form"
+        className="mx-auto w-[90%] tablet:w-4/5"
         name="Contact"
         method="POST"
         onSubmit={handleSubmit}>
         <div className="form-item">
-          <label htmlFor="name">{t('contact.name')}</label>
+          <label htmlFor="name">Name</label>
           <input type="text" id="name" name="Name" required />
         </div>
         <div className="form-item">
-          <label htmlFor="email">{t('contact.email')}</label>
+          <label htmlFor="email">Email</label>
           <input type="text" id="email" name="Email" required />
         </div>
         <div className="form-item">
-          <label htmlFor="message">{t('contact.message')}</label>
+          <label htmlFor="message">Nachricht</label>
           <textarea id="message" name="Message" rows={5} required />
         </div>
         <div>
-          <button type="submit" className="submit-btn">
-            {t('contact.send')}
+          <button
+            type="submit"
+            className="mt-4 w-full rounded-xl border-none bg-accent p-1 font-bold">
+            Senden!
           </button>
         </div>
       </form>
-      <p className="or-email">
-        {t('contact.or-email')}{' '}
+      <p className="pt-2 text-center tablet:pt-5">
+        Oder schreibe mir eine Email an:{' '}
         <Link href="mailto:hello@tobiaswild.de">
-          <a target="_blank">hello@tobiaswild.de</a>
+          <a target="_blank" className="decoration-accent">
+            hello@tobiaswild.de
+          </a>
         </Link>
       </p>
     </section>
