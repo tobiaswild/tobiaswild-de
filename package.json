@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/tobiaswild/tobiaswild.de/issues"
   },
-  "homepage": "https://tobiaswild.de",
+  "homepage": "https://www.tobiaswild.de",
   "dependencies": {
     "@apollo/client": "^3.5.6",
     "@formspree/react": "^2.2.4",
@@ -33,6 +33,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-hot-toast": "^2.2.0",
     "react-scroll": "^1.8.4"
   },
   "devDependencies": {

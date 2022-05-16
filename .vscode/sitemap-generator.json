@@ -8,7 +8,7 @@
     "TagsToInclude": ["priority", "lastmod"],
     "DefaultChangeFrequency": "monthly",
     "TabCharacters": "\t",
-    "bIncludeWWW": false,
+    "bIncludeWWW": true,
     "bRemoveFileExtentions": true,
     "bUseTrailingSlash": false,
     "bAutomaticallyUpdateSitemap": true,
