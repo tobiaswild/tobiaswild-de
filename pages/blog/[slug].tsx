@@ -7,7 +7,15 @@ import { urlFor } from 'Lib/sanity'
 import { getClient } from 'Lib/sanity.server'
 import { groq } from 'next-sanity'
 
-export default function PostPage({ post }) {
+export default function PostPage() {
+  return (
+    <Layout scroll={false}>
+      <h1>there is nothing to see here.<h1>
+    </Layout>
+  )
+}
+
+/*export default function PostPage({ post }) {
   const { title = 'Missing title', body = [] } = post
   return (
     <Layout scroll={false}>
@@ -57,4 +65,4 @@ export async function getStaticProps(context) {
     },
     // revalidate: 60 * 60, // one hour
   }
-}
+} */
