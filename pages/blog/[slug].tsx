@@ -10,7 +10,7 @@ import { groq } from 'next-sanity'
 export default function PostPage() {
   return (
     <Layout scroll={false}>
-      <h1>there is nothing to see here.<h1>
+      <h1>there is nothing to see here.</h1>
     </Layout>
   )
 }
