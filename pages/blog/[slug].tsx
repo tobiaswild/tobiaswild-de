@@ -1,11 +1,12 @@
-import { PortableText } from '@portabletext/react'
+
 import Layout from 'Components/Layout'
-import BasicMeta from 'Components/meta/BasicMeta'
+/* import BasicMeta from 'Components/meta/BasicMeta'
 import SocialMeta from 'Components/meta/SocialMeta'
 import MyImage from 'Components/MyImage'
 import { urlFor } from 'Lib/sanity'
 import { getClient } from 'Lib/sanity.server'
-import { groq } from 'next-sanity'
+import { groq } from 'next-sanity' 
+import { PortableText } from '@portabletext/react' */
 
 export default function PostPage() {
   return (
