@@ -9,6 +9,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="box my-0 py-12">
+      <Toaster />
       <h2>Kontakt</h2>
       {state.succeeded === true ? (
         {notify}
@@ -46,7 +47,7 @@ export default function Contact() {
           </a>
         </Link>
       </p>
-      <Toaster />
+      
     </section>
   )
 }
