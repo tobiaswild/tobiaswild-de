@@ -32,6 +32,7 @@ export default function Contact() {
           <button
             type="submit"
             onClick={notify}
+            data-splitbee-event="form submit button clicked"
             className="mt-4 w-full rounded-xl border-none bg-accent p-1 font-bold">
             Senden!
           </button>
