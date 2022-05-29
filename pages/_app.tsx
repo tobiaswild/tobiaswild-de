@@ -6,7 +6,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <script async src="https://cdn.splitbee.io/sb.js" />
+        <script async data-api="/_hive" src="/bee.js"></script>
         <FaviconMeta />
       </Head>
       <Component {...pageProps} />

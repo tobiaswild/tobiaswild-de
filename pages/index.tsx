@@ -8,6 +8,7 @@ import Skills from 'Components/Skills'
 import { GitHub } from 'Lib/GitHub'
 import { getClient } from 'Lib/sanity.server'
 import { groq } from 'next-sanity'
+import { Toaster } from 'react-hot-toast'
 
 export default function Home({ pinnedItems, skills, profilePic }) {
   return (
@@ -41,6 +42,7 @@ export default function Home({ pinnedItems, skills, profilePic }) {
       <Projects pinnedItems={pinnedItems} />
       <Skills skills={skills} />
       <Contact />
+      <Toaster position="bottom-center" />
     </Layout>
   )
 }
