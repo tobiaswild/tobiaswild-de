@@ -9,8 +9,8 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body onContextMenu={(e)=> e.preventDefault()}>
-        <Main />
+      <body>
+        <Main onContextMenu={(e)=> e.preventDefault()}/>
         <NextScript />
       </body>
     </Html>
