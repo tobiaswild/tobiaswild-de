@@ -9,7 +9,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body>
+      <body onContextMenu={(e)=> e.preventDefault()}>
         <Main />
         <NextScript />
       </body>
