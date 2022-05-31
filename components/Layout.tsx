@@ -7,7 +7,7 @@ export default function Layout({ children, scroll }) {
   return (
     <>
       {scroll ? <ScrollNav /> : <NormalNav />}
-      <div className="mx-auto max-w-[90%] tablet:w-2xl desktop:w-3xl">
+      <div className="mx-auto max-w-[90%] tablet:w-2xl desktop:w-3xl" onContextMenu={(e)=> e.preventDefault()}>
         <main id="top" className="pt-16">
           <PageTransition>{children}</PageTransition>
         </main>

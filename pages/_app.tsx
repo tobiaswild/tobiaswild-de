@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
         <script async data-api="/_hive" src="/bee.js"></script>
         <FaviconMeta />
       </Head>
-      <Component onContextMenu={(e)=> e.preventDefault()} {...pageProps} />
+      <Component {...pageProps} />
     </>
   )
 }
