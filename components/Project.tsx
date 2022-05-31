@@ -17,8 +17,8 @@ export default function Project({ item }) {
       <h3 className="py-0.5">{item.name}</h3>
       <p className="project-desc">{item.description}</p>
       <Weblink url={item.homepageUrl} />
-      <Link href={item.url} data-splitbee-event={`project "${item.url}" github button clicked`} passHref>
-        <a target="_blank" className="flex items-center">
+      <Link href={item.url} passHref>
+        <a target="_blank" className="flex items-center" data-splitbee-event={`project "${item.url}" github button clicked`}>
           <span className="mr-1">
             <FaGithub />
           </span>
