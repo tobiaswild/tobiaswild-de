@@ -4,7 +4,7 @@ import { FaGlobe } from 'react-icons/fa'
 export default function Weblink({ url }) {
   if (url === '') return null
   return (
-    <Link href={url} passHref>
+    <Link href={url} data-splitbee-event={`project "${card.url}" web button clicked`} passHref>
       <a target="_blank" className="flex items-center">
         <span className="mr-1">
           <FaGlobe />
