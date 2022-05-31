@@ -1,7 +1,7 @@
-import Footer from './Footer'
-import NormalNav from './NormalNav'
+import Footer from './footer'
+import NormalNav from './navigation/NormalNav'
 import PageTransition from './PageTransition'
-import ScrollNav from './ScrollNav'
+import ScrollNav from './navigation/ScrollNav'
 
 export default function Layout({ children, scroll }) {
   return (
