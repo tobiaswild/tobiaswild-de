@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
-import MyImage from './MyImage'
-import Weblink from './Weblink'
+import MyImage from '../MyImage'
+import Weblink from '../Weblink'
 
 export default function Project({ item }) {
   return (
