@@ -1,7 +1,7 @@
 import Layout from 'Components/Layout'
 import BasicMeta from 'Components/meta/BasicMeta'
 import SocialMeta from 'Components/meta/SocialMeta'
-import Posts from 'Components/Posts'
+import Posts from 'Components/posts'
 import { getClient } from 'Lib/sanity.server'
 import { groq } from 'next-sanity'
 

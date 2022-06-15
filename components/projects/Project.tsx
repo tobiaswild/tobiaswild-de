@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
-import MyImage from './MyImage'
-import Weblink from './Weblink'
+import MyImage from '../MyImage'
+import Weblink from '../Weblink'
 
 export default function Project({ item }) {
   return (
@@ -18,7 +18,7 @@ export default function Project({ item }) {
       <p className="project-desc">{item.description}</p>
       <Weblink url={item.homepageUrl} />
       <Link href={item.url} passHref>
-        <a target="_blank" className="flex items-center">
+        <a target="_blank" className="flex items-center" data-splitbee-event={`project "${item.url}" github button clicked`}>
           <span className="mr-1">
             <FaGithub />
           </span>

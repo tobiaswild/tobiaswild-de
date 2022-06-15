@@ -1,5 +1,5 @@
 import { urlFor } from 'Lib/sanity'
-import MyImage from './MyImage'
+import MyImage from '../MyImage'
 
 export default function Skill({ skill }) {
   return (
