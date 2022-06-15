@@ -1,0 +1,12 @@
+@tailwind components;
+
+@layer components {
+  .form_item {
+    @apply relative min-h-[5rem] w-full overflow-hidden p-2;
+  }
+  .form_item input,
+  .form_item select,
+  .form_item textarea {
+    @apply focus:border-primery dark:bg-dark w-full rounded-none border-b-2 border-neutral-400 p-1 pl-2 outline-none transition-all;
+  }
+}

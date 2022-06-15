@@ -1,17 +1,11 @@
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./components/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        base: 'var(--color-text)',
-        accent: 'var(--color-accent)',
-        background: 'var(--color-background)',
-      },
-      fontFamily: {
-        'Space-Grotesk': ['Space Grotesk', 'sans-serif'],
+        dark: 'var(--color-dark)',
+        darker: 'var(--color-darker)',
+        primery: 'var(--color-primery)',
       },
       width: {
         xl: '36rem',
@@ -19,10 +13,6 @@ module.exports = {
         '3xl': '48rem',
         '4xl': '56rem',
       },
-    },
-    screens: {
-      tablet: '640px',
-      desktop: '1248px',
     },
   },
   plugins: [],

@@ -1,29 +1,28 @@
-# My Portfolio
+# tobiaswild.de
 
-[https://tobiaswild.de/](https://tobiaswild.de/)
+This source of my personal website. It's built with following technologies:
 
-## General info
-
-My personal portfolio website, build with Next.js, JavaScript and TailwindCSS.
-
-## Stack
-
+- [React](https://reactjs.org/) – My frontend library of choice.
 - [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [TypeScript](https://typescriptlang.org) – Typed JavaScript. I love it.
 - [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
 - [Next Translate](https://github.com/vinissimus/next-translate) - Next.js plugin + i18n API for Next.js
 - [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 
-## Project structure
+## Local development
 
+Provide a `GITHUB_TOKEN` inside your `.env` file.
+
+### Install the dependencies
+
+```sh
+yarn
 ```
-.
-├── components              # React component files
-├── locales                 # Language files
-├── pages                   # Page files
-├── public                  # Static images and other files
-├── styles                  # CSS files (TailwindCSS)
-├── LICENSE
-└── README.md
+
+### Run it locally
+
+```sh
+yarn dev
 ```
 
 ## Inspired and copied from
@@ -31,6 +30,7 @@ My personal portfolio website, build with Next.js, JavaScript and TailwindCSS.
 - Craftzdogs [Homepage](https://github.com/craftzdog/craftzdog-homepage)
 - Mezos [Website](https://github.com/mezotv/portfolio_website)
 - Fromthemountains [Homepage](https://github.com/Rey810/from-the-mountain)
+- Timo Lins [Website](https://github.com/timolins/timo-sh)
 - Many more
 
 ## CONTRIBUTING

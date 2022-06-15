@@ -1,178 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
 
 @layer base {
   :root {
-    --color-text: #ffffff;
-    --color-background: #202023;
-    --color-accent: #7289da;
-  }
-  * {
-    @apply box-border;
+    --color-primery: #7289da;
+    --color-dark: #232323;
+    --color-darker: #121212;
   }
   html,
   body {
-    @apply m-0 select-none overflow-x-hidden scroll-smooth bg-background p-0 font-sans text-base;
+    @apply scroll-smooth dark:bg-dark dark:text-white;
   }
   a {
-    @apply no-underline;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-Space-Grotesk font-semibold;
-  }
-  /* Just my name */
-  h1 {
-    @apply text-3xl font-black tablet:text-4xl;
-  }
-  /* Section Headings */
-  h2 {
-    @apply mb-8 text-center text-4xl font-black leading-none tablet:mb-12 tablet:text-5xl;
-  }
-  /* Sub-Section Headings */
-  h3 {
-    @apply text-2xl font-bold;
-  }
-  h4 {
-    @apply text-xl;
-  }
-  h5 {
-    @apply text-lg;
-  }
-  h6 {
-    @apply text-sm;
-  }
-  a {
-    @apply hover:underline;
-  }
-
-  nav {
-    @apply fixed top-0 z-10 w-full overflow-hidden bg-background;
-  }
-  main {
-    @apply pt-16;
-  }
-  section {
-    @apply py-12;
-  }
-  footer {
-    @apply py-8 text-center text-sm text-neutral-400;
+    @apply text-blue-500 hover:cursor-pointer;
   }
 
   ::-webkit-scrollbar {
-    @apply w-1;
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-white dark:bg-dark;
   }
   ::-webkit-scrollbar-thumb {
-    @apply rounded-xl bg-accent;
+    @apply bg-primery;
   }
 }
 
 @layer components {
-  .box {
-    @apply rounded-xl bg-neutral-800 shadow-sm shadow-neutral-800;
-  }
   .wrapper {
-    @apply mx-auto max-w-[85%] tablet:w-2xl desktop:w-3xl;
+    @apply mx-auto w-4xl max-w-[85%];
   }
 
-  /* Navigation */
-  .nav-container {
-    @apply mx-auto flex max-w-[95%] flex-row justify-between tablet:w-4xl;
-  }
-  .logo {
-    @apply m-2 items-center p-2 font-Space-Grotesk text-2xl hover:no-underline;
-  }
-  .nav-links {
-    @apply flex flex-row;
-  }
-  .nav-link {
-    @apply m-2 flex h-10 w-auto max-w-sm items-center p-2 text-neutral-400 hover:text-neutral-500 hover:no-underline;
-  }
-  .nav-link-icon {
-    @apply text-xl tablet:hidden;
-  }
-  .nav-link-text {
-    @apply hidden tablet:block;
+  .section {
+    @apply mx-auto scroll-mt-5 py-12;
   }
 
-  /* Info */
-  .bar {
-    @apply my-4 w-full rounded-xl bg-accent py-3 text-center;
-  }
-  #info {
-    @apply pt-0;
-  }
-  .info-img {
-    @apply float-right ml-1 mb-1 max-h-36 w-36 rounded-full bg-black p-1;
+  .section-header {
+    @apply text-center text-4xl font-semibold;
   }
 
-  /* Projects */
-  .projects-container {
-    @apply mx-auto grid grid-flow-row items-start gap-4 tablet:grid-cols-2;
-  }
-  .project {
-    @apply box p-4;
-  }
-  .project-link {
-    @apply flex items-center;
-  }
-  .project-link span {
-    @apply mr-1;
+  .sub-section-header {
+    @apply text-center text-3xl font-medium;
   }
 
-  /* Technologies */
-  .toolbox-cards-wrapper {
-    @apply flex flex-col items-center;
-  }
-  .toolbox-card {
-    @apply flex flex-col items-center py-4;
-  }
-  .tools-container ul {
-    @apply flex flex-row flex-wrap justify-center;
-  }
-  .tool {
-    @apply box m-2 flex h-28 w-28 flex-col items-center justify-end p-4;
-  }
-  .tool-icon {
-    @apply text-4xl;
-  }
-  .tool-icon svg {
-    @apply fill-accent;
+  .sanityText {
+    @apply px-4 py-2;
   }
 
-  /* CONTACT */
-  #contact {
-    @apply box;
+  .sanityText h1 {
+    @apply text-4xl font-bold;
   }
-  .form {
-    @apply mx-auto w-[90%] tablet:w-4/5;
+  .sanityText h2 {
+    @apply text-3xl font-semibold;
   }
-  .form-item {
-    @apply relative min-h-[5rem] w-full overflow-hidden p-2;
-  }
-  .form-item input,
-  .form-item select,
-  .form-item textarea {
-    @apply box w-full rounded-none border-b-2 border-neutral-400 p-1 pl-2 outline-none transition-all focus:border-accent;
-  }
-  .form .submit-btn {
-    @apply mt-4 w-full rounded-xl border-none bg-accent p-1 font-bold;
-  }
-  .or-email {
-    @apply pt-2 text-center tablet:pt-5;
-  }
-  .or-email a {
-    @apply decoration-accent;
+  .sanityText h3 {
+    @apply text-2xl font-medium;
   }
 }
 
 .active {
-  @apply text-accent;
+  @apply text-primery;
 }

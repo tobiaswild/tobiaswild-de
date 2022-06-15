@@ -3,12 +3,12 @@ import {
   createHttpLink,
   gql,
   InMemoryCache,
-} from '@apollo/client'
-import { setContext } from '@apollo/client/link/context'
+} from "@apollo/client"
+import { setContext } from "@apollo/client/link/context"
 
 export const GitHub = async () => {
   const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
+    uri: "https://api.github.com/graphql",
   })
 
   const authLink = setContext((_, { headers }) => {
@@ -48,6 +48,15 @@ export const GitHub = async () => {
                   url
                   homepageUrl
                   openGraphImageUrl
+                  watchers {
+                    totalCount
+                  }
+                  stargazers {
+                    totalCount
+                  }
+                  collaborators {
+                    totalCount
+                  }
                 }
               }
             }

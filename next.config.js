@@ -6,6 +6,8 @@ module.exports = {
   ...nextTranslate(),
   images: {
     domains: [
+      'cdn.sanity.io',
+      'images.pexels.com',
       'repository-images.githubusercontent.com',
       'avatars.githubusercontent.com',
       'res.cloudinary.com',
