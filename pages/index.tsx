@@ -18,7 +18,7 @@ export default function Home({ pinnedItems, skills, profilePic }) {
   const buttonHandler = () => {
     splitbee.enableCookie()
     allowCookies(true)
-    console.log(allowCookies)
+    console.log(allowedCookies)
   }
 
   return (
