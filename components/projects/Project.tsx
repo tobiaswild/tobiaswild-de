@@ -16,8 +16,8 @@ export default function Project({ item }) {
       </div>
       <h3 className="py-0.5">{item.name}</h3>
       <p className="project-desc">{item.description}</p>
-      <Weblink url={item.homepageUrl} />
-      <Link href={item.url} name={item.name} passHref>
+      <Weblink url={item.homepageUrl} name={item.name} />
+      <Link href={item.url} passHref>
         <a
           target="_blank"
           className="flex items-center"
