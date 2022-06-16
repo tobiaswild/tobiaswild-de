@@ -6,7 +6,12 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <script async data-api="/_hive" src="/bee.js"></script>
+        <script
+          data-respect-dnt
+          data-no-cookie
+          async
+          data-api="/_hive"
+          src="/bee.js"></script>
         <FaviconMeta />
       </Head>
       <Component {...pageProps} />

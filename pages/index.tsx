@@ -1,3 +1,4 @@
+import splitbee from '@splitbee/web'
 import Contact from 'Components/Contact'
 import Layout from 'Components/Layout'
 import BasicMeta from 'Components/meta/BasicMeta'
@@ -18,6 +19,7 @@ export default function Home({ pinnedItems, skills, profilePic }) {
       <div className="my-4 w-full rounded-xl bg-accent py-3 text-center">
         Hey, ich bin ein Schüler und Programmierer aus Deutschland.
       </div>
+      <button onClick={splitbee.enableCookie()}>Cookies?</button>
       <section id="pt-0">
         <div className="relative float-right ml-1 mb-1 h-40 w-40 rounded-full bg-black p-1">
           <MyImage

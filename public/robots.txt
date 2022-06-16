@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /icons
 Allow: /
 
 Sitemap: https://tobiaswild.de/sitemap.xml
