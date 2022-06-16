@@ -9,9 +9,18 @@ import Skills from 'Components/skills'
 import { GitHub } from 'Lib/GitHub'
 import { getClient } from 'Lib/sanity.server'
 import { groq } from 'next-sanity'
+import { useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 
 export default function Home({ pinnedItems, skills, profilePic }) {
+  const [allowedCookies, allowCookies] = useState(false)
+
+  const buttonHandler = () => {
+    splitbee.enableCookie()
+    allowCookies(true)
+    console.log(allowCookies)
+  }
+
   return (
     <Layout scroll>
       <BasicMeta url="/" />
@@ -19,7 +28,7 @@ export default function Home({ pinnedItems, skills, profilePic }) {
       <div className="my-4 w-full rounded-xl bg-accent py-3 text-center">
         Hey, ich bin ein Schüler und Programmierer aus Deutschland.
       </div>
-      <button onClick={splitbee.enableCookie()}>Cookies?</button>
+      <button onClick={buttonHandler}>Cookies?</button>
       <section id="pt-0">
         <div className="relative float-right ml-1 mb-1 h-40 w-40 rounded-full bg-black p-1">
           <MyImage
