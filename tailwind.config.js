@@ -5,25 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        base: 'var(--color-text)',
-        accent: 'var(--color-accent)',
-        background: 'var(--color-background)',
-      },
       fontFamily: {
-        'Space-Grotesk': ['Space Grotesk', 'sans-serif'],
+        'Space-Grotesk': ['Space Grotesk'],
       },
-      width: {
-        xl: '36rem',
-        '2xl': '42rem',
-        '3xl': '48rem',
-        '4xl': '56rem',
-      },
-    },
-    screens: {
-      tablet: '640px',
-      desktop: '1248px',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
 }

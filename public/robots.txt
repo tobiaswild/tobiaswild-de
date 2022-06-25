@@ -1,5 +1,9 @@
 User-agent: *
-Disallow: /icons
+Disallow: /icons/
+Disallow: /browserconfig.xml
+Disallow: /manifest.json
+
+User-agent: *
 Allow: /
 
 Sitemap: https://tobiaswild.de/sitemap.xml

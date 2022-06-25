@@ -1,16 +1,18 @@
-import Layout from 'Components/Layout'
-
 function Error({ statusCode }) {
   return (
-    <Layout scroll={false}>
-      <div className="flex h-full w-full items-center justify-center">
-        <p className="text-2xl font-bold">
-          {statusCode
-            ? `An error ${statusCode} occurred on server`
-            : 'An error occurred on client'}
-        </p>
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero-content text-center">
+        <div className="max-w-md">
+          <h1 className="text-5xl font-bold">Oh nein :&#40;</h1>
+          <p className="py-6">
+            {statusCode
+              ? `Auf dem Server ist ein Fehler ${statusCode} aufgetreten`
+              : 'Auf dem Client ist ein Fehler aufgetreten'}
+          </p>
+          <button className="btn btn-primary">Zurück zur Startseite</button>
+        </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 

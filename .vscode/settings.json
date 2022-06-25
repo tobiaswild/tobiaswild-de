@@ -3,7 +3,5 @@
     "**/.next": true,
     "**/.vercel": true,
     "**/node_modules": true,
-    "CONTRIBUTING.md": true,
-    "LICENSE": true
   }
 }

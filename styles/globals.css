@@ -3,68 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-text: #ffffff;
-    --color-background: #202023;
-    --color-accent: #7289da;
-  }
-  * {
-    @apply box-border;
-  }
-  html,
-  body {
-    @apply m-0 select-none overflow-x-hidden scroll-smooth bg-background p-0 font-sans text-base;
-  }
-  a {
-    @apply no-underline;
-  }
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-Space-Grotesk font-semibold;
-  }
-  /* Section Headings */
-  h2 {
-    @apply mb-8 text-center text-4xl font-black leading-none tablet:mb-12 tablet:text-5xl;
-  }
-  /* Sub-Section Headings */
-  h3 {
-    @apply text-2xl font-bold;
-  }
-  a {
-    @apply hover:underline;
+    @apply font-Space-Grotesk;
   }
   section {
     @apply my-12;
   }
-
   ::-webkit-scrollbar {
     @apply w-1;
   }
   ::-webkit-scrollbar-thumb {
-    @apply rounded-xl bg-accent;
+    @apply rounded-xl bg-primary;
   }
-}
-
-@layer components {
-  .box {
-    @apply rounded-xl bg-neutral-800 shadow-sm shadow-neutral-800;
-  }
-
-  /* CONTACT */
-  .form-item {
-    @apply relative min-h-[5rem] w-full overflow-hidden p-2;
-  }
-  .form-item input,
-  .form-item select,
-  .form-item textarea {
-    @apply box w-full rounded-none border-b-2 border-neutral-400 p-1 pl-2 outline-none transition-all focus:border-accent;
-  }
-}
-
-.active {
-  @apply text-accent;
 }

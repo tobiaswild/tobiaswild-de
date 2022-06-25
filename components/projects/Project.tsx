@@ -1,34 +1,27 @@
-import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
-import MyImage from '../MyImage'
-import Weblink from './Weblink'
+import Image from 'next/image'
+import Githublink from './GithubLink'
+import Weblink from './WebLink'
 
 export default function Project({ item }) {
   return (
-    <div key={item.id} className="box p-3">
+    <div className="card shadow-xl">
       <div className="relative aspect-video">
-        <MyImage
+        <Image
+          layout="fill"
           src={item.openGraphImageUrl}
           alt={item.name}
-          clsName={'rounded'}
-          priority={false}
+          className="absolute"
+          objectFit="cover"
         />
       </div>
-      <h3 className="py-0.5">{item.name}</h3>
-      <p className="project-desc">{item.description}</p>
-      <Weblink url={item.homepageUrl} name={item.name} />
-      <Link href={item.url} passHref>
-        <a
-          target="_blank"
-          className="flex items-center"
-          data-splitbee-event="Project GitHub Button"
-          data-splitbee-event-project={item.name}>
-          <span className="mr-1">
-            <FaGithub />
-          </span>
-          GitHub
-        </a>
-      </Link>
+      <div className="card-body">
+        <h3 className="card-title">{item.name}</h3>
+        <p>{item.description}</p>
+        <div className="card-actions">
+          <Githublink url={item.url} name={item.name} />
+          <Weblink url={item.homepageUrl} name={item.name} />
+        </div>
+      </div>
     </div>
   )
 }

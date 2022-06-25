@@ -7,7 +7,7 @@ export default function PostPage() {
     <>
       <Nav />
       <Main>
-        <h1>Posts kommen bald.</h1>
+        <h1>Neue Seiten kommen bald.</h1>
       </Main>
       <Footer />
     </>
