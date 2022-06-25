@@ -1,4 +1,4 @@
-import { getPinnedRepos } from 'Lib/github'
+import { getPinnedRepos } from 'Lib/github-api'
 
 export default async (_, res) => {
   const response = await getPinnedRepos()
