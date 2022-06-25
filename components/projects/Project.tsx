@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Githublink from './GithubLink'
-import Weblink from './WebLink'
+import WebsiteLink from './WebsiteLink'
 
 export default function Project({ item }) {
   return (
@@ -19,7 +19,7 @@ export default function Project({ item }) {
         <p>{item.description}</p>
         <div className="card-actions">
           <Githublink url={item.url} name={item.name} />
-          <Weblink url={item.homepageUrl} name={item.name} />
+          <WebsiteLink url={item.homepageUrl} name={item.name} />
         </div>
       </div>
     </div>
