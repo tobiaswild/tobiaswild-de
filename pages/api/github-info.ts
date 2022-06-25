@@ -1,4 +1,4 @@
-import { getUserInfo } from 'Lib/github-api'
+import { getUserInfo } from 'Lib/github'
 
 export default async (_, res) => {
   const response = await getUserInfo()
