@@ -9,7 +9,7 @@ export default function Skills({ skills }) {
         <ul className="flex flex-row flex-wrap justify-center">
           {skills.map((skill) => (
             <li
-              className="box m-2 flex h-28 w-28 flex-col items-center justify-end p-2"
+              className="m-2 flex h-28 w-28 flex-col items-center justify-end p-2"
               key={skill}>
               <span className="relative h-16 w-16 text-4xl">
                 <Image

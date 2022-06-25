@@ -18,8 +18,7 @@ export default function Contact() {
           Sende mir eine Email an:{' '}
           <Link href="mailto:hello@tobiaswild.de">hello@tobiaswild.de</Link>
         </div>
-        <div className="divider divider-horizontal"></div>
-        <div className="divider divider-vertical"></div>
+        <div className="divider divider-vertical md:divider-horizontal"></div>
         <div className="card rounded-box grid flex-1 place-items-center bg-base-300 p-2">
           <form
             name="Contact"

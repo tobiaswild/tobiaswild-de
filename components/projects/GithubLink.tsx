@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
 
 export default function Githublink({ url, name }) {
-  if (url === '') return null
   return (
     <Link href={url} passHref>
       <a

@@ -6,25 +6,25 @@ import {
 } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 
-export const GitHub = async () => {
-  const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
-  })
+const httpLink = createHttpLink({
+  uri: 'https://api.github.com/graphql',
+})
 
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      },
-    }
-  })
+const authLink = setContext((_, { headers }) => {
+  return {
+    headers: {
+      ...headers,
+      authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+    },
+  }
+})
 
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  })
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+})
 
+export const getUserInfo = async () => {
   const { data } = await client.query({
     query: gql`
       {
@@ -37,8 +37,20 @@ export const GitHub = async () => {
           followers {
             totalCount
           }
+        }
+      }
+    `,
+  })
+
+  return data.user
+}
+
+export const getPinnedRepos = async () => {
+  const { data } = await client.query({
+    query: gql`
+      {
+        user(login: "tobiaswild") {
           pinnedItems(first: 6, types: [REPOSITORY]) {
-            totalCount
             edges {
               node {
                 ... on Repository {
@@ -64,6 +76,5 @@ export const GitHub = async () => {
     `,
   })
 
-  const { user } = data
-  return user
+  return data.user.pinnedItems.edges.map((edge) => edge.node)
 }
