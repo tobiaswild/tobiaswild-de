@@ -1,7 +1,7 @@
 {
   "name": "tobiaswild.de",
   "version": "0.0.1",
-  "description": "My personal portfolio website, build with Next.js, TypeScript and TailwindCSS",
+  "description": "My personal portfolio website, build with Next.js, TypeScript, TailwindCSS and daisyUI.",
   "private": true,
   "scripts": {
     "dev": "next dev",

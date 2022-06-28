@@ -16,7 +16,11 @@ export default function Contact() {
       <div className="flex w-full flex-col md:flex-row">
         <div className="card rounded-box flex-1 place-items-center justify-center bg-base-300 p-2">
           Sende mir eine Email an:{' '}
-          <Link href="mailto:hello@tobiaswild.de">hello@tobiaswild.de</Link>
+          <Link
+            href="mailto:hello@tobiaswild.de"
+            data-splitbee-event="Contact Email Link">
+            hello@tobiaswild.de
+          </Link>
         </div>
         <div className="divider divider-vertical md:divider-horizontal"></div>
         <div className="card rounded-box grid flex-1 place-items-center bg-base-300 p-2">

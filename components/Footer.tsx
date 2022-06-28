@@ -1,11 +1,45 @@
+import Link from 'next/link'
+import NowPlaying from './NowPlaying'
+
 export default function Footer() {
   return (
     <footer className="footer footer-center rounded bg-base-200 p-10 text-base-content">
+      <div>
+        <NowPlaying />
+      </div>
       <div className="grid grid-flow-col gap-4">
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        <Link href="/">
+          <a
+            className="link link-hover"
+            data-splitbee-event="Footer Link"
+            data-splitbee-event-link="About us">
+            About us
+          </a>
+        </Link>
+        <Link href="/">
+          <a
+            className="link link-hover"
+            data-splitbee-event="Footer Link"
+            data-splitbee-event-link="Contact">
+            Contact
+          </a>
+        </Link>
+        <Link href="/">
+          <a
+            className="link link-hover"
+            data-splitbee-event="Footer Link"
+            data-splitbee-event-link="Jobs">
+            Jobs
+          </a>
+        </Link>
+        <Link href="/">
+          <a
+            className="link link-hover"
+            data-splitbee-event="Footer Link"
+            data-splitbee-event-link="Press kit">
+            Press kit
+          </a>
+        </Link>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">

@@ -1,6 +1,6 @@
-import useSWR from 'swr'
-import { useEffect } from 'react'
 import { animate } from 'motion'
+import { useEffect } from 'react'
+import useSWR from 'swr'
 
 import fetcher from 'lib/fetcher'
 import { NowPlayingSong } from 'lib/types'
@@ -58,18 +58,9 @@ function AnimatedBars() {
 
   return (
     <div className="flex w-auto items-end overflow-hidden">
-      <span
-        id="bar1"
-        className="mr-[3px] h-2 w-1 bg-gray-300 opacity-75 dark:bg-gray-500"
-      />
-      <span
-        id="bar2"
-        className="mr-[3px] h-1 w-1 bg-gray-300 dark:bg-gray-500"
-      />
-      <span
-        id="bar3"
-        className="h-3 w-1 bg-gray-300 opacity-80 dark:bg-gray-500"
-      />
+      <span id="bar1" className="mr-[3px] h-2 w-1 bg-accent opacity-75" />
+      <span id="bar2" className="mr-[3px] h-1 w-1 bg-accent" />
+      <span id="bar3" className="h-3 w-1 bg-accent opacity-80" />
     </div>
   )
 }
@@ -78,7 +69,7 @@ export default function NowPlaying() {
   const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher)
 
   return (
-    <div className="mb-8 flex w-full flex-row-reverse items-center space-x-0 sm:flex-row sm:space-x-2">
+    <div className="flex w-full flex-row-reverse items-center space-x-0 sm:flex-row sm:space-x-2">
       {data?.songUrl ? (
         <AnimatedBars />
       ) : (
@@ -92,21 +83,17 @@ export default function NowPlaying() {
       <div className="inline-flex w-full max-w-full flex-col truncate sm:flex-row">
         {data?.songUrl ? (
           <a
-            className="capsize max-w-max truncate font-medium  text-gray-800 dark:text-gray-200"
+            className="capsize max-w-max truncate font-medium"
             href={data.songUrl}
             target="_blank"
             rel="noopener noreferrer">
             {data.title}
           </a>
         ) : (
-          <p className="capsize font-medium text-gray-800 dark:text-gray-200">
-            Not Playing
-          </p>
+          <p className="capsize font-medium">Not Playing</p>
         )}
-        <span className="capsize mx-2 hidden text-gray-500 dark:text-gray-300 sm:block">
-          {' – '}
-        </span>
-        <p className="capsize max-w-max truncate text-gray-500 dark:text-gray-300">
+        <span className="capsize mx-2 hidden sm:block">{' – '}</span>
+        <p className="capsize max-w-max truncate">
           {data?.artist ?? 'Spotify'}
         </p>
       </div>

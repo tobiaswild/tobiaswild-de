@@ -23,7 +23,10 @@ export default function Posts({ posts }) {
               title={post.title}
               description={post.title}>
               <Link href={`/posts/${post.slug.current}`} passHref>
-                <a className="flex items-center">
+                <a
+                  className="flex items-center"
+                  data-splitbee-event="Posts Link"
+                  data-splitbee-event-post={post.slug.current}>
                   <span className="mr-1">
                     <FaNewspaper />
                   </span>
