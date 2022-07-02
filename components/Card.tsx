@@ -8,7 +8,7 @@ export default function Project({ image, title, description, children }) {
       </div>
       <div className="card-body p-4 pt-2">
         <h3 className="card-title">{title}</h3>
-        <p>{description}</p>
+        <p className='line-clamp-3'>{description}</p>
         <div className="card-actions">{children}</div>
       </div>
     </div>
