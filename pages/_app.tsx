@@ -7,7 +7,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <script data-respect-dnt async data-api="/_hive" src="/bee.js"></script>
+        <script async data-api="/_hive" src="/bee.js"></script>
         <FaviconMeta />
       </Head>
       <ThemeProvider defaultTheme="system">

@@ -69,7 +69,7 @@ export default function Nav() {
           </Link>
         </div>
         <div className="navbar-end">
-          <label className="swap-rotate btn swap btn-ghost btn-circle">
+          <label className="btn swap btn-ghost btn-circle swap-rotate">
             <input
               type="checkbox"
               onClick={changeTheme}
